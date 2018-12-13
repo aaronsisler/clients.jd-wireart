@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { startLogin } from '../actions/auth';
+import { startLogin } from 'Actions/auth';
 
 const LoginPage = (props) => (
     <div className="box-layout">

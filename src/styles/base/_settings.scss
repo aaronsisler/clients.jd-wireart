@@ -1,8 +1,40 @@
 // Colors
-//Font size
+$mainColor: #135ba3;
+$darkMainColor: darken($mainColor, 20);
+$secColor: #009fc4;
+$lightGrey: #f3f3f3;
+$midLightGrey: #e8e8e8;
+$midGrey: #666666;
+$darkGrey: #222222;
+$fontGrey: rgba(0, 0, 0, .7);
+$closeIconGrey: #aaa;
 //Spacing
+$xxsmall: 0.3rem;
+$xsmall: 0.6rem;
 $small: 1.2rem;
 $medium: 1.6rem;
+$midlarge: 2.4rem;
 $large: 3.2rem;
 $xlarge: 4.8rem;
+$xxlarge: 7.6rem;
+$navMenuWidth: 240px;
 $desktopBreakpoint: 45rem;
+//Font Imports
+@import url('../fonts/Caveat.scss');
+@import url('../fonts/Coolvetica.scss');
+@import url('../fonts/DancingScript.scss');
+@import url('../fonts/Handlee.scss');
+@import url('../fonts/Ubuntu.scss');
+//Font Variables
+$caveatFont: "Caveat";
+$coolveticaFont: "Coolvetica";
+$dancingScriptFont: "DancingScript";
+$handleeFont: "Handlee";
+$ubuntuLightFont: "UbuntuLight";
+$ubuntuFont: "Ubuntu";
+//Site Fonts
+$mainFont: $ubuntuFont;
+$secondaryFont: $ubuntuLightFont;
+$accentFont: $caveatFont;
+// $accentFont: $dancingScriptFont;
+// $accentFont: $handleeFont;

@@ -1,0 +1,106 @@
+/*
+    Small screens - MOBILE
+    max-width 640px, small screens
+*/
+
+@media only screen {
+    .landing_page {
+        &__background_image {
+            background-image: url('/images/landing_page_background.jpg');
+            background-position: center;
+            background-size: cover;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: -10;
+        }
+        &_content {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 0.5fr;
+            min-height: 100%;
+            &__company_name,
+            &__gallery,
+            &__about_us {
+                background-color: white;
+            }
+            &__company_name {
+                align-content: center;
+                display: grid;
+                font-family: $accentFont;
+                font-size: 25rem;
+                height: 40rem;
+                justify-content: center;
+            }
+            &__gallery {
+                align-content: center;
+                display: grid;
+                height: 30rem;
+                justify-content: center;
+            }
+            &__nav_link-action {
+                background: white;
+                border: 3px solid $secColor;
+                color: $secColor;
+                font-family: $secondaryFont;
+                font-size: $xlarge;
+                margin: $small;
+                padding: $large $xlarge;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    background: $secColor;
+                    color: white;
+                    transition: background .3s ease-in-out;
+                }
+            }
+            &__nav_link-secondary {
+                background: white;
+                color: $secColor;
+                font-family: $secondaryFont;
+                font-size: $large;
+                margin: $small auto;
+                padding: $small $medium;
+                width: 70%;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    background: $secColor;
+                    color: white;
+                    transition: background .3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+/*
+    Medium screens - TABLET
+    min-width 641px, medium screens
+*/
+
+@media only screen and (min-width: 40.063em) {}
+
+/*
+    Large screens - DESKTOP
+    min-width 1025px, large screens
+*/
+
+@media only screen and (min-width: 64.063em) {}
+
+/*
+    XLarge screens
+    min-width 1441px, xlarge screens
+*/
+
+@media only screen and (min-width: 90.063em) {}
+
+/*
+    XXLarge screens
+    min-width 1921px, xlarge screens
+*/
+
+@media only screen and (min-width: 120.063em) {}
