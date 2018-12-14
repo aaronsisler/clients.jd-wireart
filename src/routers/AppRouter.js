@@ -1,22 +1,28 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import LoginPage from '../components/LoginPage';
-import DashboardPage from '../components/DashboardPage';
-import NotFoundPage from '../components/NotFoundPage';
-
-import PublicRoute from './PublicRoute';
-import PrivateRoute from './PrivateRoute';
+import ScrollToTop from 'Core/ScrollToTop';
+import AboutPage from 'Core/AboutPage'
+import GalleryPage from 'Gallery/GalleryPage'
+import LandingPage from 'Core/LandingPage';
+import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
+import NotFoundPage from 'Core/NotFoundPage';
+import Footer from 'Core/Footer'
 
 export const history = createHistory();
 
 const AppRouter = () => (
     <Router history={history}>
-        <Switch>
-            <PublicRoute path="/" component={LoginPage} exact={true} />
-            <PrivateRoute path="/dashboard" component={DashboardPage} exact={true} />
-            <Route component={NotFoundPage} />
-        </Switch>
+        <ScrollToTop>
+            <Switch>
+                <Route path="/" component={LandingPage} exact={true} />
+                <Route path="/gallery" component={GalleryPage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/privacy" component={PrivacyPolicyPage} />
+                <Route component={NotFoundPage} />
+            </Switch>
+            <Footer />
+        </ScrollToTop>
     </Router>
 );
 

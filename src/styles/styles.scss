@@ -1,2 +1,9 @@
 @import './base/settings';
 @import './base/base';
+//Core
+@import './components/core/AboutPage';
+@import './components/core/Footer';
+@import './components/core/LandingPage';
+@import './components/core/PrivacyPolicyPage';
+//Gallery
+@import './components/gallery/GalleryContainer';

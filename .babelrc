@@ -5,6 +5,27 @@
     ],
     "plugins": [
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./src"
+                ],
+                "alias": {
+                    "Actions": "./src/actions",
+                    "Content": "./src/content",
+                    "Core": "./src/components/core",
+                    "Firebase": "./src/firebase",
+                    "Gallery": "./src/components/gallery",
+                    "Reducers": "./src/reducers",
+                    "Selectors": "./src/selectors",
+                    "Shared": "./src/components/shared",
+                    "Src": "./src",
+                    "Styles": "./src/styles",
+                    "Tools": "./src/tools"
+                }
+            }
+        ]
     ]
 }
