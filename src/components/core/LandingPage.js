@@ -7,7 +7,7 @@ const LandingPage = () => (
         <div className="landing_page_content">
             <div className="landing_page_content__spacer" />
             <div className="landing_page_content__company_name">
-                Taco Man
+                JD Wire Art
             </div>
             <div className="landing_page_content__spacer" />
             <div className="landing_page_content__gallery">
