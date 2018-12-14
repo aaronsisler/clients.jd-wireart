@@ -22,19 +22,13 @@ $desktopBreakpoint: 45rem;
 //Font Imports
 @import url('../fonts/Caveat.scss');
 @import url('../fonts/Coolvetica.scss');
-@import url('../fonts/DancingScript.scss');
-@import url('../fonts/Handlee.scss');
 @import url('../fonts/Ubuntu.scss');
 //Font Variables
 $caveatFont: "Caveat";
 $coolveticaFont: "Coolvetica";
-$dancingScriptFont: "DancingScript";
-$handleeFont: "Handlee";
 $ubuntuLightFont: "UbuntuLight";
 $ubuntuFont: "Ubuntu";
 //Site Fonts
 $mainFont: $ubuntuFont;
 $secondaryFont: $ubuntuLightFont;
 $accentFont: $caveatFont;
-// $accentFont: $dancingScriptFont;
-// $accentFont: $handleeFont;
