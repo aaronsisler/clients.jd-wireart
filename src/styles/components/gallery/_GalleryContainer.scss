@@ -3,6 +3,15 @@
 @media only screen {
     .gallery_container {
         padding: $large 10%;
+        font-size: $large;
+        text-align: center;
+        &__title {
+            font-family: $mainFont;
+            margin-bottom: $large;
+        }
+        &__loading {
+            font-family: $accentFont;
+        }
     }
 }
 
