@@ -1,6 +1,6 @@
 /*
     Small screens - MOBILE
-    max-width 640px, small screens
+    max-width 641, small screens
 */
 
 @media only screen {
@@ -18,8 +18,8 @@
         }
         &_content {
             display: grid;
-            grid-template-rows: 1.75fr 0.6fr 1fr 0.5fr 0.5fr;
-            min-height: 100%;
+            grid-template-rows: 50% 10% 20% 5% auto;
+            min-height: 100vh;
             &__company_name {
                 background-color: white;
                 color: $secColor;
@@ -28,14 +28,14 @@
                 align-content: center;
                 display: grid;
                 font-family: $accentFont;
-                font-size: 20rem;
-                height: 30rem;
+                font-size: 15vw;
+                height: 20vh;
                 justify-content: center;
             }
             &__gallery {
                 align-content: center;
                 display: grid;
-                height: 30rem;
+                height: 20vh;
                 justify-content: center;
             }
             &__nav_link {
@@ -52,14 +52,14 @@
                     transition: background .3s ease-in-out;
                 }
                 &.action {
-                    font-size: $xlarge;
-                    margin: $small;
-                    padding: $large $xlarge;
+                    font-size: 6vw;
+                    margin: 0 $small $small;
+                    padding: $small $medium;
                 }
                 &.secondary {
-                    font-size: $large;
+                    font-size: 4vw;
                     margin: $small auto;
-                    padding: $small $medium;
+                    padding: $xsmall $small;
                     width: 70%;
                 }
             }
@@ -69,17 +69,111 @@
 
 /*
     Medium screens - TABLET
-    min-width 641px, medium screens
+    min-width 641, medium screens
 */
 
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    .landing_page {
+        &_content {
+            display: grid;
+            &__company_name {
+                background-color: white;
+                color: $secColor;
+            }
+            &__company_name {
+                align-content: center;
+                display: grid;
+                font-family: $accentFont;
+                justify-content: center;
+            }
+            &__gallery {
+                align-content: center;
+                display: grid;
+                justify-content: center;
+            }
+            &__nav_link {
+                background: white;
+                border: 3px solid $secColor;
+                color: $secColor;
+                font-family: $secFont;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    background: $secColor;
+                    color: white;
+                    transition: background .3s ease-in-out;
+                }
+                &.action {
+                    font-size: $large;
+                    margin: 0 $small $medium;
+                    padding: $small $medium;
+                }
+                &.secondary {
+                    font-size: $midlarge;
+                    margin: $medium auto;
+                    padding: $xsmall $small;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
 
 /*
     Large screens - DESKTOP
     min-width 1025px, large screens
 */
 
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .landing_page {
+        &_content {
+            display: grid;
+            grid-template-rows: 40% 10% 20% 5% auto;
+            min-height: 125vh;
+            &__company_name {
+                background-color: white;
+                color: $secColor;
+            }
+            &__company_name {
+                align-content: center;
+                display: grid;
+                font-family: $accentFont;
+                font-size: 10vw;
+                height: 25vh;
+                justify-content: center;
+            }
+            &__gallery {
+                align-content: center;
+                display: grid;
+                justify-content: center;
+            }
+            &__nav_link {
+                background: white;
+                border: 3px solid $secColor;
+                color: $secColor;
+                font-family: $secFont;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    background: $secColor;
+                    color: white;
+                    transition: background .3s ease-in-out;
+                }
+                &.action {
+                    margin: $small;
+                    padding: $large $xlarge;
+                }
+                &.secondary {
+                    margin: $small auto;
+                    padding: $small $medium;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
 
 /*
     XLarge screens
