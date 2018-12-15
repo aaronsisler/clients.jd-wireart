@@ -18,19 +18,18 @@
         }
         &_content {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr 0.5fr;
+            grid-template-rows: 1.75fr 0.6fr 1fr 0.5fr 0.5fr;
             min-height: 100%;
-            &__company_name,
-            &__gallery,
-            &__about_us {
+            &__company_name {
                 background-color: white;
+                color: $secColor;
             }
             &__company_name {
                 align-content: center;
                 display: grid;
                 font-family: $accentFont;
-                font-size: 25rem;
-                height: 40rem;
+                font-size: 20rem;
+                height: 30rem;
                 justify-content: center;
             }
             &__gallery {
@@ -63,10 +62,10 @@
                 font-size: $large;
                 margin: $small auto;
                 padding: $small $medium;
-                width: 70%;
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
+                width: 70%;
                 &:hover {
                     background: $secColor;
                     color: white;

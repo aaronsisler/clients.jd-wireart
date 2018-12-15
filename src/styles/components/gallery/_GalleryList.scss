@@ -1,8 +1,10 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
+    .gallery_list {
+        display: grid;
+        grid-gap: $medium;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

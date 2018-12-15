@@ -16,14 +16,15 @@ const LandingPage = () => (
                     to="/gallery"
                 >
                     Browse our collection
-                </Link>
+            </Link>
                 <Link
                     className="landing_page_content__nav_link-secondary"
                     to="/about"
                 >
                     Learn more about us
-                </Link>
+            </Link>
             </div>
+            <div className="landing_page_content__spacer" />
         </div>
     </div>
 )
