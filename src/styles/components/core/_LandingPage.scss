@@ -18,29 +18,26 @@
         }
         &_content {
             display: grid;
-            grid-template-rows: 50% 10% 20% 5% auto;
-            min-height: 100vh;
-            &__company_name {
-                background-color: white;
-                color: $secColor;
-            }
+            grid-template-rows: 50vh auto 7vh auto 20vh;
             &__company_name {
                 align-content: center;
+                background-color: white;
+                color: $secColor;
                 display: grid;
                 font-family: $accentFont;
-                font-size: 15vw;
-                height: 20vh;
+                font-size: 10vw;
                 justify-content: center;
+                padding: $medium;
             }
             &__gallery {
                 align-content: center;
                 display: grid;
-                height: 20vh;
                 justify-content: center;
             }
             &__nav_link {
                 background: white;
                 border: 3px solid $secColor;
+                border-radius: 4px;
                 color: $secColor;
                 font-family: $secFont;
                 text-align: center;
@@ -52,15 +49,15 @@
                     transition: background .3s ease-in-out;
                 }
                 &.action {
-                    font-size: 6vw;
+                    font-size: 4vw;
                     margin: 0 $small $small;
                     padding: $small $medium;
                 }
                 &.secondary {
-                    font-size: 4vw;
+                    font-size: 3vw;
                     margin: $small auto;
                     padding: $xsmall $small;
-                    width: 70%;
+                    width: 80%;
                 }
             }
         }
@@ -77,43 +74,18 @@
         &_content {
             display: grid;
             &__company_name {
-                background-color: white;
-                color: $secColor;
-            }
-            &__company_name {
-                align-content: center;
-                display: grid;
-                font-family: $accentFont;
-                justify-content: center;
-            }
-            &__gallery {
-                align-content: center;
-                display: grid;
-                justify-content: center;
+                font-size: 7vw;
+                padding: $large;
             }
             &__nav_link {
-                background: white;
-                border: 3px solid $secColor;
-                color: $secColor;
-                font-family: $secFont;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                &:hover {
-                    background: $secColor;
-                    color: white;
-                    transition: background .3s ease-in-out;
-                }
                 &.action {
-                    font-size: $large;
+                    font-size: $midlarge;
                     margin: 0 $small $medium;
-                    padding: $small $medium;
                 }
                 &.secondary {
-                    font-size: $midlarge;
+                    font-size: $medium;
                     margin: $medium auto;
-                    padding: $xsmall $small;
-                    width: 70%;
+                    width: 75%;
                 }
             }
         }
@@ -129,46 +101,20 @@
     .landing_page {
         &_content {
             display: grid;
-            grid-template-rows: 40% 10% 20% 5% auto;
-            min-height: 125vh;
             &__company_name {
-                background-color: white;
-                color: $secColor;
-            }
-            &__company_name {
-                align-content: center;
-                display: grid;
-                font-family: $accentFont;
-                font-size: 10vw;
-                height: 25vh;
-                justify-content: center;
-            }
-            &__gallery {
-                align-content: center;
-                display: grid;
-                justify-content: center;
+                font-size: $xxlarge;
             }
             &__nav_link {
-                background: white;
-                border: 3px solid $secColor;
-                color: $secColor;
-                font-family: $secFont;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                &:hover {
-                    background: $secColor;
-                    color: white;
-                    transition: background .3s ease-in-out;
-                }
                 &.action {
+                    font-size: $midlarge;
                     margin: $small;
-                    padding: $large $xlarge;
+                    padding: $midlarge $large;
                 }
                 &.secondary {
+                    font-size: $medium;
                     margin: $small auto;
                     padding: $small $medium;
-                    width: 70%;
+                    width: 80%;
                 }
             }
         }
