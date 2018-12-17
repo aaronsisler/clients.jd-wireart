@@ -8,10 +8,11 @@
         &__background_image {
             background-image: url('/images/landing_page_background.jpg');
             background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
+            min-height: 100vh;
             left: 0;
-            min-height: 100%;
-            min-width: 100%;
+            width: 100%;
             position: fixed;
             top: 0;
             z-index: -10;

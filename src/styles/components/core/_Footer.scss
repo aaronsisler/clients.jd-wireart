@@ -2,7 +2,6 @@
 //max-width 640px, small screens
 @media only screen {
     footer {
-        // background-color: $darkMainColor;
         background-color: darken($secColor, 10);
         color: white;
         display: flex;
