@@ -8,7 +8,7 @@ export default class GalleryListItem extends React.Component {
     }
 
     render() {
-        const { galleryItemId, imagePath, name } = this.props;
+        const { galleryPieceId, imagePath, name } = this.props;
         return (
             <div className="gallery_list_item">
                 <div className="gallery_list_item__image">
@@ -18,7 +18,7 @@ export default class GalleryListItem extends React.Component {
                     {name}
                     <Link
                         className="gallery_list_item__link"
-                        to={`/gallery_piece/${galleryItemId}`}
+                        to={`/gallery_piece/${galleryPieceId}`}
                     >
                         View Details
                     </Link>
@@ -29,7 +29,7 @@ export default class GalleryListItem extends React.Component {
 }
 
 GalleryListItem.propTypes = {
-    galleryItemId: PropTypes.string.isRequired,
+    galleryPieceId: PropTypes.string.isRequired,
     imagePath: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
 };

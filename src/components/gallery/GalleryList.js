@@ -21,7 +21,7 @@ export default class GalleryList extends React.Component {
                 {
                     this.props.gallery.map((galleryItem) =>
                         <GalleryListItem
-                            key={galleryItem.galleryItemId}
+                            key={galleryItem.galleryPieceId}
                             {...galleryItem}
                         />)
                 }
