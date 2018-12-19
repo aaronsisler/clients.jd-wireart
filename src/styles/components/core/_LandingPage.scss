@@ -8,45 +8,39 @@
         &__background_image {
             background-image: url('/images/landing_page_background.jpg');
             background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
+            min-height: 100vh;
             left: 0;
-            min-height: 100%;
-            min-width: 100%;
+            width: 100%;
             position: fixed;
             top: 0;
             z-index: -10;
         }
         &_content {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr 0.5fr;
-            min-height: 100%;
-            &__company_name,
-            &__gallery,
-            &__about_us {
-                background-color: white;
-            }
+            grid-template-rows: 50vh auto 7vh auto 20vh;
             &__company_name {
                 align-content: center;
+                background-color: white;
+                color: $secColor;
                 display: grid;
                 font-family: $accentFont;
-                font-size: 25rem;
-                height: 40rem;
+                font-size: 10vw;
                 justify-content: center;
+                padding: $medium;
             }
             &__gallery {
                 align-content: center;
                 display: grid;
-                height: 30rem;
                 justify-content: center;
             }
-            &__nav_link-action {
+            &__nav_link {
                 background: white;
                 border: 3px solid $secColor;
+                border-radius: 4px;
                 color: $secColor;
-                font-family: $secondaryFont;
-                font-size: $xlarge;
-                margin: $small;
-                padding: $large $xlarge;
+                font-family: $secFont;
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -55,22 +49,16 @@
                     color: white;
                     transition: background .3s ease-in-out;
                 }
-            }
-            &__nav_link-secondary {
-                background: white;
-                color: $secColor;
-                font-family: $secondaryFont;
-                font-size: $large;
-                margin: $small auto;
-                padding: $small $medium;
-                width: 70%;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                &:hover {
-                    background: $secColor;
-                    color: white;
-                    transition: background .3s ease-in-out;
+                &.action {
+                    font-size: 4vw;
+                    margin: 0 $small $small;
+                    padding: $small $medium;
+                }
+                &.secondary {
+                    font-size: 3vw;
+                    margin: $small auto;
+                    padding: $xsmall $small;
+                    width: 80%;
                 }
             }
         }
@@ -82,14 +70,57 @@
     min-width 641px, medium screens
 */
 
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    .landing_page {
+        &_content {
+            display: grid;
+            &__company_name {
+                font-size: 7vw;
+                padding: $large;
+            }
+            &__nav_link {
+                &.action {
+                    font-size: $midlarge;
+                    margin: 0 $small $medium;
+                }
+                &.secondary {
+                    font-size: $medium;
+                    margin: $medium auto;
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
 
 /*
     Large screens - DESKTOP
     min-width 1025px, large screens
 */
 
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .landing_page {
+        &_content {
+            display: grid;
+            &__company_name {
+                font-size: $xxlarge;
+            }
+            &__nav_link {
+                &.action {
+                    font-size: $midlarge;
+                    margin: $small;
+                    padding: $midlarge $large;
+                }
+                &.secondary {
+                    font-size: $medium;
+                    margin: $small auto;
+                    padding: $small $medium;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
 
 /*
     XLarge screens

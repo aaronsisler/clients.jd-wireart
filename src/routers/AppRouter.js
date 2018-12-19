@@ -4,6 +4,7 @@ import createHistory from 'history/createBrowserHistory';
 import ScrollToTop from 'Core/ScrollToTop';
 import AboutPage from 'Core/AboutPage'
 import GalleryPage from 'Gallery/GalleryPage'
+import GalleryPiecePage from 'Gallery/GalleryPiecePage'
 import LandingPage from 'Core/LandingPage';
 import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
 import NotFoundPage from 'Core/NotFoundPage';
@@ -17,6 +18,7 @@ const AppRouter = () => (
             <Switch>
                 <Route path="/" component={LandingPage} exact={true} />
                 <Route path="/gallery" component={GalleryPage} />
+                <Route path="/gallery_piece/:id" component={GalleryPiecePage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/privacy" component={PrivacyPolicyPage} />
                 <Route component={NotFoundPage} />

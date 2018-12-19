@@ -2,10 +2,10 @@
 //max-width 640px, small screens
 @media only screen {
     footer {
-        background-color: $darkGrey;
+        background-color: darken($secColor, 10);
         color: white;
         display: flex;
-        font-family: $secondaryFont;
+        font-family: $secFont;
         font-size: $medium;
         justify-content: space-evenly;
         padding: $medium;
@@ -16,7 +16,8 @@
         text-decoration: none;
     }
     footer a:hover {
-        color: $secColor;
+        padding-bottom: $xsmall;
+        border-bottom: 1px solid white;
     }
 }
 

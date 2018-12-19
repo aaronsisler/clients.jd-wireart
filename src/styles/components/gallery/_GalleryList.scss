@@ -1,19 +1,10 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    #privacy_policy_page {
-        font-family: $secFont;
-        margin: 0 $medium;
-    }
-    #privacy_policy_page>h3 {
-        font-size: $large;
-    }
-    #privacy_policy_page>h4 {
-        font-size: $medium;
-    }
-    #privacy_policy_page>p {
-        font-size: $medium;
-        text-align: left;
+    .gallery_list {
+        display: grid;
+        grid-gap: $medium;
+        grid-template-rows: 1fr;
     }
 }
 
@@ -24,8 +15,8 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    #privacy_policy_page {
-        margin: 0 $xxlarge 0 $large;
+    .gallery_list {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

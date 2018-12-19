@@ -1,7 +1,18 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {}
+    .gallery_container {
+        padding: $large 10%;
+        font-size: $large;
+        text-align: center;
+        &__title {
+            font-family: $mainFont;
+            margin-bottom: $large;
+        }
+        &__loading {
+            font-family: $accentFont;
+        }
+    }
 }
 
 //Medium screens - TABLET
