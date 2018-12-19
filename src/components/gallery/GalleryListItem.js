@@ -15,9 +15,7 @@ export default class GalleryListItem extends React.Component {
                     <img src={imagePath} />
                 </div>
                 <div className="gallery_list_item__content">
-                    <div>
-                        {name}
-                    </div>
+                    {name}
                     <Link
                         className="gallery_list_item__link"
                         to={`/gallery_piece/${galleryItemId}`}

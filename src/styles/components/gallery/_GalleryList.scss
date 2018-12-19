@@ -4,7 +4,7 @@
     .gallery_list {
         display: grid;
         grid-gap: $medium;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
 
@@ -14,7 +14,11 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens

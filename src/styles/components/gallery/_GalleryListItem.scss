@@ -5,36 +5,31 @@
         background-color: white;
         box-shadow: 0 3px 4px rgba(0, 0, 0, .25);
         display: grid;
-        grid-template-rows: 2fr 0.25fr;
-        height: 50rem;
         &__image {
-            align-content: center;
             display: grid;
             justify-content: center;
-            height: 100%;
             width: 100%;
             img {
-                height: 35rem;
-                object-fit: contain;
+                object-fit: scale-down;
                 width: 100%;
             }
         }
         &__content {
             display: grid;
             font-family: $mainFont;
-            font-size: $large;
-            grid-template-rows: 0.5fr 1fr;
-            grid-gap: $small;
-            padding-bottom: $medium;
+            font-size: $midlarge;
+            padding: $medium;
             text-align: center;
         }
         &__link {
+            align-content: center;
             background: white;
             border: 2px solid $secColor;
             color: $secColor;
+            display: grid;
             font-family: $secFont;
-            font-size: $large;
-            margin: 0 auto;
+            font-size: $medium;
+            margin: $small auto 0;
             padding: $small $medium;
             text-align: center;
             text-decoration: none;
@@ -55,7 +50,14 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_list_item {
+        grid-template-rows: 2fr 0.5fr;
+        &__image {
+            align-content: center;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
