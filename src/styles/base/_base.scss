@@ -6,3 +6,22 @@ html {
     font-size: 62.5%;
     height: 100%;
 }
+
+.nav_link {
+    align-content: center;
+    background: white;
+    border: 3px solid $secColor;
+    border-radius: 4px;
+    color: $secColor;
+    display: grid;
+    font-family: $secFont;
+    padding: $small $medium;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        background: $secColor;
+        color: white;
+        transition: background .3s ease-in-out;
+    }
+}

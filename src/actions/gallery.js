@@ -6,7 +6,7 @@ export const startSetGallery = () => (dispatch) =>
         const gallery = [];
         snapshot.forEach((childSnapshot) => {
             gallery.push({
-                galleryItemId: childSnapshot.key,
+                galleryPieceId: childSnapshot.key,
                 ...childSnapshot.val(),
             });
         });

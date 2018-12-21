@@ -35,31 +35,16 @@
                 display: grid;
                 justify-content: center;
             }
-            &__nav_link {
-                background: white;
-                border: 3px solid $secColor;
-                border-radius: 4px;
-                color: $secColor;
-                font-family: $secFont;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                &:hover {
-                    background: $secColor;
-                    color: white;
-                    transition: background .3s ease-in-out;
-                }
-                &.action {
-                    font-size: 4vw;
-                    margin: 0 $small $small;
-                    padding: $small $medium;
-                }
-                &.secondary {
-                    font-size: 3vw;
-                    margin: $small auto;
-                    padding: $xsmall $small;
-                    width: 80%;
-                }
+            &__action_link {
+                font-size: 4vw;
+                margin: 0 $small $small;
+                padding: $small $medium;
+            }
+            &__secondary_link {
+                font-size: 3vw;
+                margin: $small auto;
+                padding: $xsmall $small;
+                width: 80%;
             }
         }
     }
@@ -78,16 +63,14 @@
                 font-size: 7vw;
                 padding: $large;
             }
-            &__nav_link {
-                &.action {
-                    font-size: $midlarge;
-                    margin: 0 $small $medium;
-                }
-                &.secondary {
-                    font-size: $medium;
-                    margin: $medium auto;
-                    width: 75%;
-                }
+            &__action_link {
+                font-size: $midlarge;
+                margin: 0 $small $medium;
+            }
+            &__secondary_link {
+                font-size: $medium;
+                margin: $medium auto;
+                width: 75%;
             }
         }
     }

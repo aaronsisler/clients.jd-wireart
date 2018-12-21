@@ -12,13 +12,13 @@ const LandingPage = () => (
             <div className="landing_page_content__spacer" />
             <div className="landing_page_content__gallery">
                 <Link
-                    className="landing_page_content__nav_link action"
+                    className="landing_page_content__action_link nav_link"
                     to="/gallery"
                 >
                     Browse our gallery
             </Link>
                 <Link
-                    className="landing_page_content__nav_link secondary"
+                    className="landing_page_content__secondary_link nav_link"
                     to="/about"
                 >
                     Learn more about us

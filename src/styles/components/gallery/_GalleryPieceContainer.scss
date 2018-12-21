@@ -1,0 +1,35 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    .gallery_piece_container {
+        align-items: center;
+        display: grid;
+        grid-template-areas: "gallery_piece_image" "gallery_piece_details";
+        padding: 0 0 $large 0;
+    }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+    .gallery_piece_container {
+        align-items: center;
+        display: grid;
+        grid-gap: $small;
+        grid-template-areas: "gallery_piece_details gallery_piece_image";
+        padding: 25vh 20%;
+        height: 95vh;
+    }
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {}
