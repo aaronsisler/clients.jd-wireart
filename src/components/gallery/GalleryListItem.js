@@ -17,7 +17,7 @@ export default class GalleryListItem extends React.Component {
                 <div className="gallery_list_item__content">
                     {name}
                     <Link
-                        className="gallery_list_item__link"
+                        className="gallery_list_item__link nav_link"
                         to={`/gallery_piece/${galleryPieceId}`}
                     >
                         View Details

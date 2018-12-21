@@ -2,11 +2,13 @@
 //max-width 640px, small screens
 @media only screen {
     footer {
+        align-items: center;
         background-color: darken($secColor, 10);
         color: white;
         display: flex;
         font-family: $secFont;
         font-size: $medium;
+        height: 5vh;
         justify-content: space-evenly;
         padding: $medium;
         text-align: center;

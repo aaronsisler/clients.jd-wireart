@@ -2,7 +2,15 @@
 //max-width 640px, small screens
 @media only screen {
     .gallery_piece_image {
-        background-color: rebeccapurple;
+        align-content: center;
+        display: grid;
+        grid-area: gallery_piece_image;
+        justify-content: center;
+        width: 100%;
+        img {
+            object-fit: scale-down;
+            width: 100%;
+        }
     }
 }
 

@@ -2,17 +2,51 @@
 //max-width 640px, small screens
 @media only screen {
     .gallery_piece_details {
-        background-color: greenyellow;
+        display: grid;
+        font-family: $mainFont;
+        grid-area: gallery_piece_details;
+        height: 100%;
+        padding: $medium;
+        padding-bottom: $large;
+        text-align: center;
+        &__content {
+            align-self: center;
+            padding-bottom: $medium;
+        }
+        &__name,
+        &__price {
+            font-size: $large;
+            padding: $small;
+        }
+        &__contact {
+            align-self: center;
+            font-size: $midlarge;
+            margin: 0 auto;
+            width: 70vw;
+        }
     }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    .gallery_piece_details {
+        &__contact {
+            width: 40vw;
+        }
+    }
+}
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_piece_details {
+        box-shadow: $boxShadow;
+        &__contact {
+            width: 70%;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens

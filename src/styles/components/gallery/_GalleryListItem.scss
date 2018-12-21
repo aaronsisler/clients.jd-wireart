@@ -22,24 +22,10 @@
             text-align: center;
         }
         &__link {
-            align-content: center;
-            background: white;
-            border: 2px solid $secColor;
-            color: $secColor;
-            display: grid;
             font-family: $secFont;
             font-size: $medium;
             margin: $small auto 0;
-            padding: $small $medium;
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
             width: 70%;
-            &:hover {
-                background: $secColor;
-                color: white;
-                transition: background .3s ease-in-out;
-            }
         }
     }
 }
@@ -55,6 +41,9 @@
         grid-template-rows: 2fr 0.5fr;
         &__image {
             align-content: center;
+        }
+        &__link {
+            width: 50%;
         }
     }
 }
