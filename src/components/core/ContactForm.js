@@ -162,7 +162,9 @@ class ContactForm extends React.Component {
                             this.props.galleryPieceName
                             &&
                             <div className="contact_form__gallery_piece">
-                                I would like to purchase the following piece: {this.props.galleryPieceName}
+                                I would like to purchase the following piece:
+                                <br />
+                                {this.props.galleryPieceName}
                             </div>
                         }
                         <div className="contact_form__input">
@@ -200,11 +202,16 @@ class ContactForm extends React.Component {
     }
 }
 
-const mapStateToProps = (state, props) => ({
-    galleryPieceId: props.match.params.id,
-    // galleryPieceName: undefined,
-    galleryPieceName: state.gallery.find((galleryPiece) => galleryPiece.galleryPieceId == props.match.params.id).name,
-});
+const mapStateToProps = (state, props) => {
+    const { id: galleryPieceId } = props.match.params;
+    const galleryPieceName = galleryPieceId
+        ? state.gallery.find((galleryPiece) => galleryPiece.galleryPieceId == galleryPieceId).name
+        : undefined;
+    return ({
+        galleryPieceId,
+        galleryPieceName,
+    });
+};
 
 
 const mapDispatchToProps = () => ({

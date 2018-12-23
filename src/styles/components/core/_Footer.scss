@@ -3,7 +3,7 @@
 @media only screen {
     footer {
         align-items: center;
-        background-color: darken($secColor, 10);
+        background-color: $darkMainColor;
         color: white;
         display: flex;
         font-family: $secFont;

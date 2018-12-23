@@ -1,18 +1,26 @@
 * {
     box-sizing: border-box;
+    font-family: $mainFont;
 }
 
 html {
+    font-family: $mainFont;
     font-size: 62.5%;
     height: 100%;
 }
 
-.nav_link {
+button,
+input {
+    font-family: $mainFont;
+}
+
+.nav_link,
+button {
     align-content: center;
     background: white;
-    border: 3px solid $secColor;
+    border: 3px solid $mainColor;
     border-radius: 4px;
-    color: $secColor;
+    color: $mainColor;
     display: grid;
     font-family: $secFont;
     padding: $small $medium;
@@ -20,7 +28,7 @@ html {
     text-decoration: none;
     text-transform: uppercase;
     &:hover {
-        background: $secColor;
+        background: $mainColor;
         color: white;
         transition: background .3s ease-in-out;
     }

@@ -2,31 +2,63 @@
 //max-width 640px, small screens
 @media only screen {
     .contact_form {
-        display: grid;
         font-family: $mainFont;
-        font-size: $medium;
-        justify-content: center;
-        margin: $medium;
-        width: 100%;
-        form {
+        &__form {
             display: grid;
-            width: 100%;
+            grid-template-columns: 100%;
+            justify-content: center;
+            margin: 0 auto;
+            padding: $xlarge $medium;
+            width: 90%;
         }
-        &__input {
+        &__input,
+        &__gallery_piece {
             display: grid;
+            font-size: $medium;
+            margin: 0 auto;
             padding: $medium 0;
             width: 100%;
+        }
+        &__button {
+            font-size: $medium;
+            &:disabled {
+                background: $mainColor;
+                color: white;
+                opacity: .5;
+            }
         }
     }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    .contact_form {
+        &__form {
+            width: 70%;
+        }
+    }
+}
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .contact_form {
+        font-size: $medium;
+        padding-bottom: $xlarge;
+        &__form {
+            width: 50%;
+        }
+        &__input,
+        &__gallery_piece {
+            font-size: $midlarge;
+            padding: $medium 0;
+        }
+        &__button {
+            font-size: $midlarge;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
