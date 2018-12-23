@@ -27,6 +27,11 @@
                 opacity: .5;
             }
         }
+        &__email {
+            font-size: $medium;
+            margin: $xlarge;
+            text-align: center;
+        }
     }
 }
 
@@ -36,6 +41,9 @@
     .contact_form {
         &__form {
             width: 70%;
+        }
+        &__email {
+            font-size: $midlarge;
         }
     }
 }
@@ -56,6 +64,9 @@
         }
         &__button {
             font-size: $midlarge;
+        }
+        &__email {
+            font-size: $large;
         }
     }
 }
