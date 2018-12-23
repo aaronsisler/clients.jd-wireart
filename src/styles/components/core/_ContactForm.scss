@@ -5,7 +5,18 @@
         display: grid;
         font-family: $mainFont;
         font-size: $medium;
-        margin: $medium 20%;
+        justify-content: center;
+        margin: $medium;
+        width: 100%;
+        form {
+            display: grid;
+            width: 100%;
+        }
+        &__input {
+            display: grid;
+            padding: $medium 0;
+            width: 100%;
+        }
     }
 }
 

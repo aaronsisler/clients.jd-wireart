@@ -1,16 +1,23 @@
 import { validate } from 'email-validator';
-import { apiGatewayEmailURL, apiGatewayToken, pointOfContactEmail } from '../config';
+import { apiGatewayEmailURL, apiGatewayToken, pointOfContactEmail, websiteURL } from '../config';
 
-const createRequest = (data, done, fail) => {
+export const isEmailValid = (email) => validate(email);
+
+const sendRequest = (data, done, fail) => {
     const emailProperties = {
         pointOfContactEmail,
-        name: "",
-        website: "",
         emailAddress: "",
-        phoneNumber: "",
         message: "",
+        name: "",
+        phoneNumber: "",
+        website: "",
         ...data
+    };
+
+    if (data.galleryPieceId) {
+        emailProperties.galleryPieceLink = constructGalleryPieceLink(data.galleryPieceId);
     }
+
     const request = new XMLHttpRequest();
     request.onload = function () {
         done();
@@ -24,6 +31,6 @@ const createRequest = (data, done, fail) => {
     request.send(JSON.stringify(emailProperties));
 }
 
-export const isEmailValid = (emailAddress) => validate(emailAddress);
+const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/gallery_piece/${galleryPieceId}`;
 
-export const sendEmail = (data, done, fail) => createRequest(data, done, fail);
+export const sendEmail = (data, done, fail) => sendRequest(data, done, fail);
