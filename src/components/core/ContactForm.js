@@ -11,6 +11,8 @@ class ContactForm extends React.Component {
         this.state = {
             buttonText: "Send It",
             error: {},
+            emailError: false,
+            emailSent: false,
             isSendButtonDisabled: true,
             emailAddress: "",
             name: "",
@@ -99,8 +101,8 @@ class ContactForm extends React.Component {
             name,
             phoneNumber,
         };
-        const done = () => this.setState(() => ({ isSendButtonDisabled: false }));
-        const fail = () => this.setState(() => ({ isSendButtonDisabled: false }));
+        const done = () => this.setState(() => ({ emailSent: true }));
+        const fail = () => this.setState(() => ({ emailError: true }));
         sendEmail(data, done, fail);
     }
 
@@ -119,63 +121,80 @@ class ContactForm extends React.Component {
 
         return (
             <div className="contact_form">
-                <p>GalleryPieceId: {this.props.galleryPieceId}</p>
-                <div className="contact_form__input">
-                    {error.name && <ContactFormError error={error.name} />}
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name (Required)"
-                        onChange={this.handleNameInput}
-                        onBlur={this.handleNameValidation}
-                        value={name}
-                    />
-                </div>
-                <div className="contact_form__input">
-                    {error.emailAddress && <ContactFormError error={error.emailAddress} />}
-                    <input
-                        type="text"
-                        name="emailAddress"
-                        placeholder="Email (Required)"
-                        onBlur={this.handleEmailValidation}
-                        onChange={this.handleEmailInput}
-                        value={emailAddress}
-                    />
-                </div>
-                <div className="contact_form__input">
-                    {error.phoneNumber && <ContactFormError error={error.phoneNumber} />}
-                    <input
-                        type="text"
-                        name="phoneNumber"
-                        placeholder="Phone (Digits only, no dashes, etc.)"
-                        onBlur={this.handlePhoneValidation}
-                        onChange={this.handlePhoneInput}
-                        value={phoneNumber}
-                    />
-                </div>
                 {
-                    this.props.galleryPieceName
+                    (!this.state.emailSent && !this.state.emailError)
                     &&
-                    <div className="contact_form__gallery_piece">
-                        I would like to purchase the following piece: {this.props.galleryPieceName}
+                    <div className="contact_form__form">
+                        <div className="contact_form__input">
+                            {error.name && <ContactFormError error={error.name} />}
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Name (Required)"
+                                onChange={this.handleNameInput}
+                                onBlur={this.handleNameValidation}
+                                value={name}
+                            />
+                        </div>
+                        <div className="contact_form__input">
+                            {error.emailAddress && <ContactFormError error={error.emailAddress} />}
+                            <input
+                                type="text"
+                                name="emailAddress"
+                                placeholder="Email (Required)"
+                                onBlur={this.handleEmailValidation}
+                                onChange={this.handleEmailInput}
+                                value={emailAddress}
+                            />
+                        </div>
+                        <div className="contact_form__input">
+                            {error.phoneNumber && <ContactFormError error={error.phoneNumber} />}
+                            <input
+                                type="text"
+                                name="phoneNumber"
+                                placeholder="Phone (Digits only, no dashes, etc.)"
+                                onBlur={this.handlePhoneValidation}
+                                onChange={this.handlePhoneInput}
+                                value={phoneNumber}
+                            />
+                        </div>
+                        {
+                            this.props.galleryPieceName
+                            &&
+                            <div className="contact_form__gallery_piece">
+                                I would like to purchase the following piece: {this.props.galleryPieceName}
+                            </div>
+                        }
+                        <div className="contact_form__input">
+                            <textarea
+                                name="message"
+                                rows="4"
+                                placeholder="What's on your mind?"
+                                onChange={this.handleMessageInput}
+                                value={message}
+                            ></textarea>
+                        </div>
+                        <button
+                            className="contact_form__button"
+                            disabled={isSendButtonDisabled}
+                            onClick={this.handleSubmitContact}
+                        >
+                            {this.state.buttonText}
+                        </button>
                     </div>
                 }
-                <div className="contact_form__input">
-                    <textarea
-                        name="message"
-                        rows="4"
-                        placeholder="What's on your mind?"
-                        onChange={this.handleMessageInput}
-                        value={message}
-                    ></textarea>
-                </div>
-                <button
-                    className="contact_form__button"
-                    disabled={isSendButtonDisabled}
-                    onClick={this.handleSubmitContact}
-                >
-                    {this.state.buttonText}
-                </button>
+                {
+                    this.state.emailSent &&
+                    <div className="contact_form__email">
+                        <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
+                    </div>
+                }
+                {
+                    this.state.emailError &&
+                    <div className="contact_form__email">
+                        <p>Something went wrong unfortunately. Please try reloading the page.</p>
+                    </div>
+                }
             </div>
         );
     }
