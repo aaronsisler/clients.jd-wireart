@@ -5,12 +5,12 @@ export const isEmailValid = (email) => validate(email);
 
 const sendRequest = (data, done, fail) => {
     const emailProperties = {
-        pointOfContactEmail,
         emailAddress: "",
         message: "",
         name: "",
         phoneNumber: "",
         website: "",
+        pointOfContactEmail,
         ...data
     };
 

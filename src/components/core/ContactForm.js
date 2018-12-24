@@ -117,12 +117,12 @@ class ContactForm extends React.Component {
     }
 
     render() {
-        const { emailAddress, error, isSendButtonDisabled, message, name, phoneNumber } = this.state;
+        const { emailAddress, emailError, emailSent, error, isSendButtonDisabled, message, name, phoneNumber } = this.state;
 
         return (
             <div className="contact_form">
                 {
-                    (!this.state.emailSent && !this.state.emailError)
+                    (!emailError && !emailSent)
                     &&
                     <div className="contact_form__form">
                         <div className="contact_form__input">
@@ -186,13 +186,13 @@ class ContactForm extends React.Component {
                     </div>
                 }
                 {
-                    this.state.emailSent &&
+                    emailSent &&
                     <div className="contact_form__email">
                         <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
                     </div>
                 }
                 {
-                    this.state.emailError &&
+                    emailError &&
                     <div className="contact_form__email">
                         <p>Something went wrong unfortunately. Please try reloading the page.</p>
                     </div>
