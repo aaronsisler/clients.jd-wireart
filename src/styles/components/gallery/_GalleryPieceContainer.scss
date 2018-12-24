@@ -21,6 +21,7 @@
         display: grid;
         grid-gap: $small;
         grid-template-areas: "gallery_piece_details gallery_piece_image";
+        grid-template-columns: 1fr 1fr;
         padding: 25vh 20%;
         height: 95vh;
     }
