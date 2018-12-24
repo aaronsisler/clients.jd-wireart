@@ -10,14 +10,14 @@ class ContactForm extends React.Component {
 
         this.state = {
             buttonText: "Send It",
-            error: {},
+            emailAddress: "",
             emailError: false,
             emailSent: false,
+            error: {},
             isSendButtonDisabled: true,
-            emailAddress: "",
+            message: "",
             name: "",
             phoneNumber: "",
-            message: "",
         }
     }
 
@@ -49,16 +49,16 @@ class ContactForm extends React.Component {
         }), this.validateRequiredFields);
     }
 
-    handleNameInput = (e) => {
-        const { value: name } = e.target;
-
-        return this.setState(() => ({ name }), this.validateRequiredFields);
-    }
-
     handleMessageInput = (e) => {
         const { value: message } = e.target;
 
         return this.setState(() => ({ message }));
+    }
+
+    handleNameInput = (e) => {
+        const { value: name } = e.target;
+
+        return this.setState(() => ({ name }), this.validateRequiredFields);
     }
 
     handleNameValidation = (e) => {
