@@ -2,8 +2,7 @@ import React from 'react';
 import ContactForm from 'Core/ContactForm';
 
 const ContactPage = (props) => (
-    <div id='contact_page'>
-        <h3>Contact Us</h3>
+    <div className='contact_page'>
         <ContactForm {...props} />
     </div>
 );
