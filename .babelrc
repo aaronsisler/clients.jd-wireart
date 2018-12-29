@@ -18,6 +18,7 @@
                     "Core": "./src/components/core",
                     "Firebase": "./src/firebase",
                     "Gallery": "./src/components/gallery",
+                    "Manager": "./src/components/manager",
                     "Reducers": "./src/reducers",
                     "Selectors": "./src/selectors",
                     "Shared": "./src/components/shared",
