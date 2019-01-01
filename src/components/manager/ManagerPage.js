@@ -1,9 +1,9 @@
 import React from 'react';
 import ManagerContainer from 'Manager/ManagerContainer';
 
-const ManagerPage = () => (
+const ManagerPage = (props) => (
     <div className="manager_page">
-        <ManagerContainer />
+        <ManagerContainer {...props} />
     </div>
 )
 

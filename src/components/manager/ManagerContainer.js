@@ -11,7 +11,7 @@ class ManagerContainer extends React.Component {
     }
 
     render() {
-        const { gallery } = this.props;
+        const { gallery, galleryPiece } = this.props;
         return (
             <div className="inbox_container">
                 <div className="inbox_widget">
@@ -19,16 +19,25 @@ class ManagerContainer extends React.Component {
                         <Link className="nav_link" to="/manager_add">Add Gallery Piece</Link>
                         <ManagerList gallery={gallery} />
                     </div>
-                    <ManagerDetails />
+                    <ManagerDetails galleryPiece={galleryPiece} />
                 </div>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => ({
-    gallery: state.gallery,
-});
+const mapStateToProps = (state, props) => {
+    const { id: galleryPieceId } = props.match.params;
+    const galleryPiece = galleryPieceId
+        ? state.gallery.find((stateGalleryPiece) => stateGalleryPiece.galleryPieceId == galleryPieceId)
+        : undefined;
+
+    return ({
+        gallery: state.gallery,
+        galleryPiece,
+    });
+};
+
 
 const mapDispatchToProps = () => ({
 });
@@ -37,4 +46,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(ManagerContainer);
 
 ManagerContainer.propTypes = {
     gallery: PropTypes.array,
+    galleryPiece: PropTypes.object,
 };
