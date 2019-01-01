@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { startSetPaypalFlag } from 'Actions/galleryPiece';
 
 class UnlockPaypal extends React.Component {
     constructor(props) {
@@ -12,7 +13,12 @@ class UnlockPaypal extends React.Component {
         return (
             <div className="unlock_paypal">
                 <input type='text'></input>
-                <button className="nav_link">Click to Unlock {galleryPieceId}</button>
+                <button
+                    className="nav_link"
+                    onClick={this.props.startSetPaypalFlag}
+                >
+                    Click to Unlock {galleryPieceId}
+                </button>
             </div>
         )
     }
@@ -22,11 +28,13 @@ const mapStateToProps = () => ({
 });
 
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    startSetPaypalFlag: () => dispatch(startSetPaypalFlag(ownProps.galleryPieceId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UnlockPaypal);
 
 UnlockPaypal.propTypes = {
     galleryPieceId: PropTypes.string.isRequired,
+    startSetPaypalFlag: PropTypes.func.isRequired,
 };
