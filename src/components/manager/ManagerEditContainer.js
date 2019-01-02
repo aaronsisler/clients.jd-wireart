@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from 'Tools/history';
 import GalleryPieceForm from 'Gallery/GalleryPieceForm';
@@ -19,7 +18,9 @@ class ManagerEditContainer extends React.Component {
     render() {
         return (
             <div className="manager_edit_container">
-                <Link className="nav_link" to={`/manager/${this.props.galleryPieceId}`}>Back to Dashboard</Link>
+                <div className="manager_edit_container__title">
+                    Edit Gallery Piece
+                </div>
                 <GalleryPieceForm galleryPiece={this.props.galleryPiece} onSubmit={this.onSubmit} />
             </div>
         )

@@ -1,10 +1,13 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .contact_form_error {
-        font-family: $secFont;
-        font-size: $medium;
-        padding-bottom: $small;
+    .manager_edit_container {
+        padding: $medium;
+        &__title {
+            font-size: $medium;
+            font-weight: 600;
+            margin-bottom: $small;
+        }
     }
 }
 

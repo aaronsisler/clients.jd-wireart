@@ -8,11 +8,12 @@ export default class GalleryListItem extends React.Component {
     }
 
     render() {
-        const { galleryPieceId, imagePath, name } = this.props;
+        const { galleryPieceId, imageURL, name } = this.props;
         return (
             <div className="gallery_list_item">
                 <div className="gallery_list_item__image">
-                    <img src={imagePath} />
+                    {!imageURL && <img src="/images/no_image_available.svg" />}
+                    {imageURL && <img src={imageURL} />}
                 </div>
                 <div className="gallery_list_item__content">
                     {name}
@@ -30,6 +31,6 @@ export default class GalleryListItem extends React.Component {
 
 GalleryListItem.propTypes = {
     galleryPieceId: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired,
+    imageURL: PropTypes.string,
     name: PropTypes.string.isRequired,
 };

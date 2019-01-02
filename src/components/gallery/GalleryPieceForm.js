@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { convertAmount } from 'Tools/amount';
+import FormError from 'Core/FormError';
 
 export default class GalleryPieceForm extends React.Component {
     constructor(props) {
@@ -42,7 +43,7 @@ export default class GalleryPieceForm extends React.Component {
         const { error, name, price } = this.state;
         return (
             <div className="gallery_piece_form">
-                {error && <p className="gallery_piece_form__error">{error}</p>}
+                {error && <FormError error={error} />}
                 <div className="gallery_piece_form__input">
                     <input
                         type="text"
@@ -60,7 +61,7 @@ export default class GalleryPieceForm extends React.Component {
                         onChange={this.onPriceChange}
                     />
                 </div>
-                <div>
+                <div className="gallery_piece_form__button">
                     <button className="nav_link" onClick={this.handleSubmit}>Save</button>
                 </div>
             </div>

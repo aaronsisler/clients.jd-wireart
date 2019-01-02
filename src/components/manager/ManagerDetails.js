@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { convertAmount } from 'Tools/amount';
 import UnlockPaypal from 'Paypal/UnlockPaypal';
 import GalleryPieceImage from 'Gallery/GalleryPieceImage';
+import GalleryPieceImageUpload from 'Gallery/GalleryPieceImageUpload';
 
 export default class ManagerDetails extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ export default class ManagerDetails extends React.Component {
             )
         }
 
-        const { galleryPieceId, imagePath, isPaypalActive, name, price } = galleryPiece;
+        const { galleryPieceId, imageURL, isPaypalActive, name, price } = galleryPiece;
         return (
             <div className="inbox_details" >
                 <div className="inbox_details_header">
@@ -39,7 +40,9 @@ export default class ManagerDetails extends React.Component {
                         <Link className="nav_link" to={`/manager_edit/${galleryPieceId}`}>Edit Gallery Piece</Link>
                     </div>
                     <div className="inbox_details_content__image">
-                        <GalleryPieceImage imagePath={imagePath} />
+                        <GalleryPieceImageUpload galleryPieceId={galleryPieceId} />
+                        <br />
+                        <GalleryPieceImage imageURL={imageURL} />
                     </div>
                 </div>
             </div>

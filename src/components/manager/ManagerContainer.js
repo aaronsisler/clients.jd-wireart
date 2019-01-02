@@ -19,7 +19,7 @@ class ManagerContainer extends React.Component {
                         <Link className="nav_link" to="/manager_add">Add Gallery Piece</Link>
                         <ManagerList gallery={gallery} />
                     </div>
-                    <ManagerDetails galleryPiece={galleryPiece} />
+                    <ManagerDetails galleryPiece={galleryPiece} {...this.props} />
                 </div>
             </div>
         )

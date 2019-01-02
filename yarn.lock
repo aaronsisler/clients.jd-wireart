@@ -6371,6 +6371,12 @@ react-dom@16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-firebase-file-uploader@^2.4.2:
+  version "2.4.2"
+  resolved "https://eis.jfrog.io/eis/api/npm/npm/react-firebase-file-uploader/-/react-firebase-file-uploader-2.4.2.tgz#6bce6144683c125b282fcca357bb29bf425a16c5"
+  dependencies:
+    uuid "^3.2.1"
+
 react-modal@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.2.2.tgz#4bbf98bc506e61c446c9f57329c7a488ea7d504b"
@@ -6425,6 +6431,12 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-sweet-progress@^1.1.2:
+  version "1.1.2"
+  resolved "https://eis.jfrog.io/eis/api/npm/npm/react-sweet-progress/-/react-sweet-progress-1.1.2.tgz#b27c6baa7c08a12cf0896565431ba477af249892"
+  dependencies:
+    classnames "^2.2.5"
 
 react@16.0.0:
   version "16.0.0"
@@ -7878,7 +7890,7 @@ uuid@^2.0.1, uuid@^2.0.2:
   version "2.0.3"
   resolved "https://eis.jfrog.io/eis/api/npm/npm/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0, uuid@^3.3.2:
+uuid@^3.0.0, uuid@^3.2.1, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://eis.jfrog.io/eis/api/npm/npm/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 

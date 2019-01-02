@@ -18,6 +18,9 @@ class ManagerAddContainer extends React.Component {
     render() {
         return (
             <div className="manager_add_container">
+                <div className="manager_add_container__title">
+                    Add New Gallery Piece
+                </div>
                 <GalleryPieceForm onSubmit={this.onSubmit} />
             </div>
         )

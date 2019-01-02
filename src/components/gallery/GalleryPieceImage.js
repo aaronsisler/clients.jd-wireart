@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GalleryPieceImage = ({ imagePath }) => (
+const GalleryPieceImage = ({ imageURL }) => (
     <div className="gallery_piece_image">
-        {!imagePath && <img src="/images/no_image_available.svg" />}
-        {imagePath && <img src={imagePath} />}
+        {!imageURL && <img src="/images/no_image_available.svg" />}
+        {imageURL && <img src={imageURL} />}
     </div>
 );
 
 export default GalleryPieceImage;
 
 GalleryPieceImage.propTypes = {
-    imagePath: PropTypes.string,
+    imageURL: PropTypes.string,
 };
