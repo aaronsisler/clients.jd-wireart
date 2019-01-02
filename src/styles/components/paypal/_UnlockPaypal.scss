@@ -1,0 +1,32 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    .unlock_paypal {
+        align-content: center;
+        display: grid;
+        font-family: $mainFont;
+        grid-template-columns: 100%;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+        &__active {
+            font-size: $midlarge;
+        }
+    }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {}

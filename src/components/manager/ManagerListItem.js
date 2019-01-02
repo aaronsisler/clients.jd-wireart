@@ -11,7 +11,7 @@ export default class ManagerListItem extends React.Component {
 
     render() {
         return (
-            <div className="manager_list_item nav_link" onClick={this.handleItemClick}>
+            <div className="manager_list_item" onClick={this.handleItemClick}>
                 <div className="manager_list_item__content">
                     {this.props.name}
                 </div>

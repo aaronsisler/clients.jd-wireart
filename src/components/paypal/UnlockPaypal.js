@@ -9,15 +9,24 @@ class UnlockPaypal extends React.Component {
     }
 
     render() {
-        const { galleryPieceId } = this.props;
+        const { isPaypalActive } = this.props;
+        if (isPaypalActive) {
+            return (
+                <div className="unlock_paypal">
+                    <div className="unlock_paypal__active">
+                        Paypal Activated
+                    </div>
+                </div>
+            )
+        }
+
         return (
             <div className="unlock_paypal">
-                <input type='text'></input>
                 <button
                     className="nav_link"
                     onClick={this.props.startSetPaypalFlag}
                 >
-                    Click to Unlock {galleryPieceId}
+                    Click to Unlock Paypal
                 </button>
             </div>
         )
@@ -36,5 +45,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(UnlockPaypal);
 
 UnlockPaypal.propTypes = {
     galleryPieceId: PropTypes.string.isRequired,
+    isPaypalActive: PropTypes.bool,
     startSetPaypalFlag: PropTypes.func.isRequired,
 };

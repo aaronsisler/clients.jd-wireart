@@ -20,7 +20,7 @@ export default class ManagerDetails extends React.Component {
             )
         }
 
-        const { galleryPieceId, imagePath, name, price } = galleryPiece;
+        const { galleryPieceId, imagePath, isPaypalActive, name, price } = galleryPiece;
         return (
             <div className="inbox_details" >
                 <div className="inbox_details_header">
@@ -32,11 +32,15 @@ export default class ManagerDetails extends React.Component {
                             ${convertAmount(price)}
                         </div>
                     </div>
-                    <UnlockPaypal galleryPieceId={galleryPieceId} />
+                    <UnlockPaypal galleryPieceId={galleryPieceId} isPaypalActive={isPaypalActive} />
                 </div>
                 <div className="inbox_details_content">
-                    <Link className="nav_link" to={`/manager_edit/${galleryPieceId}`}>Edit Gallery Piece</Link>
-                    <GalleryPieceImage imagePath={imagePath} />
+                    <div className="inbox_details_content__link">
+                        <Link className="nav_link" to={`/manager_edit/${galleryPieceId}`}>Edit Gallery Piece</Link>
+                    </div>
+                    <div className="inbox_details_content__image">
+                        <GalleryPieceImage imagePath={imagePath} />
+                    </div>
                 </div>
             </div>
         );

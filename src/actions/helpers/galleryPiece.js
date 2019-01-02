@@ -1,4 +1,5 @@
-export const setPaypalFlag = (galleryPieceId) => ({
-    type: 'SET_PAYPAL_FLAG',
-    galleryPieceId
+export const editGalleryPiece = (galleryPieceId, updates) => ({
+    type: 'EDIT_GALLERY_PIECE',
+    galleryPieceId,
+    updates
 });

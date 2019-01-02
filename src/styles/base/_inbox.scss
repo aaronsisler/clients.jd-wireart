@@ -48,12 +48,12 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
     color: $darkMainColor;
     display: grid;
-    grid-template-columns: 85% 15%;
+    font-family: $secFont;
+    grid-template-columns: 50% 50%;
     padding: $small $medium;
 }
 
 .inbox_details_header {
-    font-family: $secFont;
     &__name {
         font-weight: 600;
         font-size: $midlarge;
@@ -66,8 +66,21 @@
 }
 
 .inbox_details_content {
+    align-items: center;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    display: grid;
+    grid-gap: $small;
+    grid-template-areas: "inbox_details_content_link inbox_details_content_image";
+    grid-template-columns: 1fr 1fr;
     padding: $large;
     overflow-y: auto;
+    &__link {
+        font-size: $medium;
+        grid-area: inbox_details_content_link;
+        margin: 0 25%;
+    }
+    &__image {
+        grid-area: inbox_details_content_image;
+    }
 }

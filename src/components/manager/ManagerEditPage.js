@@ -1,8 +1,9 @@
 import React from 'react';
+import ManagerEditContainer from 'Manager/ManagerEditContainer';
 
-const ManagerEditPage = () => (
+const ManagerEditPage = (props) => (
     <div className="manager_edit_page">
-        ManagerEditPage
+        <ManagerEditContainer {...props} />
     </div>
 )
 
