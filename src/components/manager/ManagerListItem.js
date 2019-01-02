@@ -22,6 +22,5 @@ export default class ManagerListItem extends React.Component {
 
 ManagerListItem.propTypes = {
     galleryPieceId: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
 };

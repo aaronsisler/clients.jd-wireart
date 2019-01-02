@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import history from 'Tools/history';
 import GalleryPieceForm from 'Gallery/GalleryPieceForm';
@@ -17,7 +18,8 @@ class ManagerEditContainer extends React.Component {
 
     render() {
         return (
-            <div className="mamanger_edit_container">
+            <div className="manager_edit_container">
+                <Link className="nav_link" to={`/manager/${this.props.galleryPieceId}`}>Back to Dashboard</Link>
                 <GalleryPieceForm galleryPiece={this.props.galleryPiece} onSubmit={this.onSubmit} />
             </div>
         )
@@ -28,7 +30,6 @@ const mapStateToProps = (state, props) => ({
     galleryPieceId: props.match.params.id,
     galleryPiece: state.gallery.find((stateGalleryPiece) => stateGalleryPiece.galleryPieceId == props.match.params.id)
 });
-
 
 const mapDispatchToProps = (dispatch) => ({
     startEditGalleryPiece: (galleryPieceId, galleryPiece) => dispatch(startEditGalleryPiece(galleryPieceId, galleryPiece)),
