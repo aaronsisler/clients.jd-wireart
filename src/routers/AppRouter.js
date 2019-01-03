@@ -7,12 +7,16 @@ import ContactPage from 'Core/ContactPage'
 import GalleryPage from 'Gallery/GalleryPage'
 import GalleryPiecePage from 'Gallery/GalleryPiecePage'
 import LandingPage from 'Core/LandingPage';
+import LoginPage from 'Core/LoginPage';
+import LoggedOutPage from 'Core/LoggedOutPage';
+import LogoutPage from 'Core/LogoutPage';
 import ManagerPage from 'Manager/ManagerPage'
 import ManagerAddPage from 'Manager/ManagerAddPage'
 import ManagerEditPage from 'Manager/ManagerEditPage'
 import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
 import NotFoundPage from 'Core/NotFoundPage';
 import Footer from 'Core/Footer'
+import AuthorizedRoute from 'Routers/AuthorizedRoute';
 
 const AppRouter = () => (
     <Router history={history}>
@@ -23,10 +27,13 @@ const AppRouter = () => (
                 <Route path="/gallery_piece/:id" component={GalleryPiecePage} />
                 <Route path="/contact_us" component={ContactPage} exact={true} />
                 <Route path="/contact_us/:id" component={ContactPage} />
-                <Route path="/manager" component={ManagerPage} exact={true} />
-                <Route path="/manager/:id" component={ManagerPage} />
-                <Route path="/manager_add" component={ManagerAddPage} exact={true} />
-                <Route path="/manager_edit/:id" component={ManagerEditPage} />
+                <Route path="/login" component={LoginPage} exact={true} />
+                <Route path='/logged_out' component={LoggedOutPage} exact={true} />
+                <Route path="/logout" component={LogoutPage} exact={true} />
+                <AuthorizedRoute path="/manager" component={ManagerPage} exact={true} />
+                <AuthorizedRoute path="/manager/:id" component={ManagerPage} />
+                <AuthorizedRoute path="/manager_add" component={ManagerAddPage} exact={true} />
+                <AuthorizedRoute path="/manager_edit/:id" component={ManagerEditPage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/privacy" component={PrivacyPolicyPage} />
                 <Route component={NotFoundPage} />

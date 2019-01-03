@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { login, logout } from './actions/auth';
+import { login, logout } from 'Actions/helpers/auth';
+import { startClearUser, startSetUser } from 'Actions/user';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import { firebase } from './firebase/firebase';
@@ -32,10 +33,12 @@ firebase.auth().onAuthStateChanged(async (user) => {
     await store.dispatch(startSetGallery());
 
     if (user) {
-        store.dispatch(login(user.uid));
+        await store.dispatch(login(user.uid));
+        await store.dispatch(startSetUser());
         renderApp();
     } else {
-        store.dispatch(logout());
+        await store.dispatch(logout());
+        await store.dispatch(startClearUser());
         renderApp();
     }
 });

@@ -21,6 +21,7 @@
                     "Manager": "./src/components/manager",
                     "Paypal": "./src/components/paypal",
                     "Reducers": "./src/reducers",
+                    "Routers": "./src/routers",
                     "Selectors": "./src/selectors",
                     "Shared": "./src/components/shared",
                     "Src": "./src",
