@@ -13,19 +13,6 @@ export default class GalleryPieceForm extends React.Component {
         };
     }
 
-    onNameChange = (e) => {
-        const name = e.target.value;
-        this.setState(() => ({ name }));
-    }
-
-    onPriceChange = (e) => {
-        const price = e.target.value;
-
-        if (!price || price.match(/^\d{1,}(\.\d{0,2})?$/)) {
-            this.setState(() => ({ price }));
-        }
-    }
-
     handleSubmit = () => {
         const { name, price } = this.state
         if (!name || !price) {
@@ -36,6 +23,19 @@ export default class GalleryPieceForm extends React.Component {
                 name,
                 price: convertAmount(price, false),
             })
+        }
+    }
+
+    onNameChange = (e) => {
+        const name = e.target.value;
+        this.setState(() => ({ name }));
+    }
+
+    onPriceChange = (e) => {
+        const price = e.target.value;
+
+        if (!price || price.match(/^\d{1,}(\.\d{0,2})?$/)) {
+            this.setState(() => ({ price }));
         }
     }
 

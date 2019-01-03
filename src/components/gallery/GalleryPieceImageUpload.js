@@ -18,8 +18,6 @@ export class GalleryPieceImageUpload extends React.Component {
         };
     }
 
-    handleUploadStart = () => this.setState({ isUploading: true, success: '', progress: 0 });
-
     handleProgress = (progress) => this.setState({ progress });
 
     handleUploadError = (error) => {
@@ -28,6 +26,8 @@ export class GalleryPieceImageUpload extends React.Component {
             success: error,
         });
     };
+
+    handleUploadStart = () => this.setState({ isUploading: true, success: '', progress: 0 });
 
     handleUploadSuccess = async (imageName) => {
         const imageURL = await retrieveDownloadUrl(this.props.galleryPieceId, imageName);

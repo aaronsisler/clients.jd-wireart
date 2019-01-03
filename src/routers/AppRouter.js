@@ -9,9 +9,9 @@ import GalleryPiecePage from 'Gallery/GalleryPiecePage'
 import LandingPage from 'Core/LandingPage';
 import LoggedOutPage from 'Auth/LoggedOutPage';
 import LogoutPage from 'Auth/LogoutPage';
-import ManagerPage from 'Manager/ManagerPage'
 import ManagerAddPage from 'Manager/ManagerAddPage'
 import ManagerEditPage from 'Manager/ManagerEditPage'
+import ManagerPage from 'Manager/ManagerPage'
 import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
 import NotFoundPage from 'Core/NotFoundPage';
 import Footer from 'Core/Footer'
