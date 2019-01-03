@@ -7,7 +7,7 @@ const LoggedOutPage = () => (
             You have been logged out.
         </div>
         <div className="logged_out_page__link">
-            <Link className="nav_link" to="/login">Back to Login</Link>
+            <Link className="nav_link" to="/manager">Back to Dashboard</Link>
             <Link className="nav_link" to="/gallery">Back to Gallery</Link>
         </div>
     </div>

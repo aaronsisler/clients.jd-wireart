@@ -1,0 +1,45 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    .logged_out_page {
+        &__content {
+            display: flex;
+            font-size: $midlarge;
+            justify-content: center;
+            padding: $large;
+        }
+        &__link {
+            display: flex;
+            justify-content: center;
+            padding: 0 $medium $large;
+            .nav_link {
+                margin: 0 $small;
+            }
+        }
+    }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+    .logged_out_page {
+        &__content {
+            justify-content: flex-start;
+        }
+        &__link {
+            justify-content: flex-start;
+        }
+    }
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {}

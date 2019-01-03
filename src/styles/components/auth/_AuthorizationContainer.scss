@@ -1,17 +1,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .logged_out_page {
-        &__content {
-            display: flex;
-            font-size: $midlarge;
-            justify-content: center;
-            padding: $large;
-        }
-        &__link {
-            display: flex;
-            justify-content: center;
-            padding: 0 $medium $large;
+    .authorization_container {
+        padding: $small;
+        img {
+            object-fit: scale-down;
+            width: 100%;
         }
     }
 }
@@ -23,13 +17,10 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    .logged_out_page {
-        &__content {
-            justify-content: flex-start;
-        }
-        &__link {
-            justify-content: flex-start;
-        }
+    .authorization_container {
+        display: flex;
+        justify-content: center;
+        padding: $large;
     }
 }
 

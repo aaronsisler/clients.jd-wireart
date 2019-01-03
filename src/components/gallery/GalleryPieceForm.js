@@ -46,19 +46,18 @@ export default class GalleryPieceForm extends React.Component {
                 {error && <FormError error={error} />}
                 <div className="gallery_piece_form__input">
                     <input
-                        type="text"
-                        placeholder="Name"
-                        autoFocus
-                        value={name}
                         onChange={this.onNameChange}
+                        placeholder="Name"
+                        type="text"
+                        value={name}
                     />
                 </div>
                 <div className="gallery_piece_form__input">
                     <input
-                        type="text"
-                        placeholder="Price"
-                        value={price}
                         onChange={this.onPriceChange}
+                        placeholder="Price"
+                        type="text"
+                        value={price}
                     />
                 </div>
                 <div className="gallery_piece_form__button">

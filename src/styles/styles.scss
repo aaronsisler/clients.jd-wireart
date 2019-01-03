@@ -2,13 +2,16 @@
 @import './base/base';
 @import './base/inbox';
 @import './base/progress_bar';
+//Auth
+@import './components/auth/AuthorizationContainer';
+@import './components/auth/LoginContainer';
+@import './components/auth/LoggedOutPage';
 //Core
 @import './components/core/AboutPage';
 @import './components/core/ContactForm';
 @import './components/core/Footer';
 @import './components/core/FormError';
 @import './components/core/LandingPage';
-@import './components/core/LoggedOutPage';
 @import './components/core/PrivacyPolicyPage';
 //Gallery
 @import './components/gallery/GalleryContainer';

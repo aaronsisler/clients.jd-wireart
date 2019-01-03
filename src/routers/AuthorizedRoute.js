@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
-import AuthorizationContainer from 'Core/AuthorizationContainer';
+import AuthorizationContainer from 'Auth/AuthorizationContainer';
 
 const AuthorizedRoute = ({
     isAuthorized,
