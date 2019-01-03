@@ -55,8 +55,8 @@
 
 .inbox_details_header {
     &__name {
-        font-weight: 600;
         font-size: $midlarge;
+        font-weight: 600;
         margin-bottom: $small;
     }
     &__price {
@@ -73,8 +73,8 @@
     grid-gap: $small;
     grid-template-areas: "inbox_details_content_link inbox_details_content_image";
     grid-template-columns: 1fr 1fr;
-    padding: $large;
     overflow-y: auto;
+    padding: $large;
     &__link {
         font-size: $medium;
         grid-area: inbox_details_content_link;
