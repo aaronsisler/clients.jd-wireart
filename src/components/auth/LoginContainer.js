@@ -3,21 +3,20 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { startLogin } from 'Actions/auth';
 
-const LoginPage = (props) => (
-    <div className="box-layout">
-        <div className="box-layout__box">
-            <h1 className="box-layout__title">Boilerplate</h1>
+const LoginContainer = (props) => (
+    <div className="login_container">
+        <div className="login_container__button">
             <button className="button" onClick={props.startLogin}>Login with Google</button>
         </div>
     </div>
 );
 
-LoginPage.propTypes = {
-    startLogin: PropTypes.func.isRequired,
-};
-
 const mapDispatchToProps = dispatch => ({
     startLogin: () => dispatch(startLogin())
 });
 
-export default connect(undefined, mapDispatchToProps)(LoginPage);
+export default connect(undefined, mapDispatchToProps)(LoginContainer);
+
+LoginContainer.propTypes = {
+    startLogin: PropTypes.func.isRequired,
+};

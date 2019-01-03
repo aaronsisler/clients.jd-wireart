@@ -1,13 +1,16 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
-        font-size: $large;
+    .unlock_paypal {
+        align-content: center;
+        display: grid;
+        font-family: $mainFont;
+        grid-template-columns: 100%;
+        margin: 0 auto;
         text-align: center;
-        &__title {
-            font-family: $mainFont;
-            margin-bottom: $large;
+        width: 50%;
+        &__active {
+            font-size: $midlarge;
         }
     }
 }

@@ -16,7 +16,7 @@ const GalleryPieceDetails = ({ galleryPieceId, name, price }) => (
                 Click to Purchase
             </Link>
         </div>
-    </div >
+    </div>
 );
 
 export default GalleryPieceDetails;

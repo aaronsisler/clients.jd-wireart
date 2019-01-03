@@ -1,13 +1,12 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
-        font-size: $large;
-        text-align: center;
+    .manager_edit_container {
+        padding: $medium;
         &__title {
-            font-family: $mainFont;
-            margin-bottom: $large;
+            font-size: $medium;
+            font-weight: 600;
+            margin-bottom: $small;
         }
     }
 }

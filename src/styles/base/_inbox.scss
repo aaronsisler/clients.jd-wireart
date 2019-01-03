@@ -1,0 +1,86 @@
+.inbox_container {
+    display: grid;
+    min-height: 95vh;
+    padding: $small 5%;
+}
+
+.inbox_widget {
+    display: grid;
+    grid-gap: $small;
+    grid-template-columns: 20% 80%;
+}
+
+.inbox_details {
+    display: grid;
+    grid-gap: $small;
+    grid-template-rows: 0.5fr 3fr;
+    height: 100%;
+}
+
+.inbox_details_empty {
+    align-content: center;
+    background-color: white;
+    display: grid;
+    font-size: $midlarge;
+    height: 100%;
+    justify-content: center;
+}
+
+.inbox_list {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    display: grid;
+    grid-template-rows: 0.5fr 10fr;
+    height: 100%;
+    input {
+        border: none;
+        border-bottom: 1px solid $midLightGrey;
+        margin: 0;
+    }
+    .nav_link {
+        margin: 0;
+    }
+}
+
+.inbox_details_header {
+    align-content: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    color: $darkMainColor;
+    display: grid;
+    font-family: $secFont;
+    grid-template-columns: 50% 50%;
+    padding: $small $medium;
+}
+
+.inbox_details_header {
+    &__name {
+        font-weight: 600;
+        font-size: $midlarge;
+        margin-bottom: $small;
+    }
+    &__price {
+        font-size: $medium;
+        margin-bottom: $xsmall;
+    }
+}
+
+.inbox_details_content {
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    display: grid;
+    grid-gap: $small;
+    grid-template-areas: "inbox_details_content_link inbox_details_content_image";
+    grid-template-columns: 1fr 1fr;
+    padding: $large;
+    overflow-y: auto;
+    &__link {
+        font-size: $medium;
+        grid-area: inbox_details_content_link;
+        margin: 0 25%;
+    }
+    &__image {
+        grid-area: inbox_details_content_image;
+    }
+}

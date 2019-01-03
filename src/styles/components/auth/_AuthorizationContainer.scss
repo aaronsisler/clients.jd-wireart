@@ -1,13 +1,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
-        font-size: $large;
-        text-align: center;
-        &__title {
-            font-family: $mainFont;
-            margin-bottom: $large;
+    .authorization_container {
+        padding: $small;
+        img {
+            object-fit: scale-down;
+            width: 100%;
         }
     }
 }
@@ -18,7 +16,13 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .authorization_container {
+        display: flex;
+        justify-content: center;
+        padding: $large;
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens

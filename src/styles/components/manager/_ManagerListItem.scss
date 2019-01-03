@@ -1,10 +1,19 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .contact_form_error {
-        font-family: $secFont;
+    .manager_list_item {
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        color: $darkGrey;
+        cursor: pointer;
+        display: flex;
         font-size: $medium;
-        padding-bottom: $small;
+        padding: $medium;
+        text-decoration: none;
+        &:hover {
+            background: #fafafa;
+            color: $secColor;
+        }
     }
 }
 

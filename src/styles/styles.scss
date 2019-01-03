@@ -1,10 +1,16 @@
 @import './base/settings';
 @import './base/base';
+@import './base/inbox';
+@import './base/progress_bar';
+//Auth
+@import './components/auth/AuthorizationContainer';
+@import './components/auth/LoginContainer';
+@import './components/auth/LoggedOutPage';
 //Core
 @import './components/core/AboutPage';
 @import './components/core/ContactForm';
-@import './components/core/ContactFormError';
 @import './components/core/Footer';
+@import './components/core/FormError';
 @import './components/core/LandingPage';
 @import './components/core/PrivacyPolicyPage';
 //Gallery
@@ -13,4 +19,13 @@
 @import './components/gallery/GalleryListItem';
 @import './components/gallery/GalleryPieceContainer';
 @import './components/gallery/GalleryPieceDetails';
+@import './components/gallery/GalleryPieceForm';
 @import './components/gallery/GalleryPieceImage';
+@import './components/gallery/GalleryPieceImageUpload';
+//Manager
+@import './components/manager/ManagerAddContainer';
+@import './components/manager/ManagerEditContainer';
+@import './components/manager/ManagerList';
+@import './components/manager/ManagerListItem';
+//Paypal
+@import './components/paypal/UnlockPaypal';

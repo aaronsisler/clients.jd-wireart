@@ -1,13 +1,17 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
-        font-size: $large;
-        text-align: center;
-        &__title {
-            font-family: $mainFont;
-            margin-bottom: $large;
+    .gallery_piece_form {
+        display: grid;
+        font-size: $medium;
+        grid-template-columns: 100%;
+        &__input {
+            font-size: $midlarge;
+            padding: $xsmall 0;
+            width: 25%;
+        }
+        &__button {
+            margin-top: $small;
         }
     }
 }

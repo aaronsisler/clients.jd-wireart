@@ -1,13 +1,15 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_container {
-        padding: $large 10%;
-        font-size: $large;
-        text-align: center;
-        &__title {
-            font-family: $mainFont;
-            margin-bottom: $large;
+    .gallery_piece_image_upload {
+        display: flex;
+        flex-flow: column;
+        margin: 0 auto;
+        width: 50%;
+        &__progress,
+        &__success {
+            padding: $xsmall 0;
+            text-align: center;
         }
     }
 }

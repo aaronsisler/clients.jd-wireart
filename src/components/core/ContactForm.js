@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { isEmailValid, sendEmail } from 'Tools/email';
-import ContactFormError from 'Core/ContactFormError';
+import FormError from 'Core/FormError';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -126,7 +126,7 @@ class ContactForm extends React.Component {
                     &&
                     <div className="contact_form__form">
                         <div className="contact_form__input">
-                            {error.name && <ContactFormError error={error.name} />}
+                            {error.name && <FormError error={error.name} />}
                             <input
                                 type="text"
                                 name="name"
@@ -137,7 +137,7 @@ class ContactForm extends React.Component {
                             />
                         </div>
                         <div className="contact_form__input">
-                            {error.emailAddress && <ContactFormError error={error.emailAddress} />}
+                            {error.emailAddress && <FormError error={error.emailAddress} />}
                             <input
                                 type="text"
                                 name="emailAddress"
@@ -148,7 +148,7 @@ class ContactForm extends React.Component {
                             />
                         </div>
                         <div className="contact_form__input">
-                            {error.phoneNumber && <ContactFormError error={error.phoneNumber} />}
+                            {error.phoneNumber && <FormError error={error.phoneNumber} />}
                             <input
                                 type="text"
                                 name="phoneNumber"
