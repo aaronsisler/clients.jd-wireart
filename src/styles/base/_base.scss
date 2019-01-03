@@ -34,4 +34,10 @@ button {
         color: white;
         transition: background .3s ease-in-out;
     }
+    &:disabled {
+        background: $mainColor;
+        cursor: not-allowed;
+        color: white;
+        opacity: .5;
+    }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { convertAmount } from 'Tools/amount';
+import { convertPrice } from 'Tools/price';
 import UnlockPaypal from 'Paypal/UnlockPaypal';
 import GalleryPieceImage from 'Gallery/GalleryPieceImage';
 import GalleryPieceImageUpload from 'Gallery/GalleryPieceImageUpload';
@@ -30,7 +30,7 @@ export default class ManagerDetails extends React.Component {
                             {name}
                         </div>
                         <div className="inbox_details_header__price">
-                            ${convertAmount(price)}
+                            ${convertPrice(price)}
                         </div>
                     </div>
                     <UnlockPaypal galleryPieceId={galleryPieceId} isPaypalActive={isPaypalActive} />

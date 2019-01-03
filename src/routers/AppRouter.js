@@ -12,6 +12,7 @@ import LogoutPage from 'Auth/LogoutPage';
 import ManagerAddPage from 'Manager/ManagerAddPage'
 import ManagerEditPage from 'Manager/ManagerEditPage'
 import ManagerPage from 'Manager/ManagerPage'
+import PaymentConfirmationPage from 'Paypal/PaymentConfirmationPage'
 import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
 import NotFoundPage from 'Core/NotFoundPage';
 import Footer from 'Core/Footer'
@@ -28,6 +29,7 @@ const AppRouter = () => (
                 <Route path="/contact_us/:id" component={ContactPage} />
                 <Route path='/logged_out' component={LoggedOutPage} exact={true} />
                 <Route path="/logout" component={LogoutPage} exact={true} />
+                <Route path="/confirm_payment" component={PaymentConfirmationPage} exact={true} />
                 <AuthorizedRoute path="/manager" component={ManagerPage} exact={true} />
                 <AuthorizedRoute path="/manager/:id" component={ManagerPage} />
                 <AuthorizedRoute path="/manager_add" component={ManagerAddPage} exact={true} />
