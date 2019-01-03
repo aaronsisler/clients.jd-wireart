@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PaypalPayment from 'Paypal/PaypalPayment';
 
 const GalleryPieceDetails = ({ galleryPieceId, name, price }) => (
     <div className="gallery_piece_details">
@@ -15,6 +16,7 @@ const GalleryPieceDetails = ({ galleryPieceId, name, price }) => (
             >
                 Click to Purchase
             </Link>
+            <PaypalPayment amount={price} />
         </div>
     </div>
 );

@@ -3,3 +3,5 @@ export const apiGatewayEmailURL = "https://wfw3brtgbc.execute-api.us-east-1.amaz
 export const apiGatewayToken = 'gVs4ABqLyE49xdzgqqNataz0BD6wwHVA5c5AWv1R';
 export const pointOfContactEmail = 'aaron.sisler@eandbsolutions.com';
 export const websiteURL = "http://jdwireart.firebaseapp.com";
+export const paypalSandboxClientID = "AXItpK63JSFjy_PXAWvgrg7zpjexyvqhJbbyHq8yBliyR551HcfRGgWIjOuYH3tQJ9HzgaVHx5RtY91Y";
+export const paypalSandboxSecret = "EEiT45Im_-CJXBHjloVWv8wkIwmtl2mwPmjlssFzB57XDuuVjzN4RnlZ4Crb8Snz4ZgaqTBxJ6wBjo8E";
