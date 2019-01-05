@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { paypalEnvironment } from 'Src/config';
 import { paypalProductionClientId, paypalSandboxClientId } from 'Src/secrets';
 import history from 'Tools/history';
-// import { convertPriceForPaypal } from 'Tools/price';
 import FormError from 'Core/FormError';
 import { startSetSoldFlag } from 'Actions/galleryPiece';
 import { createTransaction } from 'Paypal/transaction';
