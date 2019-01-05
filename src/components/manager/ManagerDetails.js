@@ -25,7 +25,7 @@ export default class ManagerDetails extends React.Component {
         return (
             <div className="inbox_details" >
                 <div className="inbox_details_header">
-                    <div>
+                    <div className="inbox_details_header__text">
                         <div className="inbox_details_header__name">
                             {name}
                         </div>
