@@ -22,9 +22,16 @@ export const startEditGalleryPiece = (galleryPieceId, updates) => (dispatch) =>
             dispatch(editGalleryPiece(galleryPieceId, updates));
         });
 
-export const startSetPaypalFlag = (galleryPieceId) => (dispatch) =>
+export const startSetPaypalActiveFlag = (galleryPieceId) => (dispatch) =>
     database.ref(`gallery/${galleryPieceId}`)
         .update({ isPaypalActive: true })
         .then(() =>
             dispatch(editGalleryPiece(galleryPieceId, { isPaypalActive: true }))
+        );
+
+export const startSetSoldFlag = (galleryPieceId) => (dispatch) =>
+    database.ref(`gallery/${galleryPieceId}`)
+        .update({ isPaypalActive: false, isSold: true })
+        .then(() =>
+            dispatch(editGalleryPiece(galleryPieceId, { isPaypalActive: false, isSold: true }))
         );

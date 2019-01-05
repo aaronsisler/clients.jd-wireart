@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { convertAmount } from 'Tools/amount';
+import { convertPrice } from 'Tools/price';
 import FormError from 'Core/FormError';
 
 export default class GalleryPieceForm extends React.Component {
@@ -8,7 +8,7 @@ export default class GalleryPieceForm extends React.Component {
         super(props);
         this.state = {
             name: props.galleryPiece ? props.galleryPiece.name : '',
-            price: props.galleryPiece ? convertAmount(props.galleryPiece.price) : '',
+            price: props.galleryPiece ? convertPrice(props.galleryPiece.price) : '',
             error: '',
         };
     }
@@ -21,7 +21,7 @@ export default class GalleryPieceForm extends React.Component {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
                 name,
-                price: convertAmount(price, false),
+                price: convertPrice(price, false),
             })
         }
     }

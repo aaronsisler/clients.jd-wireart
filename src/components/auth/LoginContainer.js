@@ -11,7 +11,7 @@ const LoginContainer = (props) => (
     </div>
 );
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
     startLogin: () => dispatch(startLogin())
 });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { startSetPaypalFlag } from 'Actions/galleryPiece';
+import { startSetPaypalActiveFlag } from 'Actions/galleryPiece';
 
 class UnlockPaypal extends React.Component {
     constructor(props) {
@@ -10,6 +10,7 @@ class UnlockPaypal extends React.Component {
 
     render() {
         const { isPaypalActive } = this.props;
+
         if (isPaypalActive) {
             return (
                 <div className="unlock_paypal">
@@ -24,7 +25,7 @@ class UnlockPaypal extends React.Component {
             <div className="unlock_paypal">
                 <button
                     className="nav_link"
-                    onClick={this.props.startSetPaypalFlag}
+                    onClick={this.props.startSetPaypalActiveFlag}
                 >
                     Click to Unlock Paypal
                 </button>
@@ -36,9 +37,8 @@ class UnlockPaypal extends React.Component {
 const mapStateToProps = () => ({
 });
 
-
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    startSetPaypalFlag: () => dispatch(startSetPaypalFlag(ownProps.galleryPieceId)),
+    startSetPaypalActiveFlag: () => dispatch(startSetPaypalActiveFlag(ownProps.galleryPieceId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UnlockPaypal);
@@ -46,5 +46,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(UnlockPaypal);
 UnlockPaypal.propTypes = {
     galleryPieceId: PropTypes.string.isRequired,
     isPaypalActive: PropTypes.bool,
-    startSetPaypalFlag: PropTypes.func.isRequired,
+    startSetPaypalActiveFlag: PropTypes.func.isRequired,
 };

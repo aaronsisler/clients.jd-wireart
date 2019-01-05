@@ -63,6 +63,12 @@
         font-size: $medium;
         margin-bottom: $xsmall;
     }
+    &__sold {
+        align-content: center;
+        display: grid;
+        font-size: $midlarge;
+        text-align: center;
+    }
 }
 
 .inbox_details_content {

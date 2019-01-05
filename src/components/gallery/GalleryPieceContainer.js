@@ -24,7 +24,6 @@ const mapStateToProps = (state, props) => ({
     galleryPiece: state.gallery.find((galleryPiece) => galleryPiece.galleryPieceId === props.match.params.id),
 });
 
-
 const mapDispatchToProps = () => ({
 });
 

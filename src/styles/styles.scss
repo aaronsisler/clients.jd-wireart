@@ -28,4 +28,6 @@
 @import './components/manager/ManagerList';
 @import './components/manager/ManagerListItem';
 //Paypal
+@import './components/paypal/PaymentConfirmationPage';
+@import './components/paypal/PaypalCodeValidation';
 @import './components/paypal/UnlockPaypal';
