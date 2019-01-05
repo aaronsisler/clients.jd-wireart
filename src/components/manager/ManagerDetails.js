@@ -21,7 +21,7 @@ export default class ManagerDetails extends React.Component {
             )
         }
 
-        const { galleryPieceId, imageURL, isPaypalActive, name, price } = galleryPiece;
+        const { galleryPieceId, imageURL, isPaypalActive, isSold, name, price } = galleryPiece;
         return (
             <div className="inbox_details" >
                 <div className="inbox_details_header">
@@ -33,7 +33,14 @@ export default class ManagerDetails extends React.Component {
                             ${convertPrice(price)}
                         </div>
                     </div>
-                    <UnlockPaypal galleryPieceId={galleryPieceId} isPaypalActive={isPaypalActive} />
+                    {
+                        isSold
+                            ?
+                            <div className="inbox_details_header__sold">
+                                Sold Out
+                            </div>
+                            : <UnlockPaypal galleryPieceId={galleryPieceId} isPaypalActive={isPaypalActive} />
+                    }
                 </div>
                 <div className="inbox_details_content">
                     <div className="inbox_details_content__link">

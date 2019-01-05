@@ -92,11 +92,12 @@ class ContactForm extends React.Component {
         }));
 
         const { emailAddress, message, name, phoneNumber } = this.state;
-        const { galleryPieceId, galleryPieceName } = this.props;
+        const { galleryPieceId, galleryPieceName, isCustom } = this.props;
+        const isCustomPiece = isCustom ? `Custom Order: ${galleryPieceName}` : galleryPieceName;
         const data = {
             emailAddress,
             galleryPieceId,
-            galleryPieceName,
+            galleryPieceName: isCustomPiece,
             message,
             name,
             phoneNumber,
@@ -117,6 +118,7 @@ class ContactForm extends React.Component {
     }
 
     render() {
+        const { galleryPieceName, isCustom } = this.props;
         const { emailAddress, emailError, emailSent, error, isSendButtonDisabled, message, name, phoneNumber } = this.state;
 
         return (
@@ -159,12 +161,12 @@ class ContactForm extends React.Component {
                             />
                         </div>
                         {
-                            this.props.galleryPieceName
+                            galleryPieceName
                             &&
                             <div className="contact_form__gallery_piece">
-                                I would like to purchase the following piece:
+                                I would like to {isCustom ? "custom order" : "purchase"} the following piece:
                                 <br />
-                                {this.props.galleryPieceName}
+                                {galleryPieceName}
                             </div>
                         }
                         <div className="contact_form__input">
@@ -204,15 +206,16 @@ class ContactForm extends React.Component {
 
 const mapStateToProps = (state, props) => {
     const { id: galleryPieceId } = props.match.params;
+    const isCustom = !!props.location.search;
     const galleryPieceName = galleryPieceId
         ? state.gallery.find((galleryPiece) => galleryPiece.galleryPieceId == galleryPieceId).name
         : undefined;
     return ({
         galleryPieceId,
         galleryPieceName,
+        isCustom,
     });
 };
-
 
 const mapDispatchToProps = () => ({
 });
@@ -222,4 +225,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
 ContactForm.propTypes = {
     galleryPieceId: PropTypes.string,
     galleryPieceName: PropTypes.string,
+    isCustom: PropTypes.bool,
 };

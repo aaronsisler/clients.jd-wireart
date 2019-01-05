@@ -1,5 +1,6 @@
 import { validate } from 'email-validator';
-import { apiGatewayEmailURL, apiGatewayToken, pointOfContactEmail, websiteURL } from '../config';
+import { apiGatewayEmailURL, pointOfContactEmail, websiteURL } from 'Src/config';
+import { apiGatewayToken } from 'Src/secrets';
 
 export const isEmailValid = (email) => validate(email);
 
@@ -31,6 +32,6 @@ const sendRequest = (data, done, fail) => {
     request.send(JSON.stringify(emailProperties));
 }
 
-const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/gallery_piece/${galleryPieceId}`;
+export const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/manager/${galleryPieceId}`;
 
 export const sendEmail = (data, done, fail) => sendRequest(data, done, fail);

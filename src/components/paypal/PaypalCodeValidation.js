@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormError from 'Core/FormError';
 import PaypalPayment from 'Paypal/PaypalPayment';
-import { paypalVerificationCode } from 'Src/config';
+import { paypalVerificationCode } from 'Src/secrets';
 
 class PaypalCodeValidation extends React.Component {
     constructor(props) {
@@ -31,10 +31,11 @@ class PaypalCodeValidation extends React.Component {
     }
 
     render() {
+        const { galleryPieceId, name, price } = this.props;
         const { error, isUserValidated, userPaypalCode } = this.state;
 
         return isUserValidated
-            ? <PaypalPayment price={this.props.price} />
+            ? <PaypalPayment galleryPieceId={galleryPieceId} name={name} price={price} />
             :
             (
                 <div className="paypal_code_validation">
@@ -62,5 +63,7 @@ class PaypalCodeValidation extends React.Component {
 export default PaypalCodeValidation;
 
 PaypalCodeValidation.propTypes = {
+    galleryPieceId: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
 };
