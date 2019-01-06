@@ -72,12 +72,8 @@
         flex-flow: column;
         overflow-y: auto;
         padding: $small;
-        &__image {
-            grid-area: inbox_details_content_image;
-        }
         &__link {
             font-size: $medium;
-            grid-area: inbox_details_content_link;
             margin: 0 25% $small;
         }
     }
@@ -93,52 +89,29 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+    .inbox_mobile {
+        display: inherit;
+    }
     .inbox_container {
-        display: grid;
-        min-height: 95vh;
         padding: $small 5%;
     }
     .inbox_widget {
-        display: grid;
         grid-gap: $small;
         grid-template-columns: 20% 80%;
     }
-    .inbox_list {
-        background-color: white;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
-        display: grid;
-        grid-template-rows: 0.5fr 10fr;
-        height: 100%;
-        input {
-            border: none;
-            border-bottom: 1px solid $midLightGrey;
-            margin: 0;
-        }
-        .nav_link {
-            margin: 0;
-        }
-    }
     .inbox_details {
-        display: grid;
-        grid-gap: $small;
-        grid-template-rows: 0.5fr 3fr;
-        height: 100%;
+        padding: 0;
     }
     .inbox_details_empty {
         align-content: center;
         background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
         display: grid;
         font-size: $midlarge;
         height: 100%;
         justify-content: center;
     }
     .inbox_details_header {
-        align-content: center;
-        background-color: white;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
-        color: $darkMainColor;
-        display: grid;
-        font-family: $secFont;
         grid-template-columns: 50% 50%;
         padding: $small $medium;
     }
@@ -146,37 +119,17 @@
         &__mobile_button {
             display: none;
         }
-        &__name {
-            font-size: $midlarge;
-            font-weight: 600;
-            margin-bottom: $small;
-        }
-        &__price {
-            font-size: $medium;
-            margin-bottom: $xsmall;
-        }
-        &__sold {
-            align-content: center;
-            display: grid;
-            font-size: $midlarge;
-            text-align: center;
-        }
     }
     .inbox_details_content {
-        align-items: center;
-        background-color: white;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
         display: grid;
         grid-gap: $small;
         grid-template-areas: "inbox_details_content_link inbox_details_content_image";
         grid-template-columns: 1fr 1fr;
-        overflow-y: auto;
         padding: $large;
         &__image {
             grid-area: inbox_details_content_image;
         }
         &__link {
-            font-size: $medium;
             grid-area: inbox_details_content_link;
             margin: 0 25%;
         }

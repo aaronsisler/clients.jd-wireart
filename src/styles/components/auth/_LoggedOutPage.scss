@@ -25,16 +25,7 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-    .logged_out_page {
-        &__content {
-            justify-content: flex-start;
-        }
-        &__link {
-            justify-content: flex-start;
-        }
-    }
-}
+@media only screen and (min-width: 64.063em) {}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
