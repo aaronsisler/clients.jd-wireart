@@ -41,8 +41,9 @@
         text-align: center;
     }
     .inbox_details_header {
-        &__text {
-            margin-bottom: $small;
+        &__mobile_button {
+            margin: 0 auto $small;
+            width: 50%;
         }
         &__name {
             font-size: $midlarge;
@@ -59,6 +60,9 @@
             font-size: $midlarge;
             text-align: center;
         }
+        &__text {
+            margin-bottom: $small;
+        }
     }
     .inbox_details_content {
         align-items: center;
@@ -68,20 +72,18 @@
         flex-flow: column;
         overflow-y: auto;
         padding: $small;
+        &__image {
+            grid-area: inbox_details_content_image;
+        }
         &__link {
             font-size: $medium;
             grid-area: inbox_details_content_link;
             margin: 0 25% $small;
         }
-        &__image {
-            grid-area: inbox_details_content_image;
-        }
     }
-    .inbox_list {
+    .inbox_mobile {
         display: none;
-    } // .inbox_details {
-    // display: none;
-    // }
+    }
 }
 
 //Medium screens - TABLET
@@ -141,6 +143,9 @@
         padding: $small $medium;
     }
     .inbox_details_header {
+        &__mobile_button {
+            display: none;
+        }
         &__name {
             font-size: $midlarge;
             font-weight: 600;
@@ -167,13 +172,13 @@
         grid-template-columns: 1fr 1fr;
         overflow-y: auto;
         padding: $large;
+        &__image {
+            grid-area: inbox_details_content_image;
+        }
         &__link {
             font-size: $medium;
             grid-area: inbox_details_content_link;
             margin: 0 25%;
-        }
-        &__image {
-            grid-area: inbox_details_content_image;
         }
     }
 }
