@@ -2,8 +2,8 @@
 //max-width 640px, small screens
 @media only screen {
     .gallery_container {
-        padding: $large 10%;
         font-size: $large;
+        padding: $large 10%;
         text-align: center;
         &__title {
             font-family: $mainFont;
@@ -18,7 +18,11 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_container {
+        min-height: 95vh;
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
