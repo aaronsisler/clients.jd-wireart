@@ -15,7 +15,7 @@ class ManagerContainer extends React.Component {
         return (
             <div className="inbox_container">
                 <div className="inbox_widget">
-                    <div className="inbox_list">
+                    <div className={`inbox_list ${galleryPiece ? "inbox_mobile" : undefined}`}>
                         <Link className="nav_link" to="/manager_add">Add Gallery Piece</Link>
                         <ManagerList gallery={gallery} />
                     </div>

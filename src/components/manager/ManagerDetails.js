@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import history from 'Tools/history';
 import { convertPrice } from 'Tools/price';
 import UnlockPaypal from 'Paypal/UnlockPaypal';
 import GalleryPieceImage from 'Gallery/GalleryPieceImage';
@@ -11,21 +12,29 @@ export default class ManagerDetails extends React.Component {
         super(props);
     }
 
+    handleClick = () => history.push('/manager');
+
     render() {
         const { galleryPiece } = this.props;
         if (!galleryPiece) {
             return (
-                <div className="inbox_details_empty">
+                <div className="inbox_details_empty inbox_mobile">
                     Please select an item to view
                 </div>
             )
         }
-
         const { galleryPieceId, imageURL, isPaypalActive, isSold, name, price } = galleryPiece;
+
         return (
             <div className="inbox_details" >
                 <div className="inbox_details_header">
-                    <div>
+                    <button
+                        className="inbox_details_header__mobile_button"
+                        onClick={this.handleClick}
+                    >
+                        Back to List
+                    </button>
+                    <div className="inbox_details_header__text">
                         <div className="inbox_details_header__name">
                             {name}
                         </div>
