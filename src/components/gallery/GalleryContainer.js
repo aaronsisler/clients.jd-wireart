@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import GalleryList from 'Gallery/GalleryList';
+import GalleryListFilter from 'Gallery/GalleryListFilter';
+import selectGallery from 'Selectors/gallery';
 
 class GalleryContainer extends React.Component {
     constructor(props) {
@@ -15,6 +17,7 @@ class GalleryContainer extends React.Component {
                 <div className="gallery_container__title">
                     Gallery
                 </div>
+                <GalleryListFilter />
                 <GalleryList gallery={gallery} />
             </div>
         )
@@ -22,7 +25,8 @@ class GalleryContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    gallery: state.gallery,
+    // gallery: state.gallery,
+    gallery: selectGallery(state.gallery, state.filters.gallery),
 });
 
 const mapDispatchToProps = () => ({
