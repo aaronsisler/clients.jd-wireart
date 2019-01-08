@@ -25,7 +25,6 @@ class GalleryContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    // gallery: state.gallery,
     gallery: selectGallery(state.gallery, state.filters.gallery),
 });
 
