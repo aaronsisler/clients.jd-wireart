@@ -1,19 +1,15 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .manager_list_item {
-        align-items: center;
-        border-bottom: 1px solid #eee;
-        color: $darkGrey;
-        cursor: pointer;
-        display: flex;
-        font-size: $medium;
+    .gallery_list_filter {
+        display: grid;
+        font-size: $midlarge;
         justify-content: center;
-        padding: $medium;
-        text-decoration: none;
-        &:hover {
-            background: #fafafa;
-            color: $secColor;
+        margin: 0 auto $large;
+        &__input {
+            font-family: $secFont;
+            text-align: center;
+            width: 100%;
         }
     }
 }
@@ -24,11 +20,7 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-    .manager_list_item {
-        justify-content: left;
-    }
-}
+@media only screen and (min-width: 64.063em) {}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
