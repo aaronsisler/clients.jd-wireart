@@ -93,11 +93,14 @@
         display: inherit;
     }
     .inbox_container {
-        padding: $small 5%;
+        padding: $small 5%; //If top/bottom padding is changed, change max-height of inbox_list
     }
     .inbox_widget {
         grid-gap: $small;
         grid-template-columns: 20% 80%;
+    }
+    .inbox_list {
+        max-height: calc(95vh - 2.4rem);
     }
     .inbox_details {
         padding: 0;
