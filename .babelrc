@@ -27,7 +27,8 @@
                     "Shared": "./src/components/shared",
                     "Src": "./src",
                     "Styles": "./src/styles",
-                    "Tools": "./src/tools"
+                    "Tools": "./src/tools",
+                    "Utilities": "./src/components/utilities",
                 }
             }
         ]

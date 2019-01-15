@@ -1,9 +1,8 @@
 import React from 'react';
 import { privacyPolicy } from 'Content/privacyPolicy';
 
-
 const PrivacyPolicyPage = () => (
-    <div id='privacy_policy_page'>
+    <div className='privacy_policy_page'>
         <h3>Privacy Policy for {privacyPolicy.companyWebsite}</h3>
         {privacyPolicy.policy.map((policyLine, index) => {
             if (policyLine.isBold) {

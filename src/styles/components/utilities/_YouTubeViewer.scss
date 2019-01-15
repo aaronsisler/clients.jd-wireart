@@ -1,16 +1,18 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .privacy_policy_page {
-        font-family: $secFont;
-        font-size: $medium;
-        margin: 0 $medium;
-        h3 {
-            font-size: $large;
-        }
-        p {
-            text-align: left;
-            word-break: break-all;
+    .youtube_viewer {
+        height: 0;
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        width: 100%;
+        iframe {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
         }
     }
 }
@@ -21,11 +23,7 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-    #privacy_policy_page {
-        margin: 0 $xxlarge 0 $large;
-    }
-}
+@media only screen and (min-width: 64.063em) {}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
