@@ -16,7 +16,7 @@ const sendRequest = (data, done, fail) => {
     };
 
     if (data.galleryPieceId) {
-        emailProperties.galleryPieceLink = constructGalleryPieceLink(data.galleryPieceId);
+        emailProperties.galleryPieceLink = constructManagerGalleryPieceLink(data.galleryPieceId);
     }
 
     const request = new XMLHttpRequest();
@@ -32,6 +32,8 @@ const sendRequest = (data, done, fail) => {
     request.send(JSON.stringify(emailProperties));
 }
 
-export const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/manager/${galleryPieceId}`;
+export const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/gallery_piece/${galleryPieceId}`;
+
+export const constructManagerGalleryPieceLink = (galleryPieceId) => `${websiteURL}/manager/${galleryPieceId}`;
 
 export const sendEmail = (data, done, fail) => sendRequest(data, done, fail);
