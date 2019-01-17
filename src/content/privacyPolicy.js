@@ -1,3 +1,4 @@
+import React from 'react';
 /* eslint-disable max-len */
 export const privacyPolicy = {
     companyWebsite: 'jdwireart.com',
@@ -28,7 +29,8 @@ export const privacyPolicy = {
         { isBold: true, text: 'Third-party links'},
         { isBold: false, text: 'We do not include or offer third-party products or services on our website.'},
         { isBold: true, text: 'Google'},
-        { isBold: false, text: 'Google\'s advertising requirements can be summed up by Google\'s Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en'},
+        { isBold: false, text: `Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users.`},
+        { isBold: false, text: <a href="https://support.google.com/adwordspolicy/answer/1316548?hl=en">Google Support AdWords Policy</a>},
         { isBold: false, text: 'We use Google AdSense Advertising on our website.'},
         { isBold: false, text: 'Google, as a third-party vendor, uses cookies to serve ads on our site. Google\'s use of the DART cookie enables it to serve ads to our users based on previous visits to our site and other sites on the Internet. Users may opt-out of the use of the DART cookie by visiting the Google Ad and Content Network privacy policy.'},
         { isBold: true, text: 'We have implemented the following:'},

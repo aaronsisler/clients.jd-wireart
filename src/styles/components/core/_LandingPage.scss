@@ -10,11 +10,11 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            min-height: 100vh;
+            height: 100vh;
             left: 0;
-            width: 100%;
             position: fixed;
             top: 0;
+            width: 100%;
             z-index: -10;
         }
         &_content {
@@ -57,6 +57,18 @@
 
 @media only screen and (min-width: 40.063em) {
     .landing_page {
+        &__background_image {
+            background-image: url('/images/landing_page_background.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 100vh;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: -10;
+        }
         &_content {
             display: grid;
             &__company_name {
