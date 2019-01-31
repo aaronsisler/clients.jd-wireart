@@ -44,25 +44,26 @@ export default class GalleryPieceForm extends React.Component {
         return (
             <div className="gallery_piece_form">
                 {error && <FormError error={error} />}
-                <div className="gallery_piece_form__input">
-                    <input
-                        onChange={this.onNameChange}
-                        placeholder="Name"
-                        type="text"
-                        value={name}
-                    />
-                </div>
-                <div className="gallery_piece_form__input">
-                    <input
-                        onChange={this.onPriceChange}
-                        placeholder="Price"
-                        type="text"
-                        value={price}
-                    />
-                </div>
-                <div className="gallery_piece_form__button">
-                    <button className="nav_link" onClick={this.handleSubmit}>Save</button>
-                </div>
+                <input
+                    className="gallery_piece_form__input"
+                    onChange={this.onNameChange}
+                    placeholder="Name"
+                    type="text"
+                    value={name}
+                />
+                <input
+                    className="gallery_piece_form__input"
+                    onChange={this.onPriceChange}
+                    placeholder="Price"
+                    type="text"
+                    value={price}
+                />
+                <button
+                    className="nav_link gallery_piece_form__button"
+                    onClick={this.handleSubmit}
+                >
+                    Save
+                </button>
             </div>
         )
     }

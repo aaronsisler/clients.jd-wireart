@@ -7,6 +7,7 @@
             font-size: $medium;
             font-weight: 600;
             margin-bottom: $small;
+            text-align: center;
         }
     }
 }
@@ -17,7 +18,13 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .manager_edit_container {
+        &__title {
+            text-align: inherit;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens

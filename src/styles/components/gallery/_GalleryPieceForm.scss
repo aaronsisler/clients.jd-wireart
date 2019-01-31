@@ -4,14 +4,15 @@
     .gallery_piece_form {
         display: grid;
         font-size: $medium;
+        grid-gap: $small;
         grid-template-columns: 100%;
         &__input {
             font-size: $midlarge;
             padding: $xsmall 0;
-            width: 25%;
         }
         &__button {
             margin-top: $small;
+            width: 100%;
         }
     }
 }
@@ -22,7 +23,14 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_piece_form {
+        width: 25%;
+        &__button {
+            width: inherit;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
