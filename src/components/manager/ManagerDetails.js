@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import history from 'Tools/history';
 import { convertPrice } from 'Tools/price';
 import UnlockPaypal from 'Paypal/UnlockPaypal';
+import GalleryPieceDetailsContent from 'GalleryPiece/GalleryPieceDetailsContent';
 import GalleryPieceImage from 'GalleryPiece/GalleryPieceImage';
 import GalleryPieceImageUpload from 'GalleryPiece/GalleryPieceImageUpload';
 
@@ -54,6 +55,7 @@ export default class ManagerDetails extends React.Component {
                 <div className="inbox_details_content">
                     <div className="inbox_details_content__link">
                         <Link className="nav_link" to={`/manager_edit/${galleryPieceId}`}>Edit Gallery Piece</Link>
+                        <GalleryPieceDetailsContent {...galleryPiece} />
                     </div>
                     <div className="inbox_details_content__image">
                         <GalleryPieceImageUpload galleryPieceId={galleryPieceId} />

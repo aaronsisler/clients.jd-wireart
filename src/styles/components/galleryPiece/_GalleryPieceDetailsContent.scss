@@ -27,7 +27,7 @@
             }
             &_value {
                 font-size: $medium;
-                word-break: break-all;
+                word-wrap: break-word;
             }
         }
     }
