@@ -19,6 +19,7 @@
                     "Core": "./src/components/core",
                     "Firebase": "./src/firebase",
                     "Gallery": "./src/components/gallery",
+                    "GalleryPiece": "./src/components/galleryPiece",
                     "Manager": "./src/components/manager",
                     "Paypal": "./src/components/paypal",
                     "Reducers": "./src/reducers",

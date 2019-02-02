@@ -18,11 +18,13 @@
 @import './components/gallery/GalleryList';
 @import './components/gallery/GalleryListFilter';
 @import './components/gallery/GalleryListItem';
-@import './components/gallery/GalleryPieceContainer';
-@import './components/gallery/GalleryPieceDetails';
-@import './components/gallery/GalleryPieceForm';
-@import './components/gallery/GalleryPieceImage';
-@import './components/gallery/GalleryPieceImageUpload';
+//GalleryPiece
+@import './components/galleryPiece/GalleryPieceContainer';
+@import './components/galleryPiece/GalleryPieceDetails';
+@import './components/galleryPiece/GalleryPieceDetailsContent';
+@import './components/galleryPiece/GalleryPieceForm';
+@import './components/galleryPiece/GalleryPieceImage';
+@import './components/galleryPiece/GalleryPieceImageUpload';
 //Manager
 @import './components/manager/ManagerAddContainer';
 @import './components/manager/ManagerEditContainer';

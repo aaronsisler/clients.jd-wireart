@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import history from 'Tools/history';
-import GalleryPieceForm from 'Gallery/GalleryPieceForm';
+import GalleryPieceForm from 'GalleryPiece/GalleryPieceForm';
 import { startEditGalleryPiece } from 'Actions/galleryPiece';
 
 class ManagerEditContainer extends React.Component {

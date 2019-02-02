@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import GalleryPieceDetails from 'Gallery/GalleryPieceDetails';
-import GalleryPieceImage from 'Gallery/GalleryPieceImage';
+import GalleryPieceDetails from 'GalleryPiece/GalleryPieceDetails';
+import GalleryPieceImage from 'GalleryPiece/GalleryPieceImage';
 
 class GalleryPieceContainer extends React.Component {
     constructor(props) {

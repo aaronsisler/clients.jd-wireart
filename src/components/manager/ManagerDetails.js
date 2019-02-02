@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import history from 'Tools/history';
 import { convertPrice } from 'Tools/price';
 import UnlockPaypal from 'Paypal/UnlockPaypal';
-import GalleryPieceImage from 'Gallery/GalleryPieceImage';
-import GalleryPieceImageUpload from 'Gallery/GalleryPieceImageUpload';
+import GalleryPieceImage from 'GalleryPiece/GalleryPieceImage';
+import GalleryPieceImageUpload from 'GalleryPiece/GalleryPieceImageUpload';
 
 export default class ManagerDetails extends React.Component {
     constructor(props) {

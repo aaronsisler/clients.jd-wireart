@@ -9,15 +9,6 @@
         padding: $medium;
         padding-bottom: $large;
         text-align: center;
-        &__content {
-            align-self: center;
-            padding-bottom: $medium;
-        }
-        &__name,
-        &__price {
-            font-size: $large;
-            padding: $small;
-        }
         &__contact {
             align-self: center;
             font-size: $midlarge;
