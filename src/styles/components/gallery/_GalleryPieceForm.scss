@@ -4,15 +4,28 @@
     .gallery_piece_form {
         display: grid;
         font-size: $medium;
-        grid-gap: $small;
         grid-template-columns: 100%;
         &__input {
             font-size: $midlarge;
+            margin: $xsmall 0 $small;
             padding: $xsmall 0;
         }
         &__button {
             margin-top: $small;
             width: 100%;
+        }
+        &__dimensions {
+            display: grid;
+            grid-gap: $xsmall;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            input {
+                width: 100%;
+            }
+            div {
+                align-content: center;
+                display: grid;
+            }
         }
     }
 }
@@ -28,6 +41,11 @@
         width: 25%;
         &__button {
             width: inherit;
+        }
+        &__dimensions {
+            grid-gap: $xsmall;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: left;
         }
     }
 }
