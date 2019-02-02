@@ -7,21 +7,27 @@
         &__name,
         &__price {
             font-size: $large;
-            padding: $small;
         }
         &__dimensions {
             display: grid;
-            margin: 0 auto;
+            margin: $small 0;
             &_title {
-                font-size: $large;
+                font-size: $midlarge;
             }
             &_values {
-                font-size: $midlarge;
+                font-size: $medium;
                 display: grid;
-                margin: $medium auto 0;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: $small;
-                width: 75%;
+            }
+        }
+        &__description {
+            margin: $small 0 $medium;
+            &_title {
+                font-size: $midlarge;
+            }
+            &_value {
+                font-size: $medium;
+                word-break: break-all;
             }
         }
     }
@@ -40,11 +46,10 @@
         &__name,
         &__price {
             font-size: $large;
-            padding: $small;
         }
         &__dimensions {
             display: grid;
-            margin-top: $small;
+            margin: $medium 0;
             &_title {
                 font-size: $midlarge;
             }
@@ -55,6 +60,16 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: $small;
                 width: 50%;
+            }
+        }
+        &__description {
+            margin: $small auto;
+            width: 75%;
+            &_title {
+                font-size: $midlarge;
+            }
+            &_value {
+                font-size: $medium;
             }
         }
     }

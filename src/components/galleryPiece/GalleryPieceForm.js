@@ -7,6 +7,7 @@ export default class GalleryPieceForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            description: props.galleryPiece ? props.galleryPiece.description : '',
             name: props.galleryPiece ? props.galleryPiece.name : '',
             price: props.galleryPiece ? convertPrice(props.galleryPiece.price) : '',
             length: props.galleryPiece ? props.galleryPiece.length : '',
@@ -16,11 +17,42 @@ export default class GalleryPieceForm extends React.Component {
         };
     }
 
+    handleDescriptionChange = (e) => {
+        const description = e.target.value;
+        return this.setState(() => ({ description: description ? description : '' }));
+    }
+
+    handleDimensionChange = (e) => {
+        const { name: inputName, value: inputValue } = e.target;
+
+        if (!inputValue || inputValue.match(/^[0-9]*$/)) {
+            return this.setState({ [inputName]: inputValue });
+        }
+
+        return this.setState({ [inputName]: '' });
+    }
+
+    handleNameChange = (e) => {
+        const name = e.target.value;
+        return this.setState(() => ({ name }));
+    }
+
+    handlePriceChange = (e) => {
+        const price = e.target.value;
+
+        if (!price || price.match(/^\d{1,}(\.\d{0,2})?$/)) {
+            return this.setState(() => ({ price }));
+        }
+    }
+
     handleSubmit = () => {
         const { name, price } = this.state
         if (!name || !price) {
-            this.setState(() => ({ error: 'Please provide name and price' }));
-        } else {
+            return this.setState(() => ({ error: 'Please provide name and price' }));
+        } else if (this.validateDimensions()) {
+            return this.setState(() => ({ error: 'Please provide all three dimensions' }));
+        }
+        else {
             this.setState(() => ({ error: '' }));
             const { error, ...submitObject } = Object.assign({}, this.state); // eslint-disable-line no-unused-vars
 
@@ -31,38 +63,26 @@ export default class GalleryPieceForm extends React.Component {
         }
     }
 
-    onDimensionChange = (e) => {
-        const { name: inputName, value: inputValue } = e.target;
-
-        if (!inputValue || inputValue.match(/^[0-9]*$/)) {
-            return this.setState({ [inputName]: inputValue });
+    validateDimensions = () => {
+        const { height, length, width } = this.state;
+        if (height.length && length, length && width.length) {
+            return false;
         }
-
-        return this.setState({ [inputName]: '' });
-    }
-
-    onNameChange = (e) => {
-        const name = e.target.value;
-        return this.setState(() => ({ name }));
-    }
-
-    onPriceChange = (e) => {
-        const price = e.target.value;
-
-        if (!price || price.match(/^\d{1,}(\.\d{0,2})?$/)) {
-            return this.setState(() => ({ price }));
+        if (!height.length && !length.length && !width.length) {
+            return false;
         }
+        return true;
     }
 
     render() {
-        const { error, height, length, name, price, width } = this.state;
+        const { description, error, height, length, name, price, width } = this.state;
         return (
             <div className="gallery_piece_form">
                 {error && <FormError error={error} />}
                 <div>Name</div>
                 <input
                     className="gallery_piece_form__input"
-                    onChange={this.onNameChange}
+                    onChange={this.handleNameChange}
                     placeholder="Name"
                     type="text"
                     value={name}
@@ -70,7 +90,7 @@ export default class GalleryPieceForm extends React.Component {
                 <div>Price</div>
                 <input
                     className="gallery_piece_form__input"
-                    onChange={this.onPriceChange}
+                    onChange={this.handlePriceChange}
                     placeholder="Price"
                     type="text"
                     value={price}
@@ -80,7 +100,7 @@ export default class GalleryPieceForm extends React.Component {
                     <input
                             className="gallery_piece_form__input"
                             name="length"
-                            onChange={this.onDimensionChange}
+                            onChange={this.handleDimensionChange}
                             placeholder="Length"
                             type="text"
                             value={length}
@@ -90,7 +110,7 @@ export default class GalleryPieceForm extends React.Component {
                     <input
                             className="gallery_piece_form__input"
                             name="width"
-                            onChange={this.onDimensionChange}
+                            onChange={this.handleDimensionChange}
                             placeholder="Width"
                             type="text"
                             value={width}
@@ -100,13 +120,22 @@ export default class GalleryPieceForm extends React.Component {
                     <input
                             className="gallery_piece_form__input"
                             name="height"
-                            onChange={this.onDimensionChange}
+                            onChange={this.handleDimensionChange}
                             placeholder="Height"
                             type="text"
                             value={height}
                         />
                     </div>
                 </div>
+                <div>Description</div>
+                <textarea
+                    className="gallery_piece_form__input"
+                    maxLength="160"
+                    onChange={this.handleDescriptionChange}
+                    placeholder="Describe your piece"
+                    rows="6"
+                    value={description}
+                ></textarea>
                 <button
                     className="nav_link gallery_piece_form__button"
                     onClick={this.handleSubmit}
