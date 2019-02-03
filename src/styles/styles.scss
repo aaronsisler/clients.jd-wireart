@@ -14,9 +14,10 @@
 @import './components/core/LandingPage';
 @import './components/core/PrivacyPolicyPage';
 //Gallery
+@import './components/gallery/GalleryCategoryFilter';
 @import './components/gallery/GalleryContainer';
 @import './components/gallery/GalleryList';
-@import './components/gallery/GalleryListFilter';
+@import './components/gallery/GalleryTextFilter';
 @import './components/gallery/GalleryListItem';
 //GalleryPiece
 @import './components/galleryPiece/GalleryPieceContainer';
