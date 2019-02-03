@@ -32,7 +32,8 @@
             grid-gap: $xsmall;
             grid-template-areas: "gallery_text_filter gallery_category_filter";
             margin: 0 auto $large;
-            width: 35%;
+            // width: 35%;
+            width: 40%;
         }
     }
 }

@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { convertPrice } from 'Tools/price';
 import FormError from 'Core/FormError';
+import categories from 'Tools/category';
 
 export default class GalleryPieceForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            category: props.galleryPiece ? props.galleryPiece.category : 'NONE',
             description: props.galleryPiece ? props.galleryPiece.description : '',
             name: props.galleryPiece ? props.galleryPiece.name : '',
             price: props.galleryPiece ? convertPrice(props.galleryPiece.price) : '',
@@ -15,6 +17,11 @@ export default class GalleryPieceForm extends React.Component {
             height: props.galleryPiece ? props.galleryPiece.height : '',
             error: '',
         };
+    }
+
+    handleCategoryChange = (e) => {
+        const category = e.target.value;
+        return this.setState(() => ({ category: category ? category : '' }));
     }
 
     handleDescriptionChange = (e) => {
@@ -46,21 +53,22 @@ export default class GalleryPieceForm extends React.Component {
     }
 
     handleSubmit = () => {
-        const { name, price } = this.state
-        if (!name || !price) {
-            return this.setState(() => ({ error: 'Please provide name and price' }));
-        } else if (this.validateDimensions()) {
+        const { category, name, price } = this.state
+        if (!name || !price || category == 'NONE') {
+            return this.setState(() => ({ error: 'Please provide name, price, and category' }));
+        }
+
+        if (this.validateDimensions()) {
             return this.setState(() => ({ error: 'Please provide all three dimensions' }));
         }
-        else {
-            this.setState(() => ({ error: '' }));
-            const { error, ...submitObject } = Object.assign({}, this.state); // eslint-disable-line no-unused-vars
 
-            this.props.onSubmit({
-                ...submitObject,
-                price: convertPrice(price, false),
-            })
-        }
+        this.setState(() => ({ error: '' }));
+        const { error, ...submitObject } = Object.assign({}, this.state); // eslint-disable-line no-unused-vars
+
+        this.props.onSubmit({
+            ...submitObject,
+            price: convertPrice(price, false),
+        })
     }
 
     validateDimensions = () => {
@@ -75,7 +83,7 @@ export default class GalleryPieceForm extends React.Component {
     }
 
     render() {
-        const { description, error, height, length, name, price, width } = this.state;
+        const { category, description, error, height, length, name, price, width } = this.state;
         return (
             <div className="gallery_piece_form">
                 {error && <FormError error={error} />}
@@ -95,6 +103,22 @@ export default class GalleryPieceForm extends React.Component {
                     type="text"
                     value={price}
                 />
+                <div>Category</div>
+                <select
+                    className="gallery_piece_form__select"
+                    onChange={this.handleCategoryChange}
+                    value={category}
+                >
+                    {
+                        categories.map((categoryMap) => {
+                            const { key, value } = categoryMap;
+                            if (key == 'ALL') {
+                                return <option key='NONE' value='NONE' />;
+                            }
+                            return <option key={key} value={key}>{value}</option>
+                        })
+                    }
+                </select>
                 <div className="gallery_piece_form__dimensions">
                     <div>Length&nbsp;(in.)
                     <input

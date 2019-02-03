@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { startSetGalleryCategoryFilter } from 'Actions/gallery';
+import categories from 'Tools/category';
 
 export class GalleryCategoryFilter extends React.Component {
     constructor(props) {
@@ -21,13 +22,12 @@ export class GalleryCategoryFilter extends React.Component {
                     onChange={this.handleCategoryFilterChange}
                     value={this.props.filters.category}
                 >
-                    <option value="ALL">All</option>
-                    <option value="AIRCRAFT">Aircraft</option>
-                    <option value="AUTOS">Automobiles</option>
-                    <option value="BUGS">Bugs</option>
-                    <option value="MOTORCYCLES">Motorcycles</option>
-                    <option value="REPTILES">Reptiles</option>
-                    <option value="OTHER">Other</option>
+                    {
+                        categories.map((category) => {
+                            const { key, value } = category;
+                            return <option key={key} value={key}>{value}</option>
+                        })
+                    }
                 </select>
             </div>
         );
