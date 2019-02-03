@@ -113,7 +113,7 @@ export default class GalleryPieceForm extends React.Component {
                         categories.map((categoryMap) => {
                             const { key, value } = categoryMap;
                             if (key == 'ALL') {
-                                return <option key='NONE' value='NONE' />;
+                                return <option key='NONE' value='NONE' >Please select a category</option>;
                             }
                             return <option key={key} value={key}>{value}</option>
                         })
