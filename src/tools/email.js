@@ -1,39 +1,39 @@
-import { validate } from 'email-validator';
-import { apiGatewayEmailURL, pointOfContactEmail, websiteURL } from 'Src/config';
-import { apiGatewayToken } from 'Src/secrets';
+import { validate } from "email-validator";
+import {
+    pointOfContactEmail,
+    servicesApiGatewayToken,
+    servicesApiGatewayURL,
+    websiteURL
+} from "../config";
 
-export const isEmailValid = (email) => validate(email);
+const headers = {
+    "Content-Type": "application/json",
+    "X-Api-Key": servicesApiGatewayToken
+};
 
-const sendRequest = (data, done, fail) => {
-    const emailProperties = {
-        emailAddress: "",
-        message: "",
-        name: "",
-        phoneNumber: "",
-        website: "",
-        pointOfContactEmail,
-        ...data
-    };
+const emailOptions = { headers };
+
+export const isEmailValid = emailAddress => validate(emailAddress);
+
+export const sendEmail = async (data, done, fail) => {
+    const emailData = { pointOfContactEmail, ...data };
 
     if (data.galleryPieceId) {
-        emailProperties.galleryPieceLink = constructManagerGalleryPieceLink(data.galleryPieceId);
+        emailData.galleryPieceLink = constructManagerGalleryPieceLink(
+            data.galleryPieceId
+        );
     }
 
-    const request = new XMLHttpRequest();
-    request.onload = function () {
+    try {
+        await axios.post(servicesApiGatewayURL, emailData, emailOptions);
         done();
-    }
-    request.onerror = function () {
+    } catch {
         fail();
     }
-    request.open('POST', apiGatewayEmailURL, true);
-    request.setRequestHeader("X-Api-Key", apiGatewayToken);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify(emailProperties));
-}
+};
 
-export const constructGalleryPieceLink = (galleryPieceId) => `${websiteURL}/gallery_piece/${galleryPieceId}`;
+export const constructGalleryPieceLink = galleryPieceId =>
+    `${websiteURL}/gallery_piece/${galleryPieceId}`;
 
-export const constructManagerGalleryPieceLink = (galleryPieceId) => `${websiteURL}/manager/${galleryPieceId}`;
-
-export const sendEmail = (data, done, fail) => sendRequest(data, done, fail);
+export const constructManagerGalleryPieceLink = galleryPieceId =>
+    `${websiteURL}/manager/${galleryPieceId}`;

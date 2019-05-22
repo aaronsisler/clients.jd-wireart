@@ -1,12 +1,9 @@
-# React Boilerplate
-
-## Description
-This is used to start a new project using React, webpack, and babel.
-
+# JD WireArt Studio
 
 ## Prerequisites:
 
 1. Clone this repo and run the following command to ignore committing Firebase API Key
+
 ```bash
     git update-index --assume-unchanged src/firebase/firebase.js
 ```
@@ -17,11 +14,11 @@ This is used to start a new project using React, webpack, and babel.
 
 ## Deving steps:
 
-1. Install packages using [Yarn 1.7.0](https://github.com/yarnpkg/yarn/releases/tag/v1.7.0)
+1.  Install packages using at least [Yarn 1.13.0](https://github.com/yarnpkg/yarn/releases/tag/v1.13.0)
 
         yarn
 
-1. Run webpack dev server on http://localhost:8080
+1.  Run webpack dev server on http://localhost:8080
 
         yarn devserver
 

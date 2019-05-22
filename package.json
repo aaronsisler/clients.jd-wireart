@@ -1,19 +1,18 @@
 {
-    "name": "bolierplate",
-    "version": "1.0.0",
+    "name": "jdwireart",
+    "version": "1.1.0",
     "main": "app.js",
     "author": "Aaron Sisler",
     "license": "MIT",
     "engines": {
-        "yarn": "1.7.0",
-        "node": "8.9.4"
+        "yarn": ">=1.13.0",
+        "node": ">=10.15.1"
     },
     "scripts": {
         "build": "webpack -p --env production",
         "build:dev": "webpack",
-        "deploy": "yarn build & yarn firebase deploy",
+        "deploy": "yarn build && yarn firebase deploy",
         "dev": "webpack-dev-server",
-        "heroku-postbuild": "yarn run build",
         "start": "node server/server.js"
     },
     "dependencies": {
@@ -21,6 +20,7 @@
         "@fortawesome/fontawesome-free-brands": "^5.0.10",
         "@fortawesome/fontawesome-free-solid": "^5.0.10",
         "@fortawesome/react-fontawesome": "^0.0.18",
+        "axios": "^0.18.0",
         "babel-core": "6.25.0",
         "babel-loader": "7.1.1",
         "babel-plugin-module-resolver": "^3.1.1",
@@ -58,7 +58,7 @@
         "babel-eslint": "^8.2.3",
         "eslint": "^4.19.1",
         "eslint-plugin-react": "^7.8.2",
-        "firebase-tools": "^6.1.1",
+        "firebase-tools": "^6.9.2",
         "webpack-dev-server": "2.5.1"
     }
 }
