@@ -1,14 +1,15 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_list_filter {
+    .gallery_text_filter {
+        align-items: center;
         display: grid;
         font-size: $midlarge;
+        grid-area: gallery_text_filter;
         justify-content: center;
-        margin: 0 auto $large;
+        margin: 0 auto;
         &__input {
             font-family: $secFont;
-            text-align: center;
             width: 100%;
         }
     }

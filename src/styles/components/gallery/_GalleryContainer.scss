@@ -7,7 +7,13 @@
         text-align: center;
         &__title {
             font-family: $mainFont;
-            margin-bottom: $large;
+            margin-bottom: $small;
+        }
+        &__filters {
+            display: grid;
+            grid-gap: $small;
+            grid-template-areas: "gallery_text_filter" "gallery_category_filter";
+            margin: 0 auto $large;
         }
     }
 }
@@ -21,6 +27,14 @@
 @media only screen and (min-width: 64.063em) {
     .gallery_container {
         min-height: 95vh;
+        &__filters {
+            display: grid;
+            grid-gap: $xsmall;
+            grid-template-areas: "gallery_text_filter gallery_category_filter";
+            margin: 0 auto $large;
+            // width: 35%;
+            width: 40%;
+        }
     }
 }
 

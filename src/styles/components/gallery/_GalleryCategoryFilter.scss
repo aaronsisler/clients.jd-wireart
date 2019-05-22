@@ -1,17 +1,15 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .gallery_piece_form {
-        display: grid;
-        font-size: $medium;
-        grid-template-columns: 100%;
-        &__input {
+    .gallery_category_filter {
+        display: flex;
+        grid-area: gallery_category_filter;
+        justify-content: center;
+        select {
+            font-family: $secFont;
             font-size: $midlarge;
             padding: $xsmall 0;
-            width: 25%;
-        }
-        &__button {
-            margin-top: $small;
+            width: 100%;
         }
     }
 }
@@ -22,7 +20,11 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .gallery_category_filter {
+        display: grid;
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
