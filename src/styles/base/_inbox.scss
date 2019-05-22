@@ -73,8 +73,14 @@
         overflow-y: auto;
         padding: $small;
         &__link {
+            display: grid;
             font-size: $medium;
-            margin: 0 25% $small;
+            grid-area: inbox_details_content_link;
+            margin: 0 10%;
+            text-align: center;
+            .nav_link {
+                margin: 0 10% $small;
+            }
         }
     }
     .inbox_mobile {
@@ -133,8 +139,13 @@
             grid-area: inbox_details_content_image;
         }
         &__link {
+            display: grid;
             grid-area: inbox_details_content_link;
-            margin: 0 25%;
+            margin: 0 10%;
+            text-align: center;
+            .nav_link {
+                margin: 0 10% $small;
+            }
         }
     }
 }

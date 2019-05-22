@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import GalleryList from 'Gallery/GalleryList';
-import GalleryListFilter from 'Gallery/GalleryListFilter';
+import GalleryTextFilter from 'Gallery/GalleryTextFilter';
+import GalleryCategoryFilter from 'Gallery/GalleryCategoryFilter';
 import selectGallery from 'Selectors/gallery';
 
 class GalleryContainer extends React.Component {
@@ -17,7 +18,10 @@ class GalleryContainer extends React.Component {
                 <div className="gallery_container__title">
                     Gallery
                 </div>
-                <GalleryListFilter />
+                <div className="gallery_container__filters">
+                    <GalleryTextFilter />
+                    <GalleryCategoryFilter />
+                </div>
                 <GalleryList gallery={gallery} />
             </div>
         )

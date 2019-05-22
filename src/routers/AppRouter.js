@@ -2,21 +2,22 @@ import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from 'Tools/history';
 import ScrollToTop from 'Core/ScrollToTop';
+import AuthorizedRoute from 'Routers/AuthorizedRoute';
+
 import AboutPage from 'Core/AboutPage'
 import ContactPage from 'Core/ContactPage'
+import Footer from 'Core/Footer'
 import GalleryPage from 'Gallery/GalleryPage'
-import GalleryPiecePage from 'Gallery/GalleryPiecePage'
+import GalleryPiecePage from 'GalleryPiece/GalleryPiecePage'
 import LandingPage from 'Core/LandingPage';
 import LoggedOutPage from 'Auth/LoggedOutPage';
 import LogoutPage from 'Auth/LogoutPage';
 import ManagerAddPage from 'Manager/ManagerAddPage'
 import ManagerEditPage from 'Manager/ManagerEditPage'
 import ManagerPage from 'Manager/ManagerPage'
+import NotFoundPage from 'Core/NotFoundPage';
 import PaymentConfirmationPage from 'Paypal/PaymentConfirmationPage'
 import PrivacyPolicyPage from 'Core/PrivacyPolicyPage'
-import NotFoundPage from 'Core/NotFoundPage';
-import Footer from 'Core/Footer'
-import AuthorizedRoute from 'Routers/AuthorizedRoute';
 
 const AppRouter = () => (
     <Router history={history}>

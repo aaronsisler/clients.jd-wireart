@@ -5,8 +5,8 @@
     "author": "Aaron Sisler",
     "license": "MIT",
     "engines": {
-        "yarn": "1.7.0",
-        "node": "8.9.4"
+        "yarn": ">=1.7.0",
+        "node": ">=10.0.0"
     },
     "scripts": {
         "build": "webpack -p --env production",
@@ -34,9 +34,9 @@
         "express": "4.15.4",
         "extract-text-webpack-plugin": "3.0.0",
         "file-loader": "^1.1.11",
-        "firebase": "4.2.0",
+        "firebase": "^5.8.0",
         "history": "4.7.2",
-        "node-sass": "4.5.3",
+        "node-sass": "^4.11.0",
         "normalize.css": "7.0.0",
         "react": "16.0.0",
         "react-addons-shallow-compare": "15.6.0",

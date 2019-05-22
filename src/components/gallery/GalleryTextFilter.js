@@ -3,17 +3,17 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { startSetGalleryTextFilter } from 'Actions/gallery';
 
-export class GalleryListFilter extends React.Component {
+export class GalleryTextFilter extends React.Component {
     onTextChange = (e) => {
         this.props.startSetGalleryTextFilter(e.target.value);
     }
 
     render() {
         return (
-            <div className="gallery_list_filter">
+            <div className="gallery_text_filter">
                 <input
                     type="text"
-                    className="gallery_list_filter__input"
+                    className="gallery_text_filter__input"
                     placeholder="Search gallery by name"
                     value={this.props.filters.text}
                     onChange={this.onTextChange}
@@ -33,9 +33,9 @@ const mapDispatchToProps = (dispatch) => ({
     startSetGalleryTextFilter: (text) => dispatch(startSetGalleryTextFilter(text)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(GalleryListFilter);
+export default connect(mapStateToProps, mapDispatchToProps)(GalleryTextFilter);
 
-GalleryListFilter.propTypes = {
+GalleryTextFilter.propTypes = {
     filters: PropTypes.object.isRequired,
     startSetGalleryTextFilter: PropTypes.func.isRequired,
 };
