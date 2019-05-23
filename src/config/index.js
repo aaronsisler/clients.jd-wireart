@@ -1,5 +1,22 @@
-import { pointOfContactEmail, servicesApiGatewayURL } from "./config";
+import {
+  paypalEnvironment,
+  pointOfContactEmail,
+  servicesApiGatewayURL,
+  websiteURL
+} from "./config";
 
-import { servicesApiGatewayToken } from "./secrets";
+import {
+  paypalProductionClientId,
+  paypalSandboxClientId,
+  servicesApiGatewayToken
+} from "./secrets";
 
-export { pointOfContactEmail, servicesApiGatewayURL, servicesApiGatewayToken };
+export {
+  paypalEnvironment,
+  paypalProductionClientId,
+  paypalSandboxClientId,
+  pointOfContactEmail,
+  servicesApiGatewayURL,
+  servicesApiGatewayToken,
+  websiteURL
+};
