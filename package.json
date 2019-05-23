@@ -5,6 +5,7 @@
   "scripts": {
     "build": "react-scripts build",
     "deploy": "yarn build && yarn firebase deploy",
+    "gentemp": "node ./utils",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
@@ -35,7 +36,10 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "firebase-tools": "^6.9.2"
+    "firebase-tools": "^6.9.2",
+    "fs-extra": "^8.0.1",
+    "minimist": "^1.2.0",
+    "replace-in-file": "^4.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"
