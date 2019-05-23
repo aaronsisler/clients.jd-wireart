@@ -1,5 +1,7 @@
 // Email
+// export const pointOfContactEmail = "aaron.sisler@eandbsolutions.com";
 export const pointOfContactEmail = "jdwireart@aol.com";
+
 export const websiteURL = "https://jdwireartstudio.com";
 // export const websiteURL = 'https://jdwireart.firebaseapp.com';
 
