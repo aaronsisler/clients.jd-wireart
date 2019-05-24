@@ -1,8 +1,8 @@
 const fs = require("fs");
 const fse = require("fs-extra");
 const replace = require("replace-in-file");
-const { validateArgs } = require("./validateArgs");
-const { generateUpperName } = require("./generateUpperName");
+const { validateArgs } = require("./utils/validateArgs");
+const { generateUpperName } = require("./utils/generateUpperName");
 
 const envArgs = require("minimist")(process.argv.slice(2));
 validateArgs(envArgs);
@@ -22,7 +22,6 @@ const nameDirectory = `${__dirname}/${lowerName}`;
 fse.copySync(`${__dirname}/templates`, nameDirectory);
 
 //Replace the upper and lower name using crafted name
-
 const files = [`${nameDirectory}/javascript.js`, `${nameDirectory}/index.js`];
 
 const upperOptions = {
@@ -56,4 +55,10 @@ fs.renameSync(
   `${nameDirectory}/${lowerName}.scss`
 );
 
+console.log(__dirname);
 //Move folder and files to containers or components
+// if (isContainerBoolean) {
+//   fse.moveSync(nameDirectory, `${__dirname}/src/containers/${nameDirectory}`);
+// } else {
+//   fse.moveSync(nameDirectory, `${__dirname}/src/components/${nameDirectory}`);
+// }
