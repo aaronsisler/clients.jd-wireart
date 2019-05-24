@@ -1,48 +1,26 @@
 const fs = require("fs");
 const fse = require("fs-extra");
-const replace = require("replace-in-file");
 const { validateArgs } = require("./utils/validateArgs");
 const { generateUpperName } = require("./utils/generateUpperName");
+const { generateLowerName } = require("./utils/generateLowerName");
+const { replaceNamesInFiles } = require("./utils/replaceNamesInFiles");
 
+//Validate the name and isContainer is sent correctly
 const envArgs = require("minimist")(process.argv.slice(2));
 validateArgs(envArgs);
-
 const { isContainer, name } = envArgs;
+
+//Craft the names with logic against isContainer
 const isContainerBoolean = isContainer === "true";
-
-//Craft the names with logic against isContainerBoolean
 const upperName = generateUpperName(name, isContainerBoolean);
-const lowerName = isContainerBoolean
-  ? `${name.toLowerCase()}-container`
-  : name.toLowerCase();
-
-const nameDirectory = `${__dirname}/${lowerName}`;
+const lowerName = generateLowerName(name, isContainerBoolean);
 
 //Create a copy of templates in a directory using crafted name
+const nameDirectory = `${__dirname}/${lowerName}`;
 fse.copySync(`${__dirname}/templates`, nameDirectory);
 
 //Replace the upper and lower name using crafted name
-const files = [`${nameDirectory}/javascript.js`, `${nameDirectory}/index.js`];
-
-const upperOptions = {
-  files,
-  from: /UPPER_NAME/g,
-  to: upperName
-};
-
-const lowerOptions = {
-  files,
-  from: /LOWER_NAME/g,
-  to: lowerName
-};
-
-try {
-  replace.sync(upperOptions);
-  replace.sync(lowerOptions);
-  console.log("Files have been replaced");
-} catch (error) {
-  console.error("Error occurred:", error);
-}
+replaceNamesInFiles(nameDirectory, lowerName, upperName);
 
 //Rename the JS and SCSS files
 fs.renameSync(
@@ -55,10 +33,9 @@ fs.renameSync(
   `${nameDirectory}/${lowerName}.scss`
 );
 
-console.log(__dirname);
 //Move folder and files to containers or components
-// if (isContainerBoolean) {
-//   fse.moveSync(nameDirectory, `${__dirname}/src/containers/${nameDirectory}`);
-// } else {
-//   fse.moveSync(nameDirectory, `${__dirname}/src/components/${nameDirectory}`);
-// }
+if (isContainerBoolean) {
+  fse.moveSync(nameDirectory, `${__dirname}/../src/containers/${lowerName}/`);
+} else {
+  fse.moveSync(nameDirectory, `${__dirname}/../src/components/${lowerName}/`);
+}
