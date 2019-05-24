@@ -1,24 +1,24 @@
-exports.validateArgs = ({ isContainer, lowerName, upperName }) => {
-  if (
-    isContainer == undefined ||
-    lowerName == undefined ||
-    upperName == undefined
-  ) {
-    console.log("'isContainer','lowerName', and 'upperName' are required");
+exports.validateArgs = ({ isContainer, name }) => {
+  if (isContainer == undefined || name == undefined) {
+    console.log("'isContainer' and 'name' are required");
     process.exit(1);
   }
 
-  if (lowerName.length == 0 || upperName.length == 0) {
-    console.log("'lowerName' and 'upperName' must be populated");
-    console.log("lowerName: ", lowerName);
-    console.log("upperName: ", upperName);
+  if (name.length == 0) {
+    console.log("'name' must be populated");
+    console.log("name: ", name);
     process.exit(1);
   }
 
-  if (lowerName.includes("container") || upperName.includes("container")) {
-    console.log("'lowerName' or 'upperName' does not need 'container' added");
-    console.log("lowerName: ", lowerName);
-    console.log("upperName: ", upperName);
+  if (name.includes("container")) {
+    console.log("'name' does not need 'container' added");
+    console.log("name: ", name);
+    process.exit(1);
+  }
+
+  if (name.substr(-1) === "-") {
+    console.log("'name' should not end with a hyphen");
+    console.log("name: ", name);
     process.exit(1);
   }
 
