@@ -1,13 +1,14 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
+import { history } from "../tools/history";
 import AppContainer from "../containers/app-container";
 import "normalize.css/normalize.css";
 import "./app.scss";
 
 const App = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <AppContainer />
-  </BrowserRouter>
+  </Router>
 );
 
 export default App;

@@ -10,7 +10,7 @@ class AppContainer extends React.Component {
     return (
       <React.Fragment>
         <ScrollToTop>
-          <Navbar companyName={"Valley Love Farm"} />
+          <Navbar companyName={"JD WireArt Studio"} />
           <AppRouter />
           <Footer />
         </ScrollToTop>
