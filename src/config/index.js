@@ -6,12 +6,14 @@ import {
 } from "./config";
 
 import {
+  firebaseConfig,
   paypalProductionClientId,
   paypalSandboxClientId,
   servicesApiGatewayToken
 } from "./secrets";
 
 export {
+  firebaseConfig,
   paypalEnvironment,
   paypalProductionClientId,
   paypalSandboxClientId,

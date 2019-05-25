@@ -2,17 +2,9 @@ import * as firebase from "firebase";
 import "firebase/auth";
 import "firebase/database";
 import "firebase/storage";
+import { firebaseConfig } from "../config";
 
-const config = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: ""
-};
-
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
