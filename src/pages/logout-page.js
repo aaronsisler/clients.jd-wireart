@@ -4,13 +4,11 @@ import PropTypes from "prop-types";
 import { startLogout } from "../actions";
 
 const LogoutPage = props => (
-  <div className="box-layout">
-    <div className="box-layout__box">
-      <button className="button" onClick={props.startLogout}>
-        Logout
-      </button>
-    </div>
-  </div>
+  <main className="logout-page">
+    <button className="button" onClick={props.startLogout}>
+      Logout
+    </button>
+  </main>
 );
 
 const mapDispatchToProps = dispatch => ({

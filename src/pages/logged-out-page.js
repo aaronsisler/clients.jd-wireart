@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LoggedOutPage = () => (
-  <div className="logged_out_page">
+  <main className="logged-out-page">
     <div className="logged_out_page__content">You have been logged out.</div>
     <div className="logged_out_page__link">
       <Link className="nav_link" to="/manager">
@@ -12,7 +12,7 @@ const LoggedOutPage = () => (
         Back to Gallery
       </Link>
     </div>
-  </div>
+  </main>
 );
 
 export default LoggedOutPage;

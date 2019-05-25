@@ -2,7 +2,7 @@ import React from "react";
 import YouTubeViewer from "../components/youtube-viewer";
 
 const AboutUsPage = () => (
-  <div className="about_page">
+  <main className="about_page">
     <div className="about_page__youtube">
       <YouTubeViewer src="https://www.youtube.com/embed/3jv-q_Nexgg" />
     </div>
@@ -63,7 +63,7 @@ const AboutUsPage = () => (
         Zimbabwe.
       </p>
     </div>
-  </div>
+  </main>
 );
 
 export default AboutUsPage;

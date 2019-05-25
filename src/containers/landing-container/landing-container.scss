@@ -4,6 +4,20 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .landing-container {
+    &__content {
+      background-image: url("/images/landing/splash.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: -10;
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +28,8 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .landing-container {
+  }
 }
 
 //XLarge screens

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PaymentConfirmationPage = () => (
-  <div className="payment_confirmation_page">
+  <main className="payment-confirmation-page">
     <div className="payment_confirmation_page__message">
       Thank you for your purchase!
     </div>
@@ -11,7 +11,7 @@ const PaymentConfirmationPage = () => (
         Back to Gallery
       </Link>
     </div>
-  </div>
+  </main>
 );
 
 export default PaymentConfirmationPage;
