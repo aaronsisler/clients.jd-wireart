@@ -1,3 +1,4 @@
+import AboutUsPage from "./about-us-page";
 import AddGalleryPiecePage from "./add-gallery-piece-page";
 import ContactPage from "./contact-page";
 import EditGalleryPiecePage from "./edit-gallery-piece-page";
@@ -12,6 +13,7 @@ import PaymentConfirmationPage from "./payment-confirmation-page";
 import PrivacyPolicyPage from "./privacy-policy-page";
 
 export {
+  AboutUsPage,
   AddGalleryPiecePage,
   ContactPage,
   EditGalleryPiecePage,

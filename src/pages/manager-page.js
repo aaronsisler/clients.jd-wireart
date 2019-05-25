@@ -1,5 +1,5 @@
 import React from "react";
-import ManagerContainer from "Manager/ManagerContainer";
+import ManagerContainer from "../containers/manager-container";
 
 const ManagerPage = props => (
   <div className="manager_page">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Router } from "react-router-dom";
-import { history } from "../tools/history";
+import history from "../tools/history";
 import AppContainer from "../containers/app-container";
 import "normalize.css/normalize.css";
 import "./app.scss";

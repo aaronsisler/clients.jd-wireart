@@ -1,10 +1,10 @@
 import React from "react";
-import ManagerAddContainer from "Manager/ManagerAddContainer";
+import AddGalleryPieceContainer from "../containers/add-gallery-piece-container";
 
-const ManagerAddPage = () => (
-  <div className="manager_add_page">
-    <ManagerAddContainer />
+const AddGalleryPiecePage = () => (
+  <div className="add-gallery-piece">
+    <AddGalleryPieceContainer />
   </div>
 );
 
-export default ManagerAddPage;
+export default AddGalleryPiecePage;

@@ -1,10 +1,10 @@
 import React from "react";
-import ManagerEditContainer from "Manager/ManagerEditContainer";
+import EditGalleryPieceContainer from "../containers/edit-gallery-piece-container";
 
-const ManagerEditPage = props => (
-  <div className="manager_edit_page">
-    <ManagerEditContainer {...props} />
+const EditGalleryPiecePage = () => (
+  <div className="edit-gallery-piece">
+    <EditGalleryPieceContainer />
   </div>
 );
 
-export default ManagerEditPage;
+export default EditGalleryPiecePage;

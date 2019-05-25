@@ -3,25 +3,25 @@ import { Route, Switch } from "react-router-dom";
 import AuthorizedRoute from "./authorized-route";
 
 import {
-  AboutPage,
+  AboutUsPage,
+  AddGalleryPiecePage,
   ContactPage,
+  EditGalleryPiecePage,
   GalleryPage,
   GalleryPiecePage,
   LandingPage,
   LoggedOutPage,
   LogoutPage,
   ManagerPage,
-  ManagerAddPage,
-  ManagerEditPage,
-  NotFoundPage,
   PaymentConfirmationPage,
+  NotFoundPage,
   PrivacyPolicyPage
 } from "../pages";
 
 const AppRouter = () => (
   <Switch>
     <Route path="/" component={LandingPage} exact={true} />
-    <Route path="/about" component={AboutPage} exact={true} />
+    <Route path="/about_us" component={AboutUsPage} exact={true} />
     <Route
       path="/confirm_payment"
       component={PaymentConfirmationPage}
@@ -37,10 +37,13 @@ const AppRouter = () => (
     <AuthorizedRoute path="/manager/:id" component={ManagerPage} />
     <AuthorizedRoute
       path="/manager_add"
-      component={ManagerAddPage}
+      component={AddGalleryPiecePage}
       exact={true}
     />
-    <AuthorizedRoute path="/manager_edit/:id" component={ManagerEditPage} />
+    <AuthorizedRoute
+      path="/manager_edit/:id"
+      component={EditGalleryPiecePage}
+    />
     <Route path="/privacy" component={PrivacyPolicyPage} exact={true} />
     <Route path="/not_found" component={NotFoundPage} exact={true} />
     <Route component={NotFoundPage} />

@@ -1,8 +1,8 @@
 import React from "react";
-import GalleryContainer from "Gallery/GalleryContainer";
+import GalleryContainer from "../containers/gallery-container";
 
 const GalleryPage = () => (
-  <div className="gallery_page">
+  <div className="gallery-page">
     <GalleryContainer />
   </div>
 );

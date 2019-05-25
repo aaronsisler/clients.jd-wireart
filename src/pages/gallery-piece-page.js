@@ -1,8 +1,8 @@
 import React from "react";
-import GalleryPieceContainer from "GalleryPiece/GalleryPieceContainer";
+import GalleryPieceContainer from "../containers/gallery-piece-container";
 
 const GalleryPiecePage = props => (
-  <div className="gallery_piece_page">
+  <div className="gallery-piece-page">
     <GalleryPieceContainer {...props} />
   </div>
 );
