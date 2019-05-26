@@ -6,7 +6,6 @@
 //max-width 640px, small screens
 @media only screen {
   * {
-    @include font-type();
     box-sizing: border-box;
   }
 
@@ -16,6 +15,7 @@
   }
 
   body {
+    @include font-type();
     height: 100%;
   }
 

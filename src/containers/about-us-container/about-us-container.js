@@ -4,27 +4,27 @@ import "./about-us-container.scss";
 
 const AboutUsContainer = () => (
   <div className="about-us-container">
-    <div className="about_page__youtube">
+    <div className="about-us-container__player">
       <YouTubeViewer src="https://www.youtube.com/embed/3jv-q_Nexgg" />
     </div>
-    <div className="about_page__content">
-      <h1>About Me</h1>
-      <p>
-        My name is Jonathan Daniel. I was born in 1965 in Zimbabwe, then
-        Rhodesia. I was born and raised on a farm. Both of my parents were
-        illiterate and are still unable to read or write. My dad has been a cook
-        for a white farmer for over thirty years. He has two wives, and I am the
-        oldest of his nine children. Because my parents were so poor, I
-        literally spent my childhood with no clothes, no money and no toys.
-      </p>
-      <p>
+    <div className="about-us-container__content">
+      <h1 className="about-us-container__content-title">About Me</h1>
+      <div className="about-us-container__content-text">
+        My name is Jonathan Daniel. I was born in 1965 in Zimbabwe. I was born
+        and raised on a farm. Both of my parents were illiterate and are still
+        unable to read or write. My dad has been a cook for a white farmer for
+        over thirty years. He has two wives, and I am the oldest of his nine
+        children. Because my parents were so poor, I literally spent my
+        childhood with no clothes, money, or toys.
+      </div>
+      <div className="about-us-container__content-text">
         Although we were materially poor, my family was rich in values and
         tradition. Poverty forces you to be adventurous, creative and a dreamer.
         Sometimes people make poor choices in their poor condition that result
         in bad consequences, but others make positive choices that form positive
         talents to last a lifetime. Allow me to explain:
-      </p>
-      <p>
+      </div>
+      <div className="about-us-container__content-text">
         I remember as a young boy, when I asked my dad for a toy. He handed me
         an ax and said, “With this tool, you can create any toy you can
         imagine.” As strange as it sounds, he was right. I remember carrying
@@ -33,8 +33,8 @@ const AboutUsContainer = () => (
         imagination of what a toy should look like, and I enriched my
         perceptions in creating ideas. I became adventurous so that I started to
         utilize the environment around me for all my basic needs.
-      </p>
-      <p>
+      </div>
+      <div className="about-us-container__content-text">
         On the farm, I had often seen machinery such as a truck or a tractor,
         but I hadn’t seen the other “animals of the road” when I was young.
         There was a grocery store, merely three miles away from the farm, which
@@ -50,9 +50,11 @@ const AboutUsContainer = () => (
         completed vehicle out of trash and was able to “push-drive” them
         everywhere I went. I would even drive my trucks to the store and load
         them up with the daily bread and milk items.
-      </p>
-      <p>I quickly acquired the nickname “Wire Boy” from those on the farm.</p>
-      <p>
+      </div>
+      <div className="about-us-container__content-text">
+        I quickly acquired the nickname “Wire Boy” from those on the farm.
+      </div>
+      <div className="about-us-container__content-text">
         The humble artistic beginnings of my wire art blossomed when I came to
         the United States to study aircraft mechanics. The story of the
         development of my craft and how it helped me to fund my schooling is an
@@ -62,7 +64,7 @@ const AboutUsContainer = () => (
         North Carolina. Although I love working with youth in America, I have
         never lost my passion for the work still to be done in my own country of
         Zimbabwe.
-      </p>
+      </div>
     </div>
   </div>
 );

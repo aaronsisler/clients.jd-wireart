@@ -4,6 +4,20 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .youtube-viewer {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
 
 //Medium screens - TABLET

@@ -4,6 +4,18 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .about-us-container {
+    display: grid;
+    padding: $small $medium;
+    &__content {
+      display: grid;
+      grid-gap: $midlarge;
+      &-title {
+        @include font-type($secFont, $large, bold);
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +26,9 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .about-us-container {
+    padding: $medium 20%;
+  }
 }
 
 //XLarge screens
