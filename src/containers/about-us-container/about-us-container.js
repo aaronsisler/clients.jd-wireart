@@ -1,5 +1,5 @@
 import React from "react";
-import YouTubeViewer from "../components/youtube-viewer";
+import YouTubeViewer from "../../components/youtube-viewer";
 import "./about-us-container.scss";
 
 const AboutUsContainer = () => (

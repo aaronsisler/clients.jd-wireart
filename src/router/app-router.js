@@ -21,14 +21,14 @@ import {
 const AppRouter = () => (
   <Switch>
     <Route path="/" component={LandingPage} exact={true} />
-    <Route path="/about_us" component={AboutUsPage} exact={true} />
+    <Route path="/about" component={AboutUsPage} exact={true} />
     <Route
       path="/confirm_payment"
       component={PaymentConfirmationPage}
       exact={true}
     />
-    <Route path="/contact_us" component={ContactPage} exact={true} />
-    <Route path="/contact_us/:id" component={ContactPage} />
+    <Route path="/contact" component={ContactPage} exact={true} />
+    <Route path="/contact/:id" component={ContactPage} />
     <Route path="/gallery" component={GalleryPage} />
     <Route path="/gallery_piece/:id" component={GalleryPiecePage} />
     <Route path="/logged_out" component={LoggedOutPage} exact={true} />

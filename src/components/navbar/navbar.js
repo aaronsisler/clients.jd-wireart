@@ -51,20 +51,6 @@ export default class Navbar extends React.Component {
             Home
           </Link>
           <Link
-            to="/farm"
-            className="nav-menu__links-link"
-            onClick={this.closeSideMenu}
-          >
-            Farm
-          </Link>
-          <Link
-            to="/lawn"
-            className="nav-menu__links-link"
-            onClick={this.closeSideMenu}
-          >
-            Lawn
-          </Link>
-          <Link
             to="/contact"
             className="nav-menu__links-link nav-menu__links-contact"
             onClick={this.closeSideMenu}

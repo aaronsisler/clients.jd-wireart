@@ -5,17 +5,29 @@
 //max-width 640px, small screens
 @media only screen {
   .landing-container {
-    &__content {
+    &__splash {
+      align-items: center;
       background-image: url("/images/landing/splash.jpg");
       background-position: center;
-      background-repeat: no-repeat;
       background-size: cover;
-      height: 100vh;
-      left: 0;
-      position: fixed;
-      top: 0;
+      display: grid;
+      min-height: 94vh;
+      justify-content: center;
       width: 100%;
-      z-index: -10;
+      &-name {
+        @include font-type($accentFont, $xlarge, bold);
+        background-color: white;
+        color: $darkMainColor;
+        margin-top: 30vh;
+        padding: $small;
+        text-align: center;
+        min-width: 100vw;
+      }
+      &-link {
+        align-self: flex-start;
+        margin: 0 auto;
+        padding: 0 $small;
+      }
     }
   }
 }
@@ -29,6 +41,19 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .landing-container {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10vh 0 5vh;
+    &__splash {
+      background-image: url("/images/landing/splash.jpg");
+      min-height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      &-name {
+        @include font-type($accentFont, $xxlarge);
+      }
+    }
   }
 }
 
