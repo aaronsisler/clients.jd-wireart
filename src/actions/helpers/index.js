@@ -1,4 +1,4 @@
-import { login, logout } from "./auth";
+import { clearAuth, setAuth } from "./auth";
 import { setGallery } from "./gallery";
 import {
   setGalleryCategoryFilter,
@@ -9,10 +9,10 @@ import { clearUser, setUser } from "./user";
 
 export {
   addGalleryPiece,
+  clearAuth,
   clearUser,
   editGalleryPiece,
-  login,
-  logout,
+  setAuth,
   setGallery,
   setGalleryCategoryFilter,
   setGalleryTextFilter,

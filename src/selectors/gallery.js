@@ -2,7 +2,7 @@
 export default (gallery, { category = "ALL", text = "" }) =>
   gallery.filter(galleryPiece => {
     const matchesCategory =
-      category == "ALL" || galleryPiece.category == category;
+      category === "ALL" || galleryPiece.category === category;
     const includesText = galleryPiece.name
       .toLowerCase()
       .includes(text.toLowerCase());

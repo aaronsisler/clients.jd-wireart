@@ -8,10 +8,6 @@ import GalleryCategoryFilter from "../../components/gallery-category-filter";
 import "./gallery-container.scss";
 
 class GalleryContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { gallery } = this.props;
     return (

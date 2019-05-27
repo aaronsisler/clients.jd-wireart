@@ -1,8 +1,8 @@
-export const login = uid => ({
-  type: "LOGIN",
+export const setAuth = uid => ({
+  type: "SET_AUTH",
   uid
 });
 
-export const logout = () => ({
-  type: "LOGOUT"
+export const clearAuth = () => ({
+  type: "CLEAR_AUTH"
 });

@@ -1,4 +1,4 @@
-import { startLogin, startLogout } from "./auth";
+import { startClearAuth, startLogin, startLogout, startSetAuth } from "./auth";
 import {
   startSetGallery,
   startSetGalleryCategoryFilter,
@@ -16,10 +16,12 @@ import { startClearUser, startSetUser } from "./user";
 export {
   startAddGalleryPiece,
   startAddGalleryPieceImage,
+  startClearAuth,
   startClearUser,
   startEditGalleryPiece,
   startLogin,
   startLogout,
+  startSetAuth,
   startSetGallery,
   startSetGalleryCategoryFilter,
   startSetGalleryTextFilter,

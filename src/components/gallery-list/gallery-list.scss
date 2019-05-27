@@ -4,6 +4,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
 }
 
 //Medium screens - TABLET

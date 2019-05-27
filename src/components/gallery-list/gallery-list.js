@@ -4,10 +4,6 @@ import PropTypes from "prop-types";
 import "./gallery-list.scss";
 
 class GalleryList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     if (this.props.gallery.length === 0) {
       return <div className="gallery-list empty">No available items</div>;
@@ -26,4 +22,5 @@ class GalleryList extends React.Component {
 GalleryList.propTypes = {
   gallery: PropTypes.array
 };
+
 export default GalleryList;

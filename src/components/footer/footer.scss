@@ -8,7 +8,7 @@
     @include font-type($secFont);
 
     align-items: center;
-    background-color: $darkGrey;
+    background-color: $darkMainColor;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -18,8 +18,7 @@
       color: white;
       text-decoration: none;
       &:hover {
-        color: $darkMainColor;
-        transition: color 0.5s ease-in;
+        text-decoration: underline;
       }
     }
   }
