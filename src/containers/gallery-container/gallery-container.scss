@@ -4,6 +4,31 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-container {
+    background-color: $superLightGrey;
+    flex: 1 1 auto;
+    &__header {
+      display: flex;
+      flex-flow: column;
+      &-title {
+        @include font-type($accentFont, $xlarge, bold);
+        color: $darkMainColor;
+        margin: $small 0;
+        text-align: center;
+      }
+      &-filters {
+        background-color: white;
+        filter: drop-shadow(3px 3px 6px $boxShadowGrey);
+        display: grid;
+        grid-gap: $small;
+        margin: 0 auto;
+        padding: $small;
+      }
+    }
+    &__content {
+      margin: $small;
+    }
+  }
 }
 
 //Medium screens - TABLET

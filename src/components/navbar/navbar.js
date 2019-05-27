@@ -51,6 +51,20 @@ export default class Navbar extends React.Component {
             Home
           </Link>
           <Link
+            to="/gallery"
+            className="nav-menu__links-link"
+            onClick={this.closeSideMenu}
+          >
+            Gallery
+          </Link>
+          <Link
+            to="/about"
+            className="nav-menu__links-link"
+            onClick={this.closeSideMenu}
+          >
+            About Us
+          </Link>
+          <Link
             to="/contact"
             className="nav-menu__links-link nav-menu__links-contact"
             onClick={this.closeSideMenu}
