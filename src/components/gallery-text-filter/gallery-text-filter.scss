@@ -4,6 +4,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-text-filter {
+    &__input {
+      width: 100%;
+    }
+  }
 }
 
 //Medium screens - TABLET

@@ -4,6 +4,12 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-category-filter {
+    &__select {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
 }
 
 //Medium screens - TABLET

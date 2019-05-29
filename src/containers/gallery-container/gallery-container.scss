@@ -21,7 +21,7 @@
         filter: $dropShadow;
         display: grid;
         grid-gap: $small;
-        margin: 0 auto;
+        margin: 0 $small;
         padding: $small;
       }
     }
