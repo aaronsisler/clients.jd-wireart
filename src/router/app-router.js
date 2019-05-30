@@ -8,6 +8,7 @@ import {
   ContactPage,
   EditGalleryPiecePage,
   GalleryPage,
+  GalleryPieceNotFoundPage,
   GalleryPiecePage,
   LandingPage,
   LoggedOutPage,
@@ -31,6 +32,10 @@ const AppRouter = () => (
     <Route path="/contact/:id" component={ContactPage} />
     <Route path="/gallery" component={GalleryPage} />
     <Route path="/gallery_piece/:id" component={GalleryPiecePage} />
+    <Route
+      path="/gallery_piece_not_found"
+      component={GalleryPieceNotFoundPage}
+    />
     <Route path="/logged_out" component={LoggedOutPage} exact={true} />
     <Route path="/logout" component={LogoutPage} exact={true} />
     <AuthorizedRoute path="/manager" component={ManagerPage} exact={true} />
