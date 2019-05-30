@@ -4,6 +4,12 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-piece-image{
+    background-color: white;
+    display: grid;
+    filter: $dropShadow;
+    grid-area: gallery_piece_image;
+  }
 }
 
 //Medium screens - TABLET
