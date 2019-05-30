@@ -12,6 +12,7 @@
       flex-flow: column;
       &-title {
         @include font-type($accentFont, $xlarge, bold);
+
         color: $darkMainColor;
         margin: $small 0;
         text-align: center;
