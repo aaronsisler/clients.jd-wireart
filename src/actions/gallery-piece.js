@@ -16,12 +16,12 @@ export const startAddGalleryPiece = galleryPiece => dispatch =>
 
 export const startAddGalleryPieceImage = (
   galleryPieceId,
-  imageURL
+  imageSrc
 ) => dispatch =>
   database
     .ref(`gallery/${galleryPieceId}`)
-    .update({ imageURL })
-    .then(() => dispatch(editGalleryPiece(galleryPieceId, { imageURL })));
+    .update({ imageSrc })
+    .then(() => dispatch(editGalleryPiece(galleryPieceId, { imageSrc })));
 
 export const startEditGalleryPiece = (galleryPieceId, updates) => dispatch =>
   database

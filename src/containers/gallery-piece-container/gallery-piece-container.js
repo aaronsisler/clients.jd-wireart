@@ -19,7 +19,12 @@ class GalleryPieceContainer extends React.Component {
     return (
       <div className="gallery-piece-container">
         {galleryPiece && <GalleryPieceDetails galleryPiece={galleryPiece} />}
-        {galleryPiece && <GalleryPieceImage galleryPiece={galleryPiece} />}
+        {galleryPiece && (
+          <GalleryPieceImage
+            imageSrc={galleryPiece.imageSrc}
+            name={galleryPiece.name}
+          />
+        )}
       </div>
     );
   }

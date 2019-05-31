@@ -46,12 +46,10 @@
     "fs-extra": "^8.0.1",
     "minimist": "^1.2.0",
     "prettier": "^1.14.2",
+    "prettier-stylelint": "^0.4.2",
     "replace-in-file": "^4.1.0",
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

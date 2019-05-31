@@ -19,11 +19,11 @@ const GalleryPieceDetails = ({ galleryPiece }) => {
             price={price}
           />
         ) : (
-            <GalleryPieceAvailable
-              galleryPieceId={galleryPieceId}
-              isSold={isSold}
-            />
-          )}
+          <GalleryPieceAvailable
+            galleryPieceId={galleryPieceId}
+            isSold={isSold}
+          />
+        )}
       </div>
     </div>
   );

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./gallery-list-item.scss";
 
-const GalleryListItem = ({ galleryPieceId, imageURL, name }) => (
+const GalleryListItem = ({ galleryPieceId, imageSrc, name }) => (
   <div className="gallery-list-item">
     <div className="gallery-list-item__image">
-      {imageURL ? (
-        <img src={imageURL} alt={name} />
+      {imageSrc ? (
+        <img src={imageSrc} alt={name} />
       ) : (
         <img src="/images/site/no_image_available.svg" alt="not available" />
       )}
@@ -25,7 +25,7 @@ const GalleryListItem = ({ galleryPieceId, imageURL, name }) => (
 
 GalleryListItem.propTypes = {
   galleryPieceId: PropTypes.string.isRequired,
-  imageURL: PropTypes.string,
+  imageSrc: PropTypes.string,
   name: PropTypes.string.isRequired
 };
 
