@@ -4,7 +4,7 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .gallery-piece-container{   
+  .gallery-piece-container {
     background-color: $superLightGrey;
     display: grid;
     flex: 1 1 auto;
@@ -22,13 +22,15 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .gallery-piece-container{
+  .gallery-piece-container {
+    align-content: center;
     background-color: $superLightGrey;
     display: grid;
     flex: 1 1 auto;
     grid-gap: $small;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "gallery_piece_details gallery_piece_image";
-    padding: $small;
+    padding: 0 10%;
   }
 }
 

@@ -5,10 +5,19 @@
 //max-width 640px, small screens
 @media only screen {
   .gallery-piece-image {
+    align-content: center;
     background-color: white;
     display: grid;
     filter: $dropShadow;
     grid-area: gallery_piece_image;
+    justify-content: center;
+    padding: $small;
+    width: 100%;
+    img {
+      max-height: 50vh;
+      object-fit: scale-down;
+      width: 100%;
+    }
   }
 }
 

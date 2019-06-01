@@ -9,6 +9,13 @@
     display: grid;
     filter: $dropShadow;
     grid-area: gallery_piece_details;
+    padding: $small 10%;
+    &__process {
+      border-top: $border;
+      margin-top: $small;
+      padding-top: $small;
+      text-align: center;
+    }
   }
 }
 

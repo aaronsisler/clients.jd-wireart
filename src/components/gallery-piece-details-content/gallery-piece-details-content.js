@@ -15,7 +15,12 @@ const GalleryPieceDetailsContent = ({ galleryPiece }) => {
         ${convertPrice(price)}
       </div>
       {length && (
-        <GalleryPieceDimensions height={height} length={length} width={width} />
+        <GalleryPieceDimensions
+          className="gallery-piece-details-content__dimensions"
+          height={height}
+          length={length}
+          width={width}
+        />
       )}
       {description && (
         <div className="gallery-piece-details-content__description">

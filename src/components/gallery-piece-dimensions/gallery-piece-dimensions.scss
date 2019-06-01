@@ -4,6 +4,22 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-piece-dimensions {
+    // border-top: 1px solid black;
+    border-top: $border;
+    &__title {
+      @include font-type($secFont, $medium, bold);
+
+      margin: $small 0;
+      text-align: center;
+    }
+    &__values {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: $small;
+      text-align: center;
+    }
+  }
 }
 
 //Medium screens - TABLET
