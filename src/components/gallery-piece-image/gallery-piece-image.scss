@@ -29,6 +29,11 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .gallery-piece-image {
+    img {
+      height: 50vh;
+    }
+  }
 }
 
 //XLarge screens

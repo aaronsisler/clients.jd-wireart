@@ -28,8 +28,8 @@
     display: grid;
     flex: 1 1 auto;
     grid-gap: $small;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas: "gallery_piece_details gallery_piece_image";
+    grid-template-columns: 1fr 1fr;
     padding: 0 10%;
   }
 }
