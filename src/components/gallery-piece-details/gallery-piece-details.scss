@@ -6,15 +6,19 @@
 @media only screen {
   .gallery-piece-details {
     background-color: white;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     filter: $dropShadow;
     grid-area: gallery_piece_details;
+    justify-content: space-around;
     padding: $small 10%;
-    &__process {
-      border-top: $border;
-      margin-top: $small;
-      padding-top: $small;
-      text-align: center;
+    &__content {
+      &-process {
+        border-top: $border;
+        margin-top: $medium;
+        padding-top: $small;
+        text-align: center;
+      }
     }
   }
 }

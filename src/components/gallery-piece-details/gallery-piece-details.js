@@ -10,20 +10,22 @@ const GalleryPieceDetails = ({ galleryPiece }) => {
   const { galleryPieceId, isPaypalActive, isSold, name, price } = galleryPiece;
   return (
     <div className="gallery-piece-details">
-      <GalleryPieceDetailsContent galleryPiece={galleryPiece} />
-      <div className="gallery-piece-details__process">
-        {isPaypalActive ? (
-          <PaypalCodeValidation
-            galleryPieceId={galleryPieceId}
-            name={name}
-            price={price}
-          />
-        ) : (
-          <GalleryPieceAvailable
-            galleryPieceId={galleryPieceId}
-            isSold={isSold}
-          />
-        )}
+      <div className="gallery-piece-details__content">
+        <GalleryPieceDetailsContent galleryPiece={galleryPiece} />
+        <div className="gallery-piece-details__content-process">
+          {isPaypalActive ? (
+            <PaypalCodeValidation
+              galleryPieceId={galleryPieceId}
+              name={name}
+              price={price}
+            />
+          ) : (
+            <GalleryPieceAvailable
+              galleryPieceId={galleryPieceId}
+              isSold={isSold}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

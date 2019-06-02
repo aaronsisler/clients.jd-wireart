@@ -14,11 +14,11 @@
     &__price {
       @include font-type($mainFont, $large);
 
-      margin-bottom: $small;
+      margin-bottom: $medium;
       text-align: center;
     }
     &__dimensions {
-      margin-bottom: $small;
+      margin-bottom: $medium;
     }
     &__description {
       border-top: $border;
