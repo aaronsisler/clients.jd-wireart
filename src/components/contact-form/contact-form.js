@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { sendEmail, isEmailValid } from "../../tools/email";
 import FormError from "../form-error";
 import "./contact-form.scss";
 
-export default class ContactForm extends React.Component {
+class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -129,6 +130,7 @@ export default class ContactForm extends React.Component {
   };
 
   render() {
+    const { galleryPieceName, isCustom } = this.props;
     const {
       emailAddress,
       emailSent,
@@ -139,6 +141,7 @@ export default class ContactForm extends React.Component {
       name,
       phoneNumber
     } = this.state;
+
     return (
       <div className="contact-form">
         {!emailSent && !emailError && (
@@ -182,6 +185,14 @@ export default class ContactForm extends React.Component {
                   value={phoneNumber}
                 />
               </div>
+              {galleryPieceName && (
+                <div className="contact_form__form-order">
+                  I would like to {isCustom ? "custom order" : "purchase"} the
+                  following piece:
+                  <br />
+                  {galleryPieceName}
+                </div>
+              )}
               <textarea
                 name="message"
                 rows="4"
@@ -214,3 +225,10 @@ export default class ContactForm extends React.Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  galleryPieceName: PropTypes.string,
+  isCustom: PropTypes.bool
+};
+
+export default ContactForm;

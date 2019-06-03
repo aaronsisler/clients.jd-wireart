@@ -12,22 +12,23 @@
     flex: 1 1 auto;
     flex-direction: column;
     padding: $large $small;
-    &__upper {
+    &__email {
       background: white;
       display: grid;
       height: fit-content;
       margin: 0 auto $large;
       opacity: 0.95;
       padding: $medium $small;
+      width: fit-content;
       &-title {
-        @include font-type($mainFont, $large, bold);
+        @include font-type($mainFont, $large);
+
         margin-bottom: $small;
         text-align: center;
       }
     }
-    &__lower {
-      display: flex;
-      justify-content: center;
+    &__phone {
+      margin: 0 auto;
       width: 100%;
     }
   }
@@ -43,8 +44,9 @@
 @media only screen and (min-width: 64.063em) {
   .contact-container {
     background-image: url("/images/contact/contact_container_desktop.png");
-    &__lower {
-      display: grid;
+    &__phone {
+      margin: 0 auto;
+      width: fit-content;
     }
   }
 }

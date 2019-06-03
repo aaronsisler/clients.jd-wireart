@@ -5,16 +5,15 @@
 //max-width 640px, small screens
 @media only screen {
   .contact-phone {
+    align-content: center;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    justify-content: center;
+    display: grid;
     opacity: 0.95;
+    padding: $large $xlarge;
     text-align: center;
-    width: 100%;
     &__title {
-      @include font-type($mainFont, $large, bold);
+      @include font-type($secFont, $large, bold);
+
       margin-bottom: $medium;
     }
     &__content {
@@ -31,9 +30,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .contact-phone {
-    padding: 0 10vw;
-  }
 }
 
 //XLarge screens

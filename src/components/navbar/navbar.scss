@@ -20,7 +20,7 @@
     }
     &__brand {
       a {
-        @include font-type($accentFont, $midlarge, bold);
+        @include font-type($accentFont, $midlarge);
 
         color: white;
         letter-spacing: 0.1rem;
@@ -37,7 +37,7 @@
       transition: right 0.3s ease;
       width: $navMenuWidth;
       &.nav-menu__links-open {
-        right: 0px;
+        right: 0;
       }
       &-close {
         align-items: center;

@@ -29,7 +29,7 @@ const AppRouter = () => (
       exact={true}
     />
     <Route path="/contact" component={ContactPage} exact={true} />
-    <Route path="/contact/:id" component={ContactPage} />
+    <Route path="/contact/:galleryPieceId" component={ContactPage} />
     <Route path="/gallery" component={GalleryPage} />
     <Route path="/gallery_piece/:id" component={GalleryPiecePage} />
     <Route

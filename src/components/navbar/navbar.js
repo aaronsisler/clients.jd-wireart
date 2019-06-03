@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./navbar.scss";
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +21,7 @@ export default class Navbar extends React.Component {
     return (
       <nav className="nav-menu">
         <div className="nav-menu__brand">
-          <Link to="/">{this.props.companyName}</Link>
+          <Link to="/">JD Wire Art Studio</Link>
         </div>
         <div className="nav-menu__toggle">
           {!this.state.isNavOpen && (
@@ -77,6 +76,4 @@ export default class Navbar extends React.Component {
   }
 }
 
-Navbar.propTypes = {
-  companyName: PropTypes.string.isRequired
-};
+export default Navbar;
