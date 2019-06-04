@@ -9,6 +9,7 @@ import {
   firebaseConfig,
   paypalProductionClientId,
   paypalSandboxClientId,
+  paypalVerificationCode,
   servicesApiGatewayToken
 } from "./secrets";
 
@@ -17,6 +18,7 @@ export {
   paypalEnvironment,
   paypalProductionClientId,
   paypalSandboxClientId,
+  paypalVerificationCode,
   pointOfContactEmail,
   servicesApiGatewayURL,
   servicesApiGatewayToken,

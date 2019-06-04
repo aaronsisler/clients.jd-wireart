@@ -9,7 +9,9 @@ export const startAddGalleryPiece = galleryPiece => dispatch =>
       dispatch(
         addGalleryPiece({
           galleryPieceId: ref.key,
-          ...galleryPiece
+          ...galleryPiece,
+          isPaypalActive: false,
+          isSold: false
         })
       )
     );

@@ -23,6 +23,7 @@
     &__content {
       &-name {
         @include font-type($secFont, $midlarge);
+
         padding: $medium;
         text-align: center;
       }
@@ -45,8 +46,7 @@
   .gallery-list-item {
     margin: $small;
     img {
-      max-width: 30vw;
-      width: auto;
+      width: 25vw;
     }
   }
 }

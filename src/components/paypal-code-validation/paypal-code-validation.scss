@@ -4,6 +4,18 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .paypal-code-validation {
+    display: grid;
+    grid-gap: $small;
+    justify-content: center;
+    &__input {
+      input {
+        &::placeholder {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +26,20 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .paypal-code-validation {
+    display: grid;
+    grid-gap: $small;
+    justify-content: center;
+    &__input {
+      input::placeholder {
+        text-align: center;
+      }
+    }
+    &__button {
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
 }
 
 //XLarge screens

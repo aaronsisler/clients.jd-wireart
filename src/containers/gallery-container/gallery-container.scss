@@ -40,6 +40,14 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .gallery-container {
+    &__header {
+      &-filters {
+        margin: 0 auto;
+        width: 25vw;
+      }
+    }
+  }
 }
 
 //XLarge screens
