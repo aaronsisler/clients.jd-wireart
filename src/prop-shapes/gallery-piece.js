@@ -6,7 +6,7 @@ export default {
   galleryPieceId: PropTypes.string.isRequired,
   height: PropTypes.string,
   imageSrc: PropTypes.string,
-  isPaypalActive: PropTypes.bool,
+  isPaymentActive: PropTypes.bool,
   isSold: PropTypes.bool,
   length: PropTypes.string,
   name: PropTypes.string.isRequired,

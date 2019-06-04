@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import GalleryPieceDimensions from "../gallery-piece-dimensions";
 import { galleryPieceShape } from "../../prop-shapes";
-import { convertPrice } from "../../tools/price";
+import { convertPriceForDisplay } from "../../tools/price";
 import "./gallery-piece-details-content.scss";
 
 const GalleryPieceDetailsContent = ({ galleryPiece }) => {
@@ -12,7 +12,7 @@ const GalleryPieceDetailsContent = ({ galleryPiece }) => {
     <div className="gallery-piece-details-content">
       <div className="gallery-piece-details-content__name">{name}</div>
       <div className="gallery-piece-details-content__price">
-        ${convertPrice(price)}
+        ${convertPriceForDisplay(price)}
       </div>
       {length && (
         <GalleryPieceDimensions

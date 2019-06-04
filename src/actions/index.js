@@ -8,7 +8,7 @@ import {
   startAddGalleryPiece,
   startAddGalleryPieceImage,
   startEditGalleryPiece,
-  startSetPaypalActiveFlag,
+  startSetPaymentActiveFlag,
   startSetSoldFlag
 } from "./gallery-piece";
 import { startClearUser, startSetUser } from "./user";
@@ -25,7 +25,7 @@ export {
   startSetGallery,
   startSetGalleryCategoryFilter,
   startSetGalleryTextFilter,
-  startSetPaypalActiveFlag,
+  startSetPaymentActiveFlag,
   startSetSoldFlag,
   startSetUser
 };

@@ -10,7 +10,7 @@ export const startAddGalleryPiece = galleryPiece => dispatch =>
         addGalleryPiece({
           galleryPieceId: ref.key,
           ...galleryPiece,
-          isPaypalActive: false,
+          isPaymentActive: false,
           isSold: false
         })
       )
@@ -33,22 +33,22 @@ export const startEditGalleryPiece = (galleryPieceId, updates) => dispatch =>
       dispatch(editGalleryPiece(galleryPieceId, updates));
     });
 
-export const startSetPaypalActiveFlag = galleryPieceId => dispatch =>
+export const startSetPaymentActiveFlag = galleryPieceId => dispatch =>
   database
     .ref(`gallery/${galleryPieceId}`)
-    .update({ isPaypalActive: true })
+    .update({ isPaymentActive: true })
     .then(() =>
-      dispatch(editGalleryPiece(galleryPieceId, { isPaypalActive: true }))
+      dispatch(editGalleryPiece(galleryPieceId, { isPaymentActive: true }))
     );
 
 export const startSetSoldFlag = galleryPieceId => dispatch =>
   database
     .ref(`gallery/${galleryPieceId}`)
-    .update({ isPaypalActive: false, isSold: true })
+    .update({ isPaymentActive: false, isSold: true })
     .then(() =>
       dispatch(
         editGalleryPiece(galleryPieceId, {
-          isPaypalActive: false,
+          isPaymentActive: false,
           isSold: true
         })
       )

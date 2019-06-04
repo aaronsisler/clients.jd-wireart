@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Payment from "../payment";
 import FormError from "../form-error";
-import { paypalVerificationCode } from "../../config";
+import { paymentVerificationCode } from "../../config";
 import "./payment-code-validation.scss";
 
 class PaymentCodeValidation extends React.Component {
@@ -25,7 +25,7 @@ class PaymentCodeValidation extends React.Component {
   handleCodeValidation = () => {
     const { userVerificationCode } = this.state;
 
-    if (userVerificationCode === paypalVerificationCode) {
+    if (userVerificationCode === paymentVerificationCode) {
       return this.setState(() => ({ isCodeValidated: true }));
     }
 
