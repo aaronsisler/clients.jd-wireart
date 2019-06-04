@@ -1,11 +1,11 @@
 import React from "react";
-import YouTubeViewer from "../../components/youtube-viewer";
+import VideoPlayer from "../../components/video-player";
 import "./about-us-container.scss";
 
 const AboutUsContainer = () => (
   <div className="about-us-container">
     <div className="about-us-container__player">
-      <YouTubeViewer src="https://www.youtube.com/embed/3jv-q_Nexgg" />
+      <VideoPlayer src="https://www.youtube.com/embed/3jv-q_Nexgg" />
     </div>
     <div className="about-us-container__content">
       <h1 className="about-us-container__content-title">About Me</h1>

@@ -90,7 +90,7 @@ class ContactForm extends React.Component {
     );
   };
 
-  handlePhoneChange = e => {
+  handlePhoneInput = e => {
     const phoneNumber = e.target.value;
 
     if (
@@ -179,7 +179,7 @@ class ContactForm extends React.Component {
                 <input
                   name="phone"
                   onBlur={this.handlePhoneValidation}
-                  onChange={this.handlePhoneChange}
+                  onChange={this.handlePhoneInput}
                   placeholder="Phone (Digits only, no dashes, etc.)"
                   type="text"
                   value={phoneNumber}

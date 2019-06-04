@@ -4,7 +4,7 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .paypal-code-validation {
+  .payment-code-validation {
     display: grid;
     grid-gap: $small;
     justify-content: center;
@@ -26,7 +26,7 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .paypal-code-validation {
+  .payment-code-validation {
     display: grid;
     grid-gap: $small;
     justify-content: center;
