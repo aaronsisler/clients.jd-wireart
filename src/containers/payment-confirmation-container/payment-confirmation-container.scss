@@ -4,6 +4,23 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .payment-confirmation-container {
+    background-color: $superLightGrey;
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: $medium $small;
+    &__content {
+      background-color: white;
+      display: grid;
+      justify-items: center;
+      padding: $large;
+      &-text {
+        margin-bottom: $medium;
+        text-align: center;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +31,15 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .payment-confirmation-container {
+    padding: $large;
+    &__content {
+      padding: $large;
+      &-text {
+        margin-bottom: $medium;
+      }
+    }
+  }
 }
 
 //XLarge screens

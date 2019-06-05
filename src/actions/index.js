@@ -1,16 +1,19 @@
 import { startClearAuth, startLogin, startLogout, startSetAuth } from "./auth";
+
 import {
   startSetGallery,
   startSetGalleryCategoryFilter,
   startSetGalleryTextFilter
 } from "./gallery";
+
 import {
   startAddGalleryPiece,
   startAddGalleryPieceImage,
   startEditGalleryPiece,
   startSetPaymentActiveFlag,
-  startSetSoldFlag
+  startMarkAsSold
 } from "./gallery-piece";
+
 import { startClearUser, startSetUser } from "./user";
 
 export {
@@ -26,6 +29,6 @@ export {
   startSetGalleryCategoryFilter,
   startSetGalleryTextFilter,
   startSetPaymentActiveFlag,
-  startSetSoldFlag,
+  startMarkAsSold,
   startSetUser
 };

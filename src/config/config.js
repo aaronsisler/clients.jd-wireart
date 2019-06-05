@@ -1,10 +1,11 @@
 // Email
-export const pointOfContactEmail = "jdwireart@aol.com";
+export const pointOfContactEmail = "aaron.sisler@eandbsolutions.com";
+// export const pointOfContactEmail = "jdwireart@aol.com";
 export const websiteURL = "https://jdwireartstudio.com";
 
 //Paypal
-// export const paypalEnvironment = 'sandbox';
-export const paypalEnvironment = "production";
+export const paypalEnvironment = "sandbox";
+// export const paypalEnvironment = "production";
 
 //Services Gateway
 export const servicesApiGatewayURL =

@@ -41,7 +41,7 @@ export const startSetPaymentActiveFlag = galleryPieceId => dispatch =>
       dispatch(editGalleryPiece(galleryPieceId, { isPaymentActive: true }))
     );
 
-export const startSetSoldFlag = galleryPieceId => dispatch =>
+export const startMarkAsSold = galleryPieceId => dispatch =>
   database
     .ref(`gallery/${galleryPieceId}`)
     .update({ isPaymentActive: false, isSold: true })
