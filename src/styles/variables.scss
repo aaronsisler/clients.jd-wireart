@@ -9,12 +9,12 @@ $midGrey: #666;
 $darkGrey: #222;
 $fontGrey: rgba(0, 0, 0, 0.7);
 $closeIconGrey: #aaa;
-$borderGrey: #bbb;
+$borderGrey: rgba(0, 0, 0, 0.7);
 $border: 1px solid $borderGrey;
 $boxShadowGrey: rgba(189, 195, 199, 0.6);
 $dropShadow: drop-shadow(3px 3px 6px $boxShadowGrey);
 
-//Spacing
+// Spacing
 $xxsmall: 0.3rem;
 $xsmall: 0.6rem;
 $small: 1.2rem;
@@ -26,7 +26,13 @@ $xxlarge: 7.6rem;
 $navMenuWidth: 240px;
 $desktopBreakpoint: 45rem;
 
-//Site Fonts
+// Screen Breakpoints
+$mediumScreen: 641px;
+$largeScreen: 1025px;
+$xLargeScreen: 1441px;
+$xxLargeScreen: 1921px;
+
+// Site Fonts
 $mainFont: "Ubuntu", sans-serif;
 $secFont: "Ubuntu Light", sans-serif;
 $accentFont: "Dancing Script", sans-serif;

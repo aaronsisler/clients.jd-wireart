@@ -1,6 +1,7 @@
 @import "../styles/variables.scss";
 @import "../styles/fonts.scss";
 @import "../styles/typography.scss";
+@import "../styles/atoms.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
@@ -8,17 +9,15 @@
   * {
     box-sizing: border-box;
   }
-
   html {
     font-size: 62.5%;
     height: 100%;
   }
-
   body {
     @include font-type();
+
     height: 100%;
   }
-
   button,
   .nav_link {
     align-self: center;
@@ -34,13 +33,11 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-
     &:hover {
       background: $mainColor;
       color: white;
       transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
-
     &:disabled {
       background: $mainColor;
       cursor: not-allowed;
@@ -48,14 +45,12 @@
       opacity: 0.5;
     }
   }
-
   input,
   textarea {
-    border: 0.5px solid $fontGrey;
+    border: 1px solid $fontGrey;
     border-radius: 5px;
     padding: $small $xsmall;
   }
-
   textarea {
     font-size: $medium;
   }

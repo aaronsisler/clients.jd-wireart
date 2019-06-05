@@ -7,11 +7,9 @@
   .about-us {
     padding: $medium 5%;
     text-align: center;
-
     &__title {
       @include font-type($mainFont, $large, bold);
     }
-
     &__content {
       &-image {
         margin: $medium 0;
@@ -21,7 +19,6 @@
           width: 100%;
         }
       }
-
       &-text {
         @include font-type($mainFont, $medium);
 
@@ -37,16 +34,15 @@
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: $largeScreen) {
   .about-us {
     padding: $large 10%;
     text-align: inherit;
-
     &__content {
       align-items: center;
       display: grid;
@@ -59,10 +55,10 @@
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }
