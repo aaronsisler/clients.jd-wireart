@@ -13,6 +13,7 @@
     &__content {
       background-color: white;
       display: grid;
+      filter: $dropShadow;
       justify-items: center;
       padding: $large;
       &-text {
