@@ -3,6 +3,30 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .inbox {
+    display: grid;
+    flex: 1 1 auto;
+    grid-gap: $small;
+    grid-template-columns: 1fr 4fr;
+    padding: $small;
+    &__list {
+      background-color: white;
+      display: grid;
+      filter: $dropShadow;
+      grid-template-rows: auto 10fr;
+      width: 100%;
+      .nav-link {
+        @include font-type($mainFont, $small);
+
+        margin: 0;
+        padding: $xsmall $small;
+      }
+    }
+    &__details {
+      background-color: white;
+      filter: $dropShadow;
+    }
+  }
 }
 
 //Medium screens - TABLET

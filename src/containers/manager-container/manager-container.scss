@@ -4,6 +4,13 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .manager-container {
+    align-content: center;
+    background-color: $containerBackgroundColor;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0 $small;
+  }
 }
 
 //Medium screens - TABLET

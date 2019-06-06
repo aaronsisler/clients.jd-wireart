@@ -8,14 +8,16 @@ import ManagerDetails from "../../components/manager-details";
 import "./manager-container.scss";
 
 const ManagerContainer = ({ gallery, galleryPiece }) => (
-  <div className="inbox-container">
-    <div className={`inbox-list ${galleryPiece ? "inbox-mobile" : undefined}`}>
-      <Link className="nav-link" to="/manager_add">
-        Add Gallery Piece
-      </Link>
-      <ManagerList gallery={gallery} />
+  <div className="manager-container">
+    <div className="inbox">
+      <div className={`inbox__list ${galleryPiece ? "inbox-mobile" : ""}`}>
+        <Link className="nav-link" to="/manager_add">
+          Add Gallery Piece
+        </Link>
+        <ManagerList gallery={gallery} />
+      </div>
+      <ManagerDetails galleryPiece={galleryPiece} />
     </div>
-    <ManagerDetails galleryPiece={galleryPiece} />
   </div>
 );
 
