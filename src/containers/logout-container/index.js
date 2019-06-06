@@ -1,1 +1,1 @@
-export { default } from "./logged-out-container";
+export { default } from "./logout-container";

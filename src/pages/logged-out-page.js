@@ -1,17 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LoggedOutContainer from "../containers/logged-out-container";
 
 const LoggedOutPage = () => (
   <main className="logged-out-page">
-    <div className="logged_out_page__content">You have been logged out.</div>
-    <div className="logged_out_page__link">
-      <Link className="nav-link" to="/manager">
-        Back to Dashboard
-      </Link>
-      <Link className="nav-link" to="/gallery">
-        Back to Gallery
-      </Link>
-    </div>
+    <LoggedOutContainer />
   </main>
 );
 

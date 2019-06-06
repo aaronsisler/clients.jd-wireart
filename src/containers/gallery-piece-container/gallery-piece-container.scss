@@ -5,7 +5,7 @@
 //max-width 640px, small screens
 @media only screen {
   .gallery-piece-container {
-    background-color: $superLightGrey;
+    background-color: $containerBackgroundColor;
     display: grid;
     flex: 1 1 auto;
     grid-gap: $small;
@@ -24,10 +24,6 @@
 @media only screen and (min-width: 64.063em) {
   .gallery-piece-container {
     align-content: center;
-    background-color: $superLightGrey;
-    display: grid;
-    flex: 1 1 auto;
-    grid-gap: $small;
     grid-template-areas: "gallery_piece_details gallery_piece_image";
     grid-template-columns: 1fr 1fr;
     padding: 0 10%;

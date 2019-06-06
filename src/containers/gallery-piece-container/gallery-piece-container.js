@@ -32,7 +32,8 @@ class GalleryPieceContainer extends React.Component {
 
 const mapStateToProps = (state, props) => ({
   galleryPiece: state.gallery.find(
-    galleryPiece => galleryPiece.galleryPieceId === props.match.params.id
+    galleryPiece =>
+      galleryPiece.galleryPieceId === props.match.params.galleryPieceId
   )
 });
 

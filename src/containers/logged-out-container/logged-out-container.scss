@@ -4,6 +4,29 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .logged-out-container {
+    background-color: $containerBackgroundColor;
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: $large;
+    &__content {
+      background-color: white;
+      display: grid;
+      grid-gap: $medium;
+      filter: $dropShadow;
+      padding: $large;
+      text-align: center;
+      width: fit-content;
+      &-text {
+        @include font-type($secFont, $midlarge);
+      }
+      &-links {
+        display: grid;
+        grid-gap: $small;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET

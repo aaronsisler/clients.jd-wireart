@@ -7,12 +7,15 @@ $lightGrey: #f3f3f3;
 $midLightGrey: #e8e8e8;
 $midGrey: #666;
 $darkGrey: #222;
+
+// Feature Specific Colors
 $fontGrey: rgba(0, 0, 0, 0.7);
 $closeIconGrey: #aaa;
 $borderGrey: rgba(0, 0, 0, 0.7);
 $border: 1px solid $borderGrey;
 $boxShadowGrey: rgba(189, 195, 199, 0.6);
 $dropShadow: drop-shadow(3px 3px 6px $boxShadowGrey);
+$containerBackgroundColor: $superLightGrey;
 
 // Spacing
 $xxsmall: 0.3rem;

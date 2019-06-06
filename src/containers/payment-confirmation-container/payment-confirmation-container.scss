@@ -5,7 +5,7 @@
 //max-width 640px, small screens
 @media only screen {
   .payment-confirmation-container {
-    background-color: $superLightGrey;
+    background-color: $containerBackgroundColor;
     display: grid;
     flex: 1 1 auto;
     justify-content: center;
@@ -34,12 +34,6 @@
 @media only screen and (min-width: 64.063em) {
   .payment-confirmation-container {
     padding: $large;
-    &__content {
-      padding: $large;
-      &-text {
-        margin-bottom: $medium;
-      }
-    }
   }
 }
 

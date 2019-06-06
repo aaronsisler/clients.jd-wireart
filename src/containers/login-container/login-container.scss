@@ -4,6 +4,19 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .login-container {
+    background-color: $containerBackgroundColor;
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: $large;
+    &__button {
+      background-color: white;
+      filter: $dropShadow;
+      padding: $large;
+      width: fit-content;
+    }
+  }
 }
 
 //Medium screens - TABLET

@@ -4,6 +4,29 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .authorization-container {
+    background-color: $containerBackgroundColor;
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: $large;
+    text-align: center;
+    &__content {
+      background-color: white;
+      filter: $dropShadow;
+      padding: $medium;
+      &-text {
+        @include font-type($mainFont, $midlarge);
+
+        margin-bottom: $medium;
+      }
+      &-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET

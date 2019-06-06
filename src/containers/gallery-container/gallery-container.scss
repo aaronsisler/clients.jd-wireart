@@ -5,7 +5,7 @@
 //max-width 640px, small screens
 @media only screen {
   .gallery-container {
-    background-color: $superLightGrey;
+    background-color: $containerBackgroundColor;
     flex: 1 1 auto;
     &__header {
       align-items: center;
