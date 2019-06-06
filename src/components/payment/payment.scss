@@ -4,6 +4,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .payment {
+    .form_error {
+      padding: $small;
+    }
+  }
 }
 
 //Medium screens - TABLET
