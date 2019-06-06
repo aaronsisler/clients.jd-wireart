@@ -2,12 +2,12 @@ import React from "react";
 import Select from "react-select";
 import "./dropdown.scss";
 const options = [
-  { value: "taco", label: "taco" },
-  { value: "more taco", label: "more taco" }
+  { value: "taco", label: "TACO" },
+  { value: "more taco", label: "MORE TACO" }
 ];
 
 const selectStyles = {
-  container: (base, state) => ({
+  container: base => ({
     ...base,
     zIndex: "999"
   })

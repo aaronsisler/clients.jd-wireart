@@ -24,7 +24,6 @@
         grid-gap: $small;
         margin: 0 $small;
         padding: $small;
-        z-index: 10;
       }
     }
     &__content {
@@ -45,6 +44,7 @@
     &__header {
       &-filters {
         margin: 0 auto;
+        padding: $small $medium;
         width: 25vw;
       }
     }

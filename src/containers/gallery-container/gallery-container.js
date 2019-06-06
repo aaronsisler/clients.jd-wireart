@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import selectGallery from "../../selectors/gallery";
 import GalleryList from "../../components/gallery-list";
 import GalleryTextFilter from "../../components/gallery-text-filter";
-// import GalleryCategoryFilter from "../../components/gallery-category-filter";
-import GalleryCategoryFilter from "../../components/dropdown";
+import GalleryCategoryFilter from "../../components/gallery-category-filter";
 import "./gallery-container.scss";
 
 class GalleryContainer extends React.Component {

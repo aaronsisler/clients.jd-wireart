@@ -8,6 +8,11 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    &.empty {
+      @include font-type($secFont, $large);
+
+      padding: $large;
+    }
   }
 }
 

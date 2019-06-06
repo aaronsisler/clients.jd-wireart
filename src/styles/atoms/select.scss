@@ -3,31 +3,14 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .react-select {
-    &-container {
-      @include font-type($mainFont, $medium);
+  select {
+    @include font-type($secFont, $medium);
 
-      border: $border;
-      border-radius: 5px;
-      color: $fontGrey;
-      cursor: pointer;
-      text-align: left;
-    }
-    &-container &__menu {
-      border: $border;
-      margin: 0;
-      &-list {
-        padding: 0;
-      }
-    }
-    &-container &__option {
-      @include font-type($secFont, $medium);
-      &--is-selected,
-      &--is-focused {
-        background-color: $lightGrey;
-        color: $darkGrey;
-      }
-    }
+    border: $border;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: $small $xsmall;
+    text-transform: uppercase;
   }
 }
 
