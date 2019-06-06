@@ -15,7 +15,7 @@ const GalleryListItem = ({ galleryPieceId, imageSrc, name }) => (
     <div className="gallery-list-item__content">
       <div className="gallery-list-item__content-name">{name}</div>
       <div className="gallery-list-item__content-link">
-        <Link className="nav_link" to={`/gallery_piece/${galleryPieceId}`}>
+        <Link className="nav-link" to={`/gallery_piece/${galleryPieceId}`}>
           View Details
         </Link>
       </div>

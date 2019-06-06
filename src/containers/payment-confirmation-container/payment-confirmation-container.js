@@ -9,7 +9,7 @@ const PaymentConfirmationContainer = () => (
         Thank you for your purchase!
       </div>
       <div className="payment-confirmation-container__content-link">
-        <Link className="nav_link" to="/gallery">
+        <Link className="nav-link" to="/gallery">
           Back to Gallery
         </Link>
       </div>

@@ -10,8 +10,6 @@
     height: 100%;
     width: 100%;
     &__header {
-      @include font-type();
-
       margin: 0 auto;
       text-align: center;
       &-content {
@@ -37,12 +35,12 @@
         width: 100%;
       }
       &-button {
-        font-size: $medium;
         padding: $small;
       }
     }
     &__email {
-      font-size: $midlarge;
+      @include font-type($secFont, $midlarge);
+
       padding: $small 0 $medium;
       text-align: center;
     }
@@ -59,11 +57,9 @@
 @media only screen and (min-width: 64.063em) {
   .contact-form {
     display: grid;
-    margin: 0 auto;
     max-width: 30vw;
     padding: 0 $medium;
     &__email {
-      font-size: $midlarge;
       padding: $medium 0;
       text-align: center;
     }

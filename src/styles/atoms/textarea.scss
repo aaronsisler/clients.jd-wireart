@@ -3,6 +3,12 @@
 
 //Small screens - MOBILE
 @media only screen {
+  textarea {
+    border: $border;
+    border-radius: 5px;
+    font-size: $medium;
+    padding: $small $xsmall;
+  }
 }
 
 //Medium screens - TABLET

@@ -3,6 +3,33 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .nav-link {
+    @include font-type($mainFont, $medium);
+
+    align-self: center;
+    background-color: white;
+    border: 2px solid $mainColor;
+    border-radius: $xxsmall;
+    color: $mainColor;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: $medium $midlarge;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background: $mainColor;
+      color: white;
+      transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+    &:disabled {
+      background: $mainColor;
+      cursor: not-allowed;
+      color: white;
+      opacity: 0.5;
+    }
+  }
 }
 
 //Medium screens - TABLET

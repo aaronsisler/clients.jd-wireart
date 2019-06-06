@@ -188,9 +188,7 @@ class ContactForm extends React.Component {
               {galleryPieceName && (
                 <div className="contact_form__form-order">
                   I would like to {isCustom ? "custom order" : "purchase"} the
-                  following piece:
-                  <br />
-                  {galleryPieceName}
+                  following piece: {galleryPieceName}
                 </div>
               )}
               <textarea

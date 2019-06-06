@@ -11,7 +11,7 @@ const GalleryPieceAvailable = ({ galleryPieceId, isSold }) => (
         <br />
         <br />
         <Link
-          className="gallery_piece_available__link nav_link"
+          className="gallery_piece_available__link nav-link"
           to={`/contact/${galleryPieceId}/?custom`}
         >
           Click to Custom Order
@@ -19,7 +19,7 @@ const GalleryPieceAvailable = ({ galleryPieceId, isSold }) => (
       </div>
     ) : (
       <Link
-        className="gallery_piece_available__link nav_link"
+        className="gallery_piece_available__link nav-link"
         to={`/contact/${galleryPieceId}`}
       >
         Click to Purchase
