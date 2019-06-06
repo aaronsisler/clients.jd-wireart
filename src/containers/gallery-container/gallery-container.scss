@@ -8,6 +8,7 @@
     background-color: $superLightGrey;
     flex: 1 1 auto;
     &__header {
+      align-items: center;
       display: flex;
       flex-flow: column;
       &-title {
@@ -24,6 +25,7 @@
         grid-gap: $small;
         margin: 0 $small;
         padding: $small;
+        width: fit-content;
       }
     }
     &__content {
