@@ -10,7 +10,7 @@ import "./manager-container.scss";
 const ManagerContainer = ({ gallery, galleryPiece }) => (
   <div className="manager-container">
     <div className="inbox">
-      <div className={`inbox__list ${galleryPiece ? "inbox-mobile" : ""}`}>
+      <div className={`inbox__list ${galleryPiece ? "inbox__mobile" : ""}`}>
         <Link className="nav-link" to="/manager_add">
           Add Gallery Piece
         </Link>

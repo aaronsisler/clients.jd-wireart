@@ -14,7 +14,7 @@
     cursor: pointer;
     display: inline-block;
     margin: 0;
-    padding: $medium $midlarge;
+    padding: $small $medium;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -38,6 +38,9 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  button {
+    padding: $medium $midlarge;
+  }
 }
 
 //XLarge screens

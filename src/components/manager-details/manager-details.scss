@@ -4,6 +4,32 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .manager-details {
+    display: flex;
+    flex-direction: column;
+    &__header {
+      align-items: center;
+      background-color: white;
+      display: grid;
+      grid-gap: $small;
+      filter: $dropShadow;
+      min-height: 6vw;
+      justify-content: center;
+      margin-bottom: $medium;
+      padding: $small;
+      text-align: center;
+      &-name {
+        @include font-type($secFont, $large);
+      }
+    }
+    &__content {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      filter: $dropShadow;
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +40,15 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .manager-details {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      &-name {
+        @include font-type($secFont, $large);
+      }
+    }
+  }
 }
 
 //XLarge screens

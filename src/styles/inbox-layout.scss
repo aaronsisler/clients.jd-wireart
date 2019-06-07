@@ -7,8 +7,6 @@
     display: grid;
     flex: 1 1 auto;
     grid-gap: $small;
-    grid-template-columns: 1fr 4fr;
-    padding: $small;
     &__list {
       background-color: white;
       display: grid;
@@ -17,17 +15,12 @@
       width: 100%;
     }
     &__details {
-      background-color: white;
-      filter: $dropShadow;
-      &-empty {
-        @extend .inbox__details;
-
-        @include font-type($mainFont, $midlarge);
-
-        align-items: center;
-        display: grid;
-        text-align: center;
-      }
+      width: 100%;
+      word-break: break-all;
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: none;
     }
   }
 }
@@ -38,6 +31,26 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .inbox {
+    grid-template-columns: 1fr 4fr;
+    &__details {
+      background-color: transparent;
+      filter: none;
+      &-empty {
+        @include font-type($mainFont, $midlarge);
+
+        align-items: center;
+        background-color: white;
+        display: grid;
+        filter: $dropShadow;
+        text-align: center;
+      }
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: inherit;
+    }
+  }
 }
 
 //XLarge screens

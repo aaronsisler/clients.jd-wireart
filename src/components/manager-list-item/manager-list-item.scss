@@ -6,13 +6,14 @@
 @media only screen {
   .manager-list-item {
     background-color: white;
-    cursor: pointer;
     border-bottom: $border;
+    color: $fontGrey;
+    cursor: pointer;
     padding: $small $medium;
     &:hover {
       background-color: $lightGrey;
+      border: $border;
       color: $darkMainColor;
-      transform: scale(1.1);
     }
   }
 }
