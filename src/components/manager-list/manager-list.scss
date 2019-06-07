@@ -4,6 +4,9 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .manager-list {
+    border: $border;
+  }
 }
 
 //Medium screens - TABLET

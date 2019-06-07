@@ -4,6 +4,17 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .manager-list-item {
+    background-color: white;
+    cursor: pointer;
+    border-bottom: $border;
+    padding: $small $medium;
+    &:hover {
+      background-color: $lightGrey;
+      color: $darkMainColor;
+      transform: scale(1.1);
+    }
+  }
 }
 
 //Medium screens - TABLET

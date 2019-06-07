@@ -13,7 +13,9 @@ const ManagerDetails = ({ galleryPiece }) => {
   }
   return (
     <div className="manager-details inbox__details">
-      <Link className="nav-link">Back to list</Link>
+      <Link to="/manager" className="nav-link">
+        Back to list
+      </Link>
       ManagerDetails
     </div>
   );

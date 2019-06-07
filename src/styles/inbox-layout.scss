@@ -15,16 +15,19 @@
       filter: $dropShadow;
       grid-template-rows: auto 10fr;
       width: 100%;
-      .nav-link {
-        @include font-type($mainFont, $small);
-
-        margin: 0;
-        padding: $xsmall $small;
-      }
     }
     &__details {
       background-color: white;
       filter: $dropShadow;
+      &-empty {
+        @extend .inbox__details;
+
+        @include font-type($mainFont, $midlarge);
+
+        align-items: center;
+        display: grid;
+        text-align: center;
+      }
     }
   }
 }

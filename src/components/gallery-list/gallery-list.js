@@ -1,23 +1,21 @@
 import React from "react";
-import GalleryListItem from "../gallery-list-item";
 import PropTypes from "prop-types";
+import GalleryListItem from "../gallery-list-item";
 import "./gallery-list.scss";
 
-class GalleryList extends React.Component {
-  render() {
-    if (this.props.gallery.length === 0) {
-      return <div className="gallery-list empty">No available items</div>;
-    }
-
-    return (
-      <div className="gallery-list">
-        {this.props.gallery.map(galleryItem => (
-          <GalleryListItem key={galleryItem.galleryPieceId} {...galleryItem} />
-        ))}
-      </div>
-    );
+const GalleryList = ({ gallery }) => {
+  if (gallery.length === 0) {
+    return <div className="gallery-list__empty">No available items</div>;
   }
-}
+
+  return (
+    <div className="gallery-list">
+      {gallery.map(galleryItem => (
+        <GalleryListItem key={galleryItem.galleryPieceId} {...galleryItem} />
+      ))}
+    </div>
+  );
+};
 
 GalleryList.propTypes = {
   gallery: PropTypes.array
