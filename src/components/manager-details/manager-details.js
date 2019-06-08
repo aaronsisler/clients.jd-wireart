@@ -1,4 +1,5 @@
 import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
 import PaymentUnlock from "../payment-unlock";
 import "./manager-details.scss";
@@ -14,7 +15,7 @@ const ManagerDetails = ({ galleryPiece }) => {
 
   const {
     galleryPieceId,
-    imageURL,
+    // imageURL,
     isPaymentActive,
     isSold,
     name
@@ -36,8 +37,15 @@ const ManagerDetails = ({ galleryPiece }) => {
         </div>
       </div>
       <div className="manager-details__content">
-        <div className="manager-details__content-edit">Edit</div>
-        <div className="manager-details__content-Image">Image: {imageURL}</div>
+        <Tabs>
+          <TabList>
+            <Tab>Details</Tab>
+            <Tab>Image</Tab>
+          </TabList>
+
+          <TabPanel>Edit Details</TabPanel>
+          <TabPanel>Edit Image</TabPanel>
+        </Tabs>
       </div>
     </div>
   );

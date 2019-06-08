@@ -12,7 +12,7 @@ const PaymentUnlock = ({ isPaymentActive, startSetPaymentActiveFlag }) => {
   return (
     <div className="payment-unlock">
       <button onClick={startSetPaymentActiveFlag}>
-        Click to Unlock Paypal
+        Click to Unlock Payment
       </button>
     </div>
   );
@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 PaymentUnlock.propTypes = {
   galleryPieceId: PropTypes.string.isRequired,
-  isPaypalActive: PropTypes.bool,
+  isPaymentActive: PropTypes.bool,
   startSetPaymentActiveFlag: PropTypes.func.isRequired
 };
 
