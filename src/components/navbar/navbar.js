@@ -61,7 +61,7 @@ class Navbar extends React.Component {
             className="nav-menu__links-link"
             onClick={this.closeSideMenu}
           >
-            About Us
+            About
           </Link>
           <Link
             to="/contact"

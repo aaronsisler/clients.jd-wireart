@@ -32,7 +32,8 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .inbox {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
+    padding: 0 10%;
     &__details {
       background-color: transparent;
       filter: none;

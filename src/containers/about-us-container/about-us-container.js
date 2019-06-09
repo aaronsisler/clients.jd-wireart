@@ -8,7 +8,7 @@ const AboutUsContainer = () => (
       <VideoPlayer src="https://www.youtube.com/embed/3jv-q_Nexgg" />
     </div>
     <div className="about-us-container__content">
-      <h1 className="about-us-container__content-title">About Me</h1>
+      <div className="about-us-container__content-title">About Me</div>
       <div className="about-us-container__content-text">
         My name is Jonathan Daniel. I was born in 1965 in Zimbabwe. I was born
         and raised on a farm. Both of my parents were illiterate and are still

@@ -16,12 +16,12 @@
       width: 100%;
       &-name {
         @include font-type($accentFont, $xlarge, bold);
+
         background-color: white;
         color: $darkMainColor;
         margin-top: 30vh;
         padding: $small;
         text-align: center;
-        min-width: 100vw;
       }
       &-link {
         align-self: flex-start;
@@ -52,6 +52,8 @@
       width: 100%;
       &-name {
         @include font-type($accentFont, $xxlarge);
+
+        padding: $small $large;
       }
     }
   }

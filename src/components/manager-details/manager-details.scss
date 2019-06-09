@@ -13,7 +13,6 @@
       display: grid;
       grid-gap: $small;
       filter: $dropShadow;
-      min-height: 6vw;
       justify-content: center;
       margin-bottom: $medium;
       padding: $small;
@@ -44,6 +43,7 @@
     &__header {
       display: flex;
       justify-content: space-between;
+      min-height: 7vw;
       &-name {
         @include font-type($secFont, $large);
       }

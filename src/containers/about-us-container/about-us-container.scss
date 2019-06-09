@@ -8,11 +8,12 @@
     display: grid;
     padding: $small $medium;
     &__content {
+      background-color: white;
       display: grid;
-      grid-gap: $midlarge;
+      grid-gap: $medium;
+      padding: $small;
       &-title {
         @include font-type($secFont, $large, bold);
-        margin-bottom: 0;
       }
     }
   }
@@ -27,7 +28,15 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .about-us-container {
+    background-color: $containerBackgroundColor;
+    grid-gap: $medium;
     padding: $medium 20%;
+    &__content {
+      background-color: white;
+      filter: $dropShadow;
+      grid-gap: $midlarge;
+      padding: $small;
+    }
   }
 }
 
