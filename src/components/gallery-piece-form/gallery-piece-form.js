@@ -111,7 +111,7 @@ class GalleryPieceForm extends React.Component {
       <div className="gallery-piece-form">
         <div className="gallery-piece-form__input">
           {error && <FormError error={error} />}
-          <div>Name</div>
+          <div className="gallery-piece-form__input-title">Name</div>
           <input
             onChange={this.handleNameChange}
             placeholder="Name"
@@ -120,7 +120,7 @@ class GalleryPieceForm extends React.Component {
           />
         </div>
         <div className="gallery-piece-form__input">
-          <div>Price</div>
+          <div className="gallery-piece-form__input-title">Price</div>
           <input
             onChange={this.handlePriceChange}
             placeholder="Price"
@@ -129,7 +129,7 @@ class GalleryPieceForm extends React.Component {
           />
         </div>
         <div className="gallery-piece-form__input">
-          <div>Category</div>
+          <div className="gallery-piece-form__input-title">Category</div>
           <select onChange={this.handleCategoryChange} value={category}>
             {categories.map(categoryMap => {
               const { key, value } = categoryMap;
@@ -148,9 +148,11 @@ class GalleryPieceForm extends React.Component {
             })}
           </select>
         </div>
-        <div className="gallery_piece_form__dimensions">
-          <div>
-            Length&nbsp;(in.)
+        <div className="gallery-piece-form__dimensions">
+          <div className="gallery-piece-form__dimension">
+            <div className="gallery-piece-form__dimension-title">
+              Length&nbsp;(in.)
+            </div>
             <input
               name="length"
               onChange={this.handleDimensionChange}
@@ -159,8 +161,10 @@ class GalleryPieceForm extends React.Component {
               value={length}
             />
           </div>
-          <div>
-            Width&nbsp;(in.)
+          <div className="gallery-piece-form__dimension">
+            <div className="gallery-piece-form__dimension-title">
+              Width&nbsp;(in.)
+            </div>
             <input
               name="width"
               onChange={this.handleDimensionChange}
@@ -169,8 +173,10 @@ class GalleryPieceForm extends React.Component {
               value={width}
             />
           </div>
-          <div>
-            Height&nbsp;(in.)
+          <div className="gallery-piece-form__dimension">
+            <div className="gallery-piece-form__dimension-title">
+              Height&nbsp;(in.)
+            </div>
             <input
               name="height"
               onChange={this.handleDimensionChange}
@@ -181,7 +187,7 @@ class GalleryPieceForm extends React.Component {
           </div>
         </div>
         <div className="gallery-piece-form__input">
-          <div>Description</div>
+          <div className="gallery-piece-form__input-title">Description</div>
           <textarea
             maxLength="160"
             onChange={this.handleDescriptionChange}

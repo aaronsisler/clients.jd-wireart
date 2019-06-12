@@ -7,9 +7,6 @@ import "./edit-gallery-piece-container.scss";
 
 const EditGalleryPieceContainer = ({ galleryPiece, startEditGalleryPiece }) => (
   <div className="edit-gallery-piece-container">
-    <div className="edit-gallery-piece-container__title">
-      Edit Gallery Piece
-    </div>
     <GalleryPieceForm
       galleryPiece={galleryPiece}
       onSubmit={startEditGalleryPiece}

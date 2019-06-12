@@ -4,6 +4,30 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-piece-form {
+    display: grid;
+    grid-gap: $small;
+    &__input {
+      display: grid;
+      &-title {
+        @include font-type($secFont, $medium, bold);
+
+        margin-bottom: $xsmall;
+      }
+    }
+    &__dimensions {
+      display: grid;
+      grid-gap: $small;
+      width: 50%;
+    }
+    &__dimension {
+      &-title {
+        @include font-type($secFont, $medium, bold);
+
+        margin-bottom: $xsmall;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET

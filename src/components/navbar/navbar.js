@@ -43,11 +43,11 @@ class Navbar extends React.Component {
         </div>
         <div className={`nav-menu__links ${isNavOpenClass}`}>
           <Link
-            to="/"
+            to="/manager"
             className="nav-menu__links-link"
             onClick={this.closeSideMenu}
           >
-            Home
+            Manager
           </Link>
           <Link
             to="/gallery"

@@ -40,8 +40,8 @@ const ManagerDetails = ({ galleryPiece }) => {
       <div className="manager-details__content">
         <Tabs>
           <TabList>
-            <Tab>Details</Tab>
-            <Tab>Image</Tab>
+            <Tab>Edit Details</Tab>
+            <Tab>Edit Image</Tab>
           </TabList>
 
           <TabPanel>

@@ -4,6 +4,12 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .edit-gallery-piece-container {
+    display: grid;
+    justify-content: center;
+    padding: $small;
+    width: 100%;
+  }
 }
 
 //Medium screens - TABLET
