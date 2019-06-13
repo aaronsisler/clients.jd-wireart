@@ -1,10 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .form_error {
-    font-family: $secFont;
-    font-size: $medium;
-    padding-bottom: $small;
+  .form-error {
+    @include font-type($secFont, $medium);
+
+    // margin-bottom: $xsmall;
   }
 }
 

@@ -18,7 +18,7 @@
     &__dimensions {
       display: grid;
       grid-gap: $small;
-      width: 50%;
+      grid-template-columns: 1fr 1fr 1fr;
     }
     &__dimension {
       &-title {

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { startSetGalleryCategoryFilter } from "../../actions";
-import categories from "../../content/category";
+import categories from "../../content/categories";
 import "./gallery-category-filter.scss";
 
 export class GalleryCategoryFilter extends React.Component {

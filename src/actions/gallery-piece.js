@@ -4,7 +4,7 @@ import { addGalleryPiece, editGalleryPiece } from "./helpers/gallery-piece";
 export const startAddGalleryPiece = galleryPiece => dispatch =>
   database
     .ref(`gallery`)
-    .push(galleryPiece)
+    .push({ ...galleryPiece, isPaymentActive: false, isSold: false })
     .then(ref =>
       dispatch(
         addGalleryPiece({
