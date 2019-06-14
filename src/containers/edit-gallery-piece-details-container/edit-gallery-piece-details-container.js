@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryPieceForm from "../../components/gallery-piece-form";
 import { startEditGalleryPiece } from "../../actions";
-import "./edit-gallery-piece-container.scss";
+import "./edit-gallery-piece-details-container.scss";
 
-const EditGalleryPieceContainer = ({ galleryPiece, startEditGalleryPiece }) => (
-  <div className="edit-gallery-piece-container">
+const EditGalleryPieceDetailsContainer = ({
+  galleryPiece,
+  startEditGalleryPiece
+}) => (
+  <div className="edit-gallery-piece-details-container">
     <GalleryPieceForm
       galleryPiece={galleryPiece}
       onSubmit={startEditGalleryPiece}
@@ -19,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(startEditGalleryPiece(galleryPieceId, galleryPiece))
 });
 
-EditGalleryPieceContainer.propTypes = {
+EditGalleryPieceDetailsContainer.propTypes = {
   galleryPiece: PropTypes.object.isRequired,
   startEditGalleryPiece: PropTypes.func.isRequired
 };
@@ -27,4 +30,4 @@ EditGalleryPieceContainer.propTypes = {
 export default connect(
   undefined,
   mapDispatchToProps
-)(EditGalleryPieceContainer);
+)(EditGalleryPieceDetailsContainer);

@@ -4,7 +4,7 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .edit-gallery-piece-container {
+  .edit-gallery-piece-details-container {
     display: grid;
     justify-content: center;
     padding: $small;
@@ -20,7 +20,7 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .edit-gallery-piece-container {
+  .edit-gallery-piece-details-container {
     display: grid;
     justify-content: center;
     padding: 0 10% $medium;
