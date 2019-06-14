@@ -37,7 +37,7 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingContainer />, document.getElementById("root"));
 
-auth().onAuthStateChanged(async user => {
+auth.onAuthStateChanged(async user => {
   await store.dispatch(startSetGallery());
 
   if (user) {

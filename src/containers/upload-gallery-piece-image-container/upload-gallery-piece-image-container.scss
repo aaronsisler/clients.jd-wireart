@@ -3,6 +3,14 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .upload-gallery-piece-image-container {
+    display: grid;
+    grid-gap: $small;
+    justify-content: center;
+    justify-items: center;
+    padding: $small;
+    width: 100%;
+  }
 }
 
 //Medium screens - TABLET

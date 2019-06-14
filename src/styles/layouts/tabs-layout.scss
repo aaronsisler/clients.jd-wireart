@@ -45,12 +45,7 @@
 @media only screen and (min-width: $largeScreen) {
   .react-tabs {
     &__tab-list {
-      align-items: center;
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
       padding: $small;
-      text-align: center;
     }
   }
 }

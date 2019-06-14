@@ -1,5 +1,5 @@
 import database, { auth, googleAuthProvider, storage } from "./firebase";
-import { retrieveDownloadUrl } from "./storageUtils";
+import retrieveDownloadUrl from "./retrieve-download-url";
 
 export {
   database as default,

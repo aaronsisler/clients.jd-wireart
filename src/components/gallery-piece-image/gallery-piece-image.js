@@ -6,7 +6,7 @@ const GalleryPieceImage = ({ imageSrc, name }) => (
     {imageSrc ? (
       <img src={imageSrc} alt={name} />
     ) : (
-      <img src="/images/no_image_available.svg" alt={name} />
+      <img src="/images/site/no_image_available.svg" alt="None uploaded" />
     )}
   </div>
 );

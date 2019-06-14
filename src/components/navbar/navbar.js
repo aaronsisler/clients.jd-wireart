@@ -27,7 +27,7 @@ class Navbar extends React.Component {
           {!this.state.isNavOpen && (
             <FontAwesomeIcon
               icon={faBars}
-              size="3x"
+              size="2x"
               className="favicon"
               onClick={this.openSideMenu}
             />
@@ -35,7 +35,7 @@ class Navbar extends React.Component {
           {this.state.isNavOpen && (
             <FontAwesomeIcon
               icon={faTimes}
-              size="3x"
+              size="2x"
               className="favicon"
               onClick={this.closeSideMenu}
             />

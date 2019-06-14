@@ -1,9 +1,9 @@
 import { storage } from "./firebase";
 
-const retrieveDownloadUrl = async (storagePath, documentName) =>
+const retrieveDownloadUrl = (storagePath, documentName) =>
   storage
     .ref(storagePath)
     .child(documentName)
     .getDownloadURL();
 
-export { retrieveDownloadUrl };
+export default retrieveDownloadUrl;

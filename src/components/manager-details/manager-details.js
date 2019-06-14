@@ -17,7 +17,7 @@ const ManagerDetails = ({ galleryPiece }) => {
 
   const {
     galleryPieceId,
-    // imageURL,
+    imageSrc,
     isPaymentActive,
     isSold,
     name
@@ -49,7 +49,11 @@ const ManagerDetails = ({ galleryPiece }) => {
             <EditGalleryPieceDetailsContainer galleryPiece={galleryPiece} />
           </TabPanel>
           <TabPanel>
-            <UploadGalleryPieceImageContainer />
+            <UploadGalleryPieceImageContainer
+              galleryPieceId={galleryPieceId}
+              imageSrc={imageSrc}
+              name={name}
+            />
           </TabPanel>
         </Tabs>
       </div>

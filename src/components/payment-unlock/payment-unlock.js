@@ -11,9 +11,7 @@ const PaymentUnlock = ({ isPaymentActive, startSetPaymentActiveFlag }) => {
 
   return (
     <div className="payment-unlock">
-      <button onClick={startSetPaymentActiveFlag}>
-        Click to Unlock Payment
-      </button>
+      <button onClick={startSetPaymentActiveFlag}>Unlock Payment</button>
     </div>
   );
 };
