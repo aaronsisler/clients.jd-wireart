@@ -2,6 +2,7 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
 import EditGalleryPieceDetailsContainer from "../../containers/edit-gallery-piece-details-container";
+import UploadGalleryPieceImageContainer from "../../containers/upload-gallery-piece-image-container";
 import PaymentUnlock from "../payment-unlock";
 import "./manager-details.scss";
 
@@ -41,13 +42,15 @@ const ManagerDetails = ({ galleryPiece }) => {
         <Tabs>
           <TabList>
             <Tab>Edit Details</Tab>
-            <Tab>Edit Image</Tab>
+            <Tab>Upload Image</Tab>
           </TabList>
 
           <TabPanel>
             <EditGalleryPieceDetailsContainer galleryPiece={galleryPiece} />
           </TabPanel>
-          <TabPanel>Edit Image</TabPanel>
+          <TabPanel>
+            <UploadGalleryPieceImageContainer />
+          </TabPanel>
         </Tabs>
       </div>
     </div>

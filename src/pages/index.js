@@ -1,7 +1,6 @@
 import AboutUsPage from "./about-us-page";
 import AddGalleryPiecePage from "./add-gallery-piece-page";
 import ContactPage from "./contact-page";
-import EditGalleryPiecePage from "./edit-gallery-piece-page";
 import GalleryPage from "./gallery-page";
 import GalleryPieceNotFoundPage from "./gallery-piece-not-found-page";
 import GalleryPiecePage from "./gallery-piece-page";
@@ -17,7 +16,6 @@ export {
   AboutUsPage,
   AddGalleryPiecePage,
   ContactPage,
-  EditGalleryPiecePage,
   GalleryPage,
   GalleryPieceNotFoundPage,
   GalleryPiecePage,

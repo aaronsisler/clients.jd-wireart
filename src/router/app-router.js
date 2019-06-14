@@ -6,7 +6,6 @@ import {
   AboutUsPage,
   AddGalleryPiecePage,
   ContactPage,
-  EditGalleryPiecePage,
   GalleryPage,
   GalleryPieceNotFoundPage,
   GalleryPiecePage,
@@ -44,10 +43,6 @@ const AppRouter = () => (
       path="/manager_add"
       component={AddGalleryPiecePage}
       exact={true}
-    />
-    <AuthorizedRoute
-      path="/manager_edit/:galleryPieceId"
-      component={EditGalleryPiecePage}
     />
     <Route path="/privacy" component={PrivacyPolicyPage} exact={true} />
     <Route path="/not_found" component={NotFoundPage} exact={true} />
