@@ -20,6 +20,11 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .edit-gallery-piece-container {
+    display: grid;
+    justify-content: center;
+    padding: 0 10% $medium;
+  }
 }
 
 //XLarge screens
