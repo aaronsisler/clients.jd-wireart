@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { retrieveDownloadUrl, storage } from "../../firebase";
 import { startAddGalleryPieceImage } from "../../actions";
 import "./gallery-piece-image-upload.scss";
+import "./react-sweet-progress-bar.scss";
 
 class GalleryPieceImageUpload extends React.Component {
   constructor(props) {
@@ -60,14 +61,14 @@ class GalleryPieceImageUpload extends React.Component {
             onUploadSuccess={this.handleUploadSuccess}
           />
         </label>
-        {this.state.success && (
-          <div className="gallery-piece-image-upload__success">
-            {this.state.success}
-          </div>
-        )}
         {this.state.isUploading && (
           <div className="gallery-piece-image-upload__progress">
             <Progress percent={this.state.progress} />
+          </div>
+        )}
+        {this.state.success && (
+          <div className="gallery-piece-image-upload__success">
+            {this.state.success}
           </div>
         )}
       </div>

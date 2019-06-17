@@ -7,9 +7,10 @@ import history from "../../tools/history";
 import "./add-gallery-piece-container.scss";
 
 class AddGalleryPieceContainer extends React.Component {
-  handleSubmit = galleryPiece => {
-    this.props.startAddGalleryPiece(galleryPiece);
-    return history.push("/manager");
+  handleSubmit = async galleryPiece => {
+    const galleryPieceId = await this.props.startAddGalleryPiece(galleryPiece);
+
+    return history.push(`/manager/${galleryPieceId}`);
   };
 
   render() {

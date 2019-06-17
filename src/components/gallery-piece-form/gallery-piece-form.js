@@ -42,7 +42,9 @@ class GalleryPieceForm extends React.Component {
     const { name: inputName, value: inputValue } = e.target;
 
     if (!inputValue || inputValue.match(/^[0-9]*$/)) {
-      return this.setState({ [inputName]: inputValue });
+      return this.setState({
+        [inputName]: inputValue ? parseInt(inputValue) : ""
+      });
     }
 
     return this.setState({ [inputName]: "" });
@@ -63,6 +65,7 @@ class GalleryPieceForm extends React.Component {
 
   handleSubmit = () => {
     const { category, name, price } = this.state;
+
     if (!name || !price || category === "NONE") {
       return this.setState(() => ({
         error: "Please provide name, price, and category"

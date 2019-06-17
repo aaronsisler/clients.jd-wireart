@@ -1,7 +1,24 @@
 import database from "../firebase";
 import { addGalleryPiece, editGalleryPiece } from "./helpers/gallery-piece";
 
-export const startAddGalleryPiece = galleryPiece => dispatch =>
+export const startAddGalleryPiece = galleryPiece => async dispatch => {
+  const { key: galleryPieceId } = await database
+    .ref(`gallery`)
+    .push({ ...galleryPiece, isPaymentActive: false, isSold: false });
+
+  dispatch(
+    addGalleryPiece({
+      galleryPieceId,
+      ...galleryPiece,
+      isPaymentActive: false,
+      isSold: false
+    })
+  );
+
+  return galleryPieceId;
+};
+
+export const start1AddGalleryPiece = galleryPiece => dispatch =>
   database
     .ref(`gallery`)
     .push({ ...galleryPiece, isPaymentActive: false, isSold: false })
@@ -29,9 +46,7 @@ export const startEditGalleryPiece = (galleryPieceId, updates) => dispatch =>
   database
     .ref(`gallery/${galleryPieceId}`)
     .update(updates)
-    .then(() => {
-      dispatch(editGalleryPiece(galleryPieceId, updates));
-    });
+    .then(() => dispatch(editGalleryPiece(galleryPieceId, updates)));
 
 export const startSetPaymentActiveFlag = galleryPieceId => dispatch =>
   database

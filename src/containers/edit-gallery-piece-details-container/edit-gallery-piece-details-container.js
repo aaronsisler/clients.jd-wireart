@@ -5,17 +5,23 @@ import GalleryPieceForm from "../../components/gallery-piece-form";
 import { startEditGalleryPiece } from "../../actions";
 import "./edit-gallery-piece-details-container.scss";
 
-const EditGalleryPieceDetailsContainer = ({
-  galleryPiece,
-  startEditGalleryPiece
-}) => (
-  <div className="edit-gallery-piece-details-container">
-    <GalleryPieceForm
-      galleryPiece={galleryPiece}
-      onSubmit={startEditGalleryPiece}
-    />
-  </div>
-);
+class EditGalleryPieceDetailsContainer extends React.Component {
+  handleSubmit = galleryPiece => {
+    const { galleryPieceId } = this.props.galleryPiece;
+    return this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
+  };
+
+  render() {
+    return (
+      <div className="edit-gallery-piece-details-container">
+        <GalleryPieceForm
+          galleryPiece={this.props.galleryPiece}
+          onSubmit={this.handleSubmit}
+        />
+      </div>
+    );
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
   startEditGalleryPiece: (galleryPieceId, galleryPiece) =>
