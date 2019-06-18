@@ -6,7 +6,11 @@ import "./payment-unlock.scss";
 
 const PaymentUnlock = ({ isPaymentActive, startSetPaymentActiveFlag }) => {
   if (isPaymentActive) {
-    return <div className="payment-unlock">Payment Activated</div>;
+    return (
+      <div className="payment-unlock">
+        <div className="payment-unlock__text">Payment Activated</div>
+      </div>
+    );
   }
 
   return (

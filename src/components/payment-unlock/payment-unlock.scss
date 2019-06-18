@@ -14,6 +14,11 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .payment-unlock {
+    &__text {
+      margin-right: $small;
+    }
+  }
 }
 
 //XLarge screens
