@@ -5,9 +5,10 @@
 //max-width 640px, small screens
 @media only screen {
   .form-error {
-    @include font-type($secFont, $medium);
+    @include font-type($mainFont, $medium);
 
-    // margin-bottom: $xsmall;
+    color: lighten(darkred, 15);
+    margin-bottom: $small;
   }
 }
 

@@ -6,12 +6,7 @@ import "./form-error.scss";
 
 const FormError = ({ error }) => (
   <div className="form-error">
-    <FontAwesomeIcon
-      className="form-error__icon"
-      icon={faExclamationCircle}
-      // size="lg"
-      // color="red"
-    />
+    <FontAwesomeIcon className="form-error__icon" icon={faExclamationCircle} />
     &nbsp;&nbsp;{error}
   </div>
 );

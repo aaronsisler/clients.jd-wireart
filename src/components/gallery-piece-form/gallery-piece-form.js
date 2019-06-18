@@ -42,9 +42,7 @@ class GalleryPieceForm extends React.Component {
     const { name: inputName, value: inputValue } = e.target;
 
     if (!inputValue || inputValue.match(/^[0-9]*$/)) {
-      return this.setState({
-        [inputName]: inputValue ? parseInt(inputValue) : ""
-      });
+      return this.setState({ [inputName]: inputValue });
     }
 
     return this.setState({ [inputName]: "" });
