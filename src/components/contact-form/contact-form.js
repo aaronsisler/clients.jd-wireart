@@ -21,21 +21,6 @@ class ContactForm extends React.Component {
     };
   }
 
-  handleSubmitContactForm = () => {
-    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
-
-    const { emailAddress, message, name, phoneNumber } = this.state;
-    const data = {
-      name,
-      emailAddress,
-      phoneNumber,
-      message
-    };
-    const done = () => this.setState({ emailSent: true });
-    const fail = () => this.setState({ emailError: true });
-    sendEmail(data, done, fail);
-  };
-
   handleEmailValidation = e => {
     const { value: inputValue } = e.target;
 
@@ -127,6 +112,25 @@ class ContactForm extends React.Component {
     }
 
     return this.setState({ isSendButtonDisabled: true });
+  };
+
+  handleSubmitContactForm = () => {
+    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
+
+    const { emailAddress, message, name, phoneNumber } = this.state;
+    const { galleryPieceId } = this.props;
+    const data = {
+      emailAddress,
+      galleryPieceId,
+      name,
+      message,
+      phoneNumber
+    };
+
+    const done = () => this.setState({ emailSent: true });
+    const fail = () => this.setState({ emailError: true });
+
+    sendEmail(data, done, fail);
   };
 
   render() {
@@ -225,6 +229,7 @@ class ContactForm extends React.Component {
 }
 
 ContactForm.propTypes = {
+  galleryPieceId: PropTypes.string,
   galleryPieceName: PropTypes.string,
   isCustom: PropTypes.bool
 };

@@ -5,11 +5,15 @@ import ContactForm from "../../components/contact-form";
 import ContactPhone from "../../components/contact-phone";
 import "./contact-container.scss";
 
-const ContactContainer = ({ galleryPieceName, isCustom }) => (
+const ContactContainer = ({ galleryPieceId, galleryPieceName, isCustom }) => (
   <div className="contact-container">
     <div className="contact-container__email">
       <div className="contact-container__email-title">Send us a message</div>
-      <ContactForm galleryPieceName={galleryPieceName} isCustom={isCustom} />
+      <ContactForm
+        galleryPieceId={galleryPieceId}
+        galleryPieceName={galleryPieceName}
+        isCustom={isCustom}
+      />
     </div>
     <div className="contact-container__phone">
       <ContactPhone />
@@ -38,7 +42,7 @@ const mapStateToProps = (state, props) => {
   };
 };
 
-ContactForm.propTypes = {
+ContactContainer.propTypes = {
   galleryPieceId: PropTypes.string,
   galleryPieceName: PropTypes.string,
   isCustom: PropTypes.bool
