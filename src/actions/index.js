@@ -14,12 +14,15 @@ import {
   startMarkAsSold
 } from "./gallery-piece";
 
+import { startClearNotification, startSetNotification } from "./notification";
+
 import { startClearUser, startSetUser } from "./user";
 
 export {
   startAddGalleryPiece,
   startAddGalleryPieceImage,
   startClearAuth,
+  startClearNotification,
   startClearUser,
   startEditGalleryPiece,
   startLogin,
@@ -28,6 +31,7 @@ export {
   startSetGallery,
   startSetGalleryCategoryFilter,
   startSetGalleryTextFilter,
+  startSetNotification,
   startSetPaymentActiveFlag,
   startMarkAsSold,
   startSetUser

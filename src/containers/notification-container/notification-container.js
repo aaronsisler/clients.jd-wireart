@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   startClearNotification: () => dispatch(startClearNotification()),
-  startSetNotification: (notification = "Taco") =>
+  startSetNotification: notification =>
     dispatch(startSetNotification(notification))
 });
 

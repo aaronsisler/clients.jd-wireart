@@ -3,6 +3,21 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .notification-container {
+    align-items: center;
+    background-color: lightgreen;
+    border-radius: 5px;
+    display: grid;
+    height: $xxlarge;
+    left: 0;
+    margin: $small;
+    opacity: 0.9;
+    padding: $small;
+    position: fixed;
+    right: 0;
+    top: 8vh;
+    z-index: 1000;
+  }
 }
 
 //Medium screens - TABLET
@@ -11,6 +26,9 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .notification-container {
+    margin: $small 10vh;
+  }
 }
 
 //XLarge screens

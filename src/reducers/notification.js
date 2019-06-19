@@ -1,4 +1,4 @@
-const notificationReducerDefaultState = undefined;
+const notificationReducerDefaultState = "";
 
 const notificationReducer = (
   state = notificationReducerDefaultState,
@@ -6,7 +6,7 @@ const notificationReducer = (
 ) => {
   switch (action.type) {
     case "CLEAR_NOTIFICATION":
-      return undefined;
+      return notificationReducerDefaultState;
     case "SET_NOTIFICATION":
       return action.notification;
     default:

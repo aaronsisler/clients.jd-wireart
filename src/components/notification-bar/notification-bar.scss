@@ -3,6 +3,18 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .notification-bar {
+    @include font-type($secFont, $medium, bold);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    &__text {
+      text-align: center;
+    }
+    &__clear {
+      text-align: end;
+    }
+  }
 }
 
 //Medium screens - TABLET

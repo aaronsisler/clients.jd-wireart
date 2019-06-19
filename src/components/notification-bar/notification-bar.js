@@ -8,10 +8,13 @@ const NotificationBar = ({
   startSetNotification
 }) => (
   <div className="notification-bar">
-    <div className="notification-bar__text">{notification}</div>
-    <div className="notification-bar__set" onClick={startSetNotification}>
+    <div
+      className="notification-bar__set"
+      onClick={() => startSetNotification("burrito")}
+    >
       Set
     </div>
+    <div className="notification-bar__text">{notification}</div>
     <div className="notification-bar__clear" onClick={startClearNotification}>
       Clear
     </div>
