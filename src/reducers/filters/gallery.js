@@ -18,6 +18,8 @@ const galleryFilterReducer = (
         ...state,
         category: action.category
       };
+    case "RESET_GALLERY_FILTERS":
+      return galleryFilterReducerDefaultState;
     default:
       return state;
   }

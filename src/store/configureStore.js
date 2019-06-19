@@ -4,6 +4,7 @@ import {
   authReducer,
   galleryFilterReducer,
   galleryReducer,
+  notificationReducer,
   userReducer
 } from "../reducers";
 
@@ -17,6 +18,7 @@ export default () => {
         gallery: galleryFilterReducer
       }),
       gallery: galleryReducer,
+      notification: notificationReducer,
       user: userReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
