@@ -33,12 +33,10 @@ export class GalleryCategoryFilter extends React.Component {
   }
 }
 
-/* istanbul ignore next */
 const mapStateToProps = state => ({
   filters: state.filters.gallery
 });
 
-/* istanbul ignore next */
 const mapDispatchToProps = dispatch => ({
   startSetGalleryCategoryFilter: category =>
     dispatch(startSetGalleryCategoryFilter(category))

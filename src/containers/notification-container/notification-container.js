@@ -1,6 +1,41 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { startClearNotification, startSetNotification } from "../../actions";
+import NotificationBar from "../../components/notification-bar/notification-bar";
 import "./notification-container.scss";
 
-const NotificationContainer = () => <div className="notification-container">NotificationContainer</div>;
+const NotificationContainer = ({
+  notification,
+  startClearNotification,
+  startSetNotification
+}) => (
+  <div className="notification-container">
+    <NotificationBar
+      notification={notification}
+      startClearNotification={startClearNotification}
+      startSetNotification={startSetNotification}
+    />
+  </div>
+);
 
-export default NotificationContainer;
+const mapStateToProps = state => ({
+  notification: state.notification
+});
+
+const mapDispatchToProps = dispatch => ({
+  startClearNotification: () => dispatch(startClearNotification()),
+  startSetNotification: (notification = "Taco") =>
+    dispatch(startSetNotification(notification))
+});
+
+NotificationContainer.propTypes = {
+  notification: PropTypes.string,
+  startClearNotification: PropTypes.func.isRequired,
+  startSetNotification: PropTypes.func.isRequired
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NotificationContainer);
