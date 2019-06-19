@@ -2,13 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryPieceForm from "../../components/gallery-piece-form";
-import { startEditGalleryPiece } from "../../actions";
+import { startEditGalleryPiece, startSetNotification } from "../../actions";
 import "./edit-gallery-piece-details-container.scss";
 
 class EditGalleryPieceDetailsContainer extends React.Component {
   handleSubmit = galleryPiece => {
     const { galleryPieceId } = this.props.galleryPiece;
-    return this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
+    this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
+    return this.props.startSetNotification("Gallery piece updated");
   };
 
   render() {
@@ -25,12 +26,15 @@ class EditGalleryPieceDetailsContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   startEditGalleryPiece: (galleryPieceId, galleryPiece) =>
-    dispatch(startEditGalleryPiece(galleryPieceId, galleryPiece))
+    dispatch(startEditGalleryPiece(galleryPieceId, galleryPiece)),
+  startSetNotification: notification =>
+    dispatch(startSetNotification(notification))
 });
 
 EditGalleryPieceDetailsContainer.propTypes = {
   galleryPiece: PropTypes.object.isRequired,
-  startEditGalleryPiece: PropTypes.func.isRequired
+  startEditGalleryPiece: PropTypes.func.isRequired,
+  startSetNotification: PropTypes.func.isRequired
 };
 
 export default connect(

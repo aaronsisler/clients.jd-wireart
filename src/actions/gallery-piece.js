@@ -18,21 +18,6 @@ export const startAddGalleryPiece = galleryPiece => async dispatch => {
   return galleryPieceId;
 };
 
-export const start1AddGalleryPiece = galleryPiece => dispatch =>
-  database
-    .ref(`gallery`)
-    .push({ ...galleryPiece, isPaymentActive: false, isSold: false })
-    .then(ref =>
-      dispatch(
-        addGalleryPiece({
-          galleryPieceId: ref.key,
-          ...galleryPiece,
-          isPaymentActive: false,
-          isSold: false
-        })
-      )
-    );
-
 export const startAddGalleryPieceImage = (
   galleryPieceId,
   imageSrc

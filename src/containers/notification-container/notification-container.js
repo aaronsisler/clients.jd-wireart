@@ -9,15 +9,19 @@ const NotificationContainer = ({
   notification,
   startClearNotification,
   startSetNotification
-}) => (
-  <div className="notification-container">
-    <NotificationBar
-      notification={notification}
-      startClearNotification={startClearNotification}
-      startSetNotification={startSetNotification}
-    />
-  </div>
-);
+}) => {
+  return (
+    notification && (
+      <div className="notification-container">
+        <NotificationBar
+          notification={notification}
+          startClearNotification={startClearNotification}
+          startSetNotification={startSetNotification}
+        />
+      </div>
+    )
+  );
+};
 
 const mapStateToProps = state => ({
   notification: state.notification
