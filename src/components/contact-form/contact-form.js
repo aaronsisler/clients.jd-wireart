@@ -118,12 +118,13 @@ class ContactForm extends React.Component {
     this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
 
     const { emailAddress, message, name, phoneNumber } = this.state;
-    const { galleryPieceId } = this.props;
+    const { galleryPieceId, galleryPieceName } = this.props;
     const data = {
       emailAddress,
       galleryPieceId,
-      name,
+      galleryPieceName,
       message,
+      name,
       phoneNumber
     };
 
