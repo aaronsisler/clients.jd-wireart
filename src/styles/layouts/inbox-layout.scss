@@ -16,6 +16,17 @@
     }
     &__details {
       width: 100%;
+      &-empty,
+      &-invalid {
+        @include font-type($mainFont, $midlarge);
+
+        align-items: center;
+        background-color: white;
+        display: grid;
+        filter: $dropShadow;
+        padding: $small;
+        text-align: center;
+      }
     }
     // This must stay at the bottom to be applied last
     &__mobile {
@@ -36,15 +47,6 @@
     &__details {
       background-color: transparent;
       filter: none;
-      &-empty {
-        @include font-type($mainFont, $midlarge);
-
-        align-items: center;
-        background-color: white;
-        display: grid;
-        filter: $dropShadow;
-        text-align: center;
-      }
     }
     // This must stay at the bottom to be applied last
     &__mobile {

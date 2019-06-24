@@ -7,16 +7,19 @@ import ManagerDetails from "../../components/manager-details";
 
 import "./manager-container.scss";
 
-const ManagerContainer = ({ gallery, galleryPiece }) => (
+const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => (
   <div className="manager-container">
     <div className="inbox">
-      <div className={`inbox__list ${galleryPiece ? "inbox__mobile" : ""}`}>
+      <div className={`inbox__list ${galleryPieceId ? "inbox__mobile" : ""}`}>
         <Link className="nav-link" to="/manager_add">
           Add Gallery Piece
         </Link>
         <ManagerList gallery={gallery} />
       </div>
-      <ManagerDetails galleryPiece={galleryPiece} />
+      <ManagerDetails
+        galleryPiece={galleryPiece}
+        galleryPieceId={galleryPieceId}
+      />
     </div>
   </div>
 );
@@ -31,7 +34,8 @@ const mapStateToProps = (state, props) => {
 
   return {
     gallery: state.gallery,
-    galleryPiece
+    galleryPiece,
+    galleryPieceId
   };
 };
 

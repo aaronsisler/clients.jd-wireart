@@ -6,7 +6,15 @@ import UploadGalleryPieceImageContainer from "../../containers/upload-gallery-pi
 import PaymentUnlock from "../payment-unlock";
 import "./manager-details.scss";
 
-const ManagerDetails = ({ galleryPiece }) => {
+const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
+  if (galleryPieceId && !galleryPiece) {
+    return (
+      <div className={`manager-details inbox__details-invalid`}>
+        That galley piece does not exist. Please refer back to the gallery list.
+      </div>
+    );
+  }
+
   if (!galleryPiece) {
     return (
       <div className={`manager-details inbox__details-empty inbox__mobile`}>
@@ -15,13 +23,7 @@ const ManagerDetails = ({ galleryPiece }) => {
     );
   }
 
-  const {
-    galleryPieceId,
-    imageSrc,
-    isPaymentActive,
-    isSold,
-    name
-  } = galleryPiece;
+  const { imageSrc, isPaymentActive, isSold, name } = galleryPiece;
 
   return (
     <div className="manager-details inbox__details">
