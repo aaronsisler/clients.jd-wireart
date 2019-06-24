@@ -22,11 +22,14 @@
 
         align-items: center;
         background-color: white;
-        display: grid;
+        display: flex;
         filter: $dropShadow;
         padding: $small;
         text-align: center;
       }
+    }
+    &__nav-back {
+      margin: $medium 0;
     }
     // This must stay at the bottom to be applied last
     &__mobile {
@@ -47,6 +50,13 @@
     &__details {
       background-color: transparent;
       filter: none;
+      &-empty,
+      &-invalid {
+        display: grid;
+      }
+    }
+    &__nav-back {
+      display: none;
     }
     // This must stay at the bottom to be applied last
     &__mobile {

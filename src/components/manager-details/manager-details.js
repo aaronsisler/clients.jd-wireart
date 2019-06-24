@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
 import EditGalleryPieceDetailsContainer from "../../containers/edit-gallery-piece-details-container";
@@ -10,7 +11,13 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
   if (galleryPieceId && !galleryPiece) {
     return (
       <div className={`manager-details inbox__details-invalid`}>
-        That galley piece does not exist. Please refer back to the gallery list.
+        <div className="inbox__nav-back">
+          <Link className="nav-link" to="/manager">
+            Back to list
+          </Link>
+        </div>
+        That gallery piece does not exist. Please refer back to the gallery
+        list.
       </div>
     );
   }
@@ -28,6 +35,11 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
   return (
     <div className="manager-details inbox__details">
       <div className="manager-details__header">
+        <div className="inbox__nav-back">
+          <Link className="nav-link" to="/manager">
+            Back to list
+          </Link>
+        </div>
         <div className="manager-details__header-name">{name}</div>
         <div className="manager-details__header-payment">
           {isSold ? (
