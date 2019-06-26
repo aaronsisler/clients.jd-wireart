@@ -34,6 +34,9 @@
         margin: 0 auto;
         width: 100%;
       }
+      &-order {
+        @include font-type($secFont);
+      }
       &-button {
         padding: $small;
       }
@@ -43,6 +46,10 @@
 
       padding: $small 0 $medium;
       text-align: center;
+      &--error {
+        border-bottom: $border;
+        margin-bottom: $small;
+      }
     }
   }
 }

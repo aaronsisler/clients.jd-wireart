@@ -128,8 +128,13 @@ class ContactForm extends React.Component {
       phoneNumber
     };
 
-    const done = () => this.setState({ emailSent: true });
-    const fail = () => this.setState({ emailError: true });
+    const done = () => this.setState({ emailError: false, emailSent: true });
+    const fail = () =>
+      this.setState({
+        emailError: true,
+        isSendButtonDisabled: false,
+        buttonText: "Send It"
+      });
 
     sendEmail(data, done, fail);
   };
@@ -149,7 +154,18 @@ class ContactForm extends React.Component {
 
     return (
       <div className="contact-form">
-        {!emailSent && !emailError && (
+        {emailSent && (
+          <div className="contact-form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
+          </div>
+        )}
+        {emailError && (
+          <div className="contact-form__email contact-form__email--error">
+            Something went wrong unfortunately. Please try sending again.
+          </div>
+        )}
+        {!emailSent && (
           <React.Fragment>
             <div className="contact-form__header">
               <div className="contact-form__header-content">
@@ -191,7 +207,7 @@ class ContactForm extends React.Component {
                 />
               </div>
               {galleryPieceName && (
-                <div className="contact_form__form-order">
+                <div className="contact-form__form-order">
                   I would like to {isCustom ? "custom order" : "purchase"} the
                   following piece: {galleryPieceName}
                 </div>
@@ -212,17 +228,6 @@ class ContactForm extends React.Component {
               </button>
             </div>
           </React.Fragment>
-        )}
-        {emailSent && (
-          <div className="contact-form__email">
-            Thank you for reaching out! We are excited to get back in touch with
-            you.
-          </div>
-        )}
-        {emailError && (
-          <div className="contact-form__email">
-            Something went wrong unfortunately. Please try reloading the page.
-          </div>
         )}
       </div>
     );

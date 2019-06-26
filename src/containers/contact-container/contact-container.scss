@@ -18,7 +18,7 @@
       height: fit-content;
       margin: 0 auto $large;
       opacity: 0.95;
-      padding: $medium $small;
+      padding: $medium;
       width: fit-content;
       &-title {
         @include font-type($mainFont, $large);
@@ -43,7 +43,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .contact-container {
-    background-image: url("/images/contact/contact_container_desktop.png");
+    background-image: url("/images/contact/contact_container_desktop.jpg");
     &__phone {
       margin: 0 auto;
       width: fit-content;
