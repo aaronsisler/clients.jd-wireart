@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import GalleryTextFilter from "../../components/gallery-text-filter";
+import GalleryCategoryFilter from "../../components/gallery-category-filter";
 import ManagerList from "../../components/manager-list";
 import ManagerDetails from "../../components/manager-details";
+import NavLink from "../../components/nav-link";
 
 import "./manager-container.scss";
 
@@ -11,9 +13,11 @@ const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => (
   <div className="manager-container">
     <div className="inbox">
       <div className={`inbox__list ${galleryPieceId ? "inbox__mobile" : ""}`}>
-        <Link className="nav-link" to="/manager_add">
-          Add Gallery Piece
-        </Link>
+        <div className="inbox__list-controls">
+          <NavLink linkText="Add Gallery Piece" to="manager_add" />
+          <GalleryTextFilter />
+          <GalleryCategoryFilter />
+        </div>
         <ManagerList gallery={gallery} />
       </div>
       <ManagerDetails
