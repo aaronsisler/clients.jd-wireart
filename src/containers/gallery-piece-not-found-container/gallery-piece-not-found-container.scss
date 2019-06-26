@@ -4,6 +4,24 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .gallery-piece-not-found-container {
+    background-color: $containerBackgroundColor;
+    display: grid;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: $large;
+    text-align: center;
+    &__content {
+      background-color: white;
+      filter: $dropShadow;
+      padding: $midlarge;
+      &-text {
+        @include font-type($mainFont, $midlarge);
+
+        margin-bottom: $medium;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
