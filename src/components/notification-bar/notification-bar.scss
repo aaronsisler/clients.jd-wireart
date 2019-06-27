@@ -6,13 +6,15 @@
   .notification-bar {
     @include font-type($secFont, $medium, bold);
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    color: $fontGrey;
+    display: flex;
     &__text {
+      flex: 1 1 auto;
       text-align: center;
     }
     &__clear {
-      text-align: end;
+      position: absolute;
+      right: $small;
     }
   }
 }
@@ -23,6 +25,9 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .notification-bar {
+    @include font-type($secFont, $midlarge, bold);
+  }
 }
 
 //XLarge screens

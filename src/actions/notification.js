@@ -1,9 +1,14 @@
 import { clearNotification, setNotification } from "./helpers/notification";
 
+const timeoutLengthInMilliseconds = 5000;
+
 export const startClearNotification = () => dispatch =>
   dispatch(clearNotification());
 
 export const startSetNotification = notification => dispatch => {
   dispatch(setNotification(notification));
-  setTimeout(() => dispatch(clearNotification()), 5000);
+  return setTimeout(
+    () => dispatch(clearNotification()),
+    timeoutLengthInMilliseconds
+  );
 };

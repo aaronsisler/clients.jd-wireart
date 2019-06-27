@@ -1,30 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 import "./notification-bar.scss";
 
-const NotificationBar = ({
-  notification,
-  startClearNotification,
-  startSetNotification
-}) => (
+const NotificationBar = ({ notification, startClearNotification }) => (
   <div className="notification-bar">
-    <div
-      className="notification-bar__set"
-      onClick={() => startSetNotification("burrito")}
-    >
-      Set
-    </div>
     <div className="notification-bar__text">{notification}</div>
     <div className="notification-bar__clear" onClick={startClearNotification}>
-      Clear
+      <FontAwesomeIcon className="notification-bar__icon" icon={faTimes} />
     </div>
   </div>
 );
 
 NotificationBar.propTypes = {
   notification: PropTypes.string,
-  startClearNotification: PropTypes.func.isRequired,
-  startSetNotification: PropTypes.func.isRequired
+  startClearNotification: PropTypes.func.isRequired
 };
 
 export default NotificationBar;

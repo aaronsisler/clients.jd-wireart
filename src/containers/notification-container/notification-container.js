@@ -1,22 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { startClearNotification, startSetNotification } from "../../actions";
+import { startClearNotification } from "../../actions";
 import NotificationBar from "../../components/notification-bar/notification-bar";
 import "./notification-container.scss";
 
-const NotificationContainer = ({
-  notification,
-  startClearNotification,
-  startSetNotification
-}) => {
+const NotificationContainer = ({ notification, startClearNotification }) => {
   return (
     notification && (
       <div className="notification-container">
         <NotificationBar
           notification={notification}
           startClearNotification={startClearNotification}
-          startSetNotification={startSetNotification}
         />
       </div>
     )
@@ -28,15 +23,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  startClearNotification: () => dispatch(startClearNotification()),
-  startSetNotification: notification =>
-    dispatch(startSetNotification(notification))
+  startClearNotification: () => dispatch(startClearNotification())
 });
 
 NotificationContainer.propTypes = {
   notification: PropTypes.string,
-  startClearNotification: PropTypes.func.isRequired,
-  startSetNotification: PropTypes.func.isRequired
+  startClearNotification: PropTypes.func.isRequired
 };
 
 export default connect(
