@@ -6,10 +6,16 @@ import { startEditGalleryPiece, startSetNotification } from "../../actions";
 import "./edit-gallery-piece-details-container.scss";
 
 class EditGalleryPieceDetailsContainer extends React.Component {
-  handleSubmit = galleryPiece => {
+  handleSubmit = async galleryPiece => {
     const { galleryPieceId } = this.props.galleryPiece;
-    this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
-    return this.props.startSetNotification("Gallery piece updated");
+    try {
+      await this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
+      this.props.startSetNotification("Gallery piece updated");
+    } catch (error) {
+      this.props.startSetNotification(
+        "Gallery piece update failed. Please try again."
+      );
+    }
   };
 
   render() {
