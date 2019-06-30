@@ -5,21 +5,22 @@ import {
   setGalleryTextFilter
 } from "./helpers/gallery-filter";
 
-export const startSetGallery = () => dispatch =>
-  database
-    .ref(`gallery`)
-    .once("value")
-    .then(snapshot => {
-      const gallery = [];
-      snapshot.forEach(childSnapshot => {
-        gallery.push({
-          galleryPieceId: childSnapshot.key,
-          ...childSnapshot.val()
-        });
-      });
+export const startSetGallery = () => async dispatch => {
+  try {
+    const gallery = [];
+    const snapshot = await database.ref(`gallery`).once("value");
 
-      return dispatch(setGallery(gallery));
+    snapshot.forEach(childSnapshot => {
+      gallery.push({
+        galleryPieceId: childSnapshot.key,
+        ...childSnapshot.val()
+      });
     });
+    return dispatch(setGallery(gallery));
+  } catch (error) {
+    throw error;
+  }
+};
 
 export const startSetGalleryCategoryFilter = category => dispatch =>
   dispatch(setGalleryCategoryFilter(category));

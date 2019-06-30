@@ -16,7 +16,7 @@ const NotificationBar = ({ isError, notification, startClearNotification }) => (
 );
 
 NotificationBar.propTypes = {
-  isError: PropTypes.string,
+  isError: PropTypes.bool,
   notification: PropTypes.string.isRequired,
   startClearNotification: PropTypes.func.isRequired
 };

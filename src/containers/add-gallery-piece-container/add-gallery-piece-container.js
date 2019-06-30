@@ -2,15 +2,27 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryPieceForm from "../../components/gallery-piece-form";
-import { startAddGalleryPiece } from "../../actions";
+import {
+  startAddGalleryPiece,
+  startSetErrorNotification,
+  startSetSuccessNotification
+} from "../../actions";
 import history from "../../tools/history";
 import "./add-gallery-piece-container.scss";
 
 class AddGalleryPieceContainer extends React.Component {
   handleSubmit = async galleryPiece => {
-    const galleryPieceId = await this.props.startAddGalleryPiece(galleryPiece);
-
-    return history.push(`/manager/${galleryPieceId}`);
+    try {
+      const galleryPieceId = await this.props.startAddGalleryPiece(
+        galleryPiece
+      );
+      await this.props.startSetSuccessNotification("Gallery piece added");
+      return history.push(`/manager/${galleryPieceId}`);
+    } catch (error) {
+      this.props.startSetErrorNotification(
+        "Adding gallery piece failed. Please try again."
+      );
+    }
   };
 
   render() {
@@ -29,11 +41,17 @@ class AddGalleryPieceContainer extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   startAddGalleryPiece: galleryPiece =>
-    dispatch(startAddGalleryPiece(galleryPiece))
+    dispatch(startAddGalleryPiece(galleryPiece)),
+  startSetErrorNotification: notification =>
+    dispatch(startSetErrorNotification(notification)),
+  startSetSuccessNotification: notification =>
+    dispatch(startSetSuccessNotification(notification))
 });
 
 AddGalleryPieceContainer.propTypes = {
-  startAddGalleryPiece: PropTypes.func.isRequired
+  startAddGalleryPiece: PropTypes.func.isRequired,
+  startSetErrorNotification: PropTypes.func.isRequired,
+  startSetSuccessNotification: PropTypes.func.isRequired
 };
 
 export default connect(

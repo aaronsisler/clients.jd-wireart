@@ -11,6 +11,7 @@ export const startClearNotification = () => dispatch =>
 
 export const startSetErrorNotification = notification => dispatch => {
   dispatch(setErrorNotification(notification));
+
   return setTimeout(
     () => dispatch(clearNotification()),
     timeoutLengthInMilliseconds
@@ -19,6 +20,7 @@ export const startSetErrorNotification = notification => dispatch => {
 
 export const startSetSuccessNotification = notification => dispatch => {
   dispatch(setSuccessNotification(notification));
+
   return setTimeout(
     () => dispatch(clearNotification()),
     timeoutLengthInMilliseconds

@@ -17,6 +17,7 @@
       text-align: center;
     }
     &__clear {
+      cursor: pointer;
       position: absolute;
       right: $small;
     }

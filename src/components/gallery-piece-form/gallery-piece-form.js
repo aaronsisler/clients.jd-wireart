@@ -9,6 +9,8 @@ import categories from "../../content/categories";
 import "./gallery-piece-form.scss";
 
 class GalleryPieceForm extends React.Component {
+  disableSaveButtonTimeout;
+
   constructor(props) {
     super(props);
 
@@ -25,6 +27,10 @@ class GalleryPieceForm extends React.Component {
       isSaveButtonDisabled: false,
       error: ""
     };
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.disableSaveButtonTimeout);
   }
 
   handleCategoryChange = e => {
@@ -79,7 +85,7 @@ class GalleryPieceForm extends React.Component {
     }
 
     this.setState(() => ({ error: "", isSaveButtonDisabled: true }));
-    setTimeout(
+    this.disableSaveButtonTimeout = setTimeout(
       () => this.setState({ isSaveButtonDisabled: false }),
       timeoutLengthInMilliseconds
     );

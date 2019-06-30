@@ -7,7 +7,7 @@ export const startAddGalleryPiece = galleryPiece => async dispatch => {
       .ref(`gallery`)
       .push({ ...galleryPiece, isPaymentActive: false, isSold: false });
 
-    dispatch(
+    await dispatch(
       addGalleryPiece({
         galleryPieceId,
         ...galleryPiece,
@@ -16,7 +16,7 @@ export const startAddGalleryPiece = galleryPiece => async dispatch => {
       })
     );
 
-    return galleryPieceId;
+    return Promise.resolve(galleryPieceId);
   } catch (error) {
     throw error;
   }

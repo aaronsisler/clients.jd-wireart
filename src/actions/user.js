@@ -3,18 +3,18 @@ import { clearUser, setUser } from "./helpers/user";
 
 export const startClearUser = () => dispatch => dispatch(clearUser());
 
-export const startSetUser = () => (dispatch, getState) => {
-  const { uid: userId } = getState().auth;
+export const startSetUser = () => async (dispatch, getState) => {
+  try {
+    const { uid: userId } = getState().auth;
+    const snapshot = await database.ref(`users/${userId}`).once("value");
 
-  return database
-    .ref(`users/${userId}`)
-    .once("value")
-    .then(snapshot =>
-      dispatch(
-        setUser({
-          userId: snapshot.key,
-          ...snapshot.val()
-        })
-      )
+    return dispatch(
+      setUser({
+        userId: snapshot.key,
+        ...snapshot.val()
+      })
     );
+  } catch (error) {
+    throw error;
+  }
 };
