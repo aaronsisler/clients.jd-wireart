@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 import "./notification-bar.scss";
 
-const NotificationBar = ({ notification, startClearNotification }) => (
-  <div className="notification-bar">
+const NotificationBar = ({ isError, notification, startClearNotification }) => (
+  <div
+    className={`notification-bar ${isError ? "notification-bar--error" : ""}`}
+  >
     <div className="notification-bar__text">{notification}</div>
     <div className="notification-bar__clear" onClick={startClearNotification}>
       <FontAwesomeIcon className="notification-bar__icon" icon={faTimes} />
@@ -14,7 +16,8 @@ const NotificationBar = ({ notification, startClearNotification }) => (
 );
 
 NotificationBar.propTypes = {
-  notification: PropTypes.string,
+  isError: PropTypes.string,
+  notification: PropTypes.string.isRequired,
   startClearNotification: PropTypes.func.isRequired
 };
 

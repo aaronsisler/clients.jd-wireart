@@ -6,8 +6,12 @@
   .notification-bar {
     @include font-type($secFont, $medium, bold);
 
+    align-items: center;
+    background-color: #dff0d8;
+    border-radius: 5px;
     color: $fontGrey;
     display: flex;
+    height: $xxlarge;
     &__text {
       flex: 1 1 auto;
       text-align: center;
@@ -15,6 +19,9 @@
     &__clear {
       position: absolute;
       right: $small;
+    }
+    &--error {
+      background-color: #f2dede;
     }
   }
 }

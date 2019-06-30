@@ -22,6 +22,7 @@ class GalleryPieceForm extends React.Component {
         ? convertPriceFromDatabase(props.galleryPiece.price)
         : "",
       width: props.galleryPiece ? props.galleryPiece.width : "",
+      isSaveButtonDisabled: false,
       error: ""
     };
   }
@@ -63,6 +64,7 @@ class GalleryPieceForm extends React.Component {
 
   handleSubmit = () => {
     const { category, name, price } = this.state;
+    const timeoutLengthInMilliseconds = 3000;
 
     if (!name || !price || category === "NONE") {
       return this.setState(() => ({
@@ -76,8 +78,15 @@ class GalleryPieceForm extends React.Component {
       }));
     }
 
-    this.setState(() => ({ error: "" }));
-    const { error, ...submitObject } = Object.assign({}, this.state); // eslint-disable-line no-unused-vars
+    this.setState(() => ({ error: "", isSaveButtonDisabled: true }));
+    setTimeout(
+      () => this.setState({ isSaveButtonDisabled: false }),
+      timeoutLengthInMilliseconds
+    );
+    const { error, isSaveButtonDisabled, ...submitObject } = Object.assign(
+      {},
+      this.state
+    ); // eslint-disable-line no-unused-vars
 
     this.props.onSubmit({
       ...submitObject,
@@ -102,6 +111,7 @@ class GalleryPieceForm extends React.Component {
       description,
       error,
       height,
+      isSaveButtonDisabled,
       length,
       name,
       price,
@@ -201,6 +211,7 @@ class GalleryPieceForm extends React.Component {
         </div>
         <button
           className="gallery-piece-form__button"
+          disabled={isSaveButtonDisabled}
           onClick={this.handleSubmit}
         >
           Save

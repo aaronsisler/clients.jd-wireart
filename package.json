@@ -5,7 +5,8 @@
   "scripts": {
     "build": "react-scripts build",
     "deploy": "yarn build && yarn firebase deploy",
-    "gentemp": "node ./utils",
+    "gentempcomp": "node ./utils --isContainer=false",
+    "gentempcont": "node ./utils --isContainer=true",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

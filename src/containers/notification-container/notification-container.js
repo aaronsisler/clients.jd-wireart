@@ -5,11 +5,16 @@ import { startClearNotification } from "../../actions";
 import NotificationBar from "../../components/notification-bar/notification-bar";
 import "./notification-container.scss";
 
-const NotificationContainer = ({ notification, startClearNotification }) => {
+const NotificationContainer = ({
+  isError,
+  notification,
+  startClearNotification
+}) => {
   return (
     notification && (
       <div className="notification-container">
         <NotificationBar
+          isError={isError}
           notification={notification}
           startClearNotification={startClearNotification}
         />
@@ -19,7 +24,8 @@ const NotificationContainer = ({ notification, startClearNotification }) => {
 };
 
 const mapStateToProps = state => ({
-  notification: state.notification
+  isError: state.notification.isError,
+  notification: state.notification.message
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -27,6 +33,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 NotificationContainer.propTypes = {
+  isError: PropTypes.bool,
   notification: PropTypes.string,
   startClearNotification: PropTypes.func.isRequired
 };

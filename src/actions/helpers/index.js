@@ -5,7 +5,11 @@ import {
   setGalleryTextFilter
 } from "./gallery-filter";
 import { addGalleryPiece, editGalleryPiece } from "./gallery-piece";
-import { clearNotification, setNotification } from "./notification";
+import {
+  clearNotification,
+  setErrorNotification,
+  setSuccessNotification
+} from "./notification";
 import { clearUser, setUser } from "./user";
 
 export {
@@ -15,9 +19,10 @@ export {
   clearUser,
   editGalleryPiece,
   setAuth,
+  setErrorNotification,
   setGallery,
   setGalleryCategoryFilter,
   setGalleryTextFilter,
-  setNotification,
+  setSuccessNotification,
   setUser
 };

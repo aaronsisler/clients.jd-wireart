@@ -2,7 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryPieceForm from "../../components/gallery-piece-form";
-import { startEditGalleryPiece, startSetNotification } from "../../actions";
+import {
+  startEditGalleryPiece,
+  startSetErrorNotification,
+  startSetSuccessNotification
+} from "../../actions";
 import "./edit-gallery-piece-details-container.scss";
 
 class EditGalleryPieceDetailsContainer extends React.Component {
@@ -10,9 +14,9 @@ class EditGalleryPieceDetailsContainer extends React.Component {
     const { galleryPieceId } = this.props.galleryPiece;
     try {
       await this.props.startEditGalleryPiece(galleryPieceId, galleryPiece);
-      this.props.startSetNotification("Gallery piece updated");
+      this.props.startSetSuccessNotification("Gallery piece updated");
     } catch (error) {
-      this.props.startSetNotification(
+      this.props.startSetErrorNotification(
         "Gallery piece update failed. Please try again."
       );
     }
@@ -33,14 +37,17 @@ class EditGalleryPieceDetailsContainer extends React.Component {
 const mapDispatchToProps = dispatch => ({
   startEditGalleryPiece: (galleryPieceId, galleryPiece) =>
     dispatch(startEditGalleryPiece(galleryPieceId, galleryPiece)),
-  startSetNotification: notification =>
-    dispatch(startSetNotification(notification))
+  startSetErrorNotification: notification =>
+    dispatch(startSetErrorNotification(notification)),
+  startSetSuccessNotification: notification =>
+    dispatch(startSetSuccessNotification(notification))
 });
 
 EditGalleryPieceDetailsContainer.propTypes = {
   galleryPiece: PropTypes.object.isRequired,
   startEditGalleryPiece: PropTypes.func.isRequired,
-  startSetNotification: PropTypes.func.isRequired
+  startSetErrorNotification: PropTypes.func.isRequired,
+  startSetSuccessNotification: PropTypes.func.isRequired
 };
 
 export default connect(
