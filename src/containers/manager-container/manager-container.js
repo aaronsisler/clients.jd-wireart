@@ -12,13 +12,15 @@ import "./manager-container.scss";
 const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => (
   <div className="manager-container">
     <div className="inbox">
-      <div className={`inbox__list ${galleryPieceId ? "inbox__mobile" : ""}`}>
-        <div className="inbox__list-controls">
+      <div className={`inbox__sidebar`}>
+        <div className="inbox__sidebar-controls">
           <NavLink linkText="Add Gallery Piece" to="manager_add" />
           <GalleryTextFilter />
           <GalleryCategoryFilter />
         </div>
-        <ManagerList gallery={gallery} />
+        <div className="inbox__sidebar-list">
+          <ManagerList gallery={gallery} />
+        </div>
       </div>
       <ManagerDetails
         galleryPiece={galleryPiece}

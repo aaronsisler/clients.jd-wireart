@@ -1,0 +1,83 @@
+@import "../variables.scss";
+@import "../typography.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .inbox {
+    display: grid;
+    flex: 1 1 auto;
+    grid-gap: $small;
+    &__list {
+      background-color: white;
+      display: grid;
+      filter: $dropShadow;
+      grid-template-rows: repeat(3, auto) 10fr;
+      width: 100%;
+      &-controls {
+        background-color: white;
+        filter: $dropShadow;
+        margin-bottom: $small;
+        padding: $small;
+        .nav-link {
+          width: 100%;
+        }
+      }
+    }
+    &__details {
+      width: 100%;
+      &-empty,
+      &-invalid {
+        @include font-type($mainFont, $midlarge);
+
+        align-items: center;
+        background-color: white;
+        display: flex;
+        filter: $dropShadow;
+        padding: $small;
+        text-align: center;
+      }
+    }
+    &__nav-back {
+      margin: $medium 0;
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: none;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  .inbox {
+    grid-template-columns: 1fr 2.5fr;
+    padding: 0 15%;
+    &__details {
+      background-color: transparent;
+      filter: none;
+      &-empty,
+      &-invalid {
+        display: grid;
+      }
+    }
+    &__nav-back {
+      display: none;
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: inherit;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}
