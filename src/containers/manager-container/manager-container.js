@@ -9,26 +9,29 @@ import NavLink from "../../components/nav-link";
 
 import "./manager-container.scss";
 
-const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => (
-  <div className="manager-container">
-    <div className="inbox">
-      <div className={`inbox__sidebar`}>
-        <div className="inbox__sidebar-controls">
-          <NavLink linkText="Add Gallery Piece" to="manager_add" />
-          <GalleryTextFilter />
-          <GalleryCategoryFilter />
+const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => {
+  const inboxMobileClassname = galleryPieceId ? "inbox__mobile" : "";
+  return (
+    <div className="manager-container">
+      <div className="inbox">
+        <div className={`inbox__sidebar ${inboxMobileClassname}`}>
+          <div className="inbox__sidebar-controls">
+            <NavLink linkText="Add Gallery Piece" to="manager_add" />
+            <GalleryTextFilter />
+            <GalleryCategoryFilter />
+          </div>
+          <div className="inbox__sidebar-list">
+            <ManagerList gallery={gallery} />
+          </div>
         </div>
-        <div className="inbox__sidebar-list">
-          <ManagerList gallery={gallery} />
-        </div>
+        <ManagerDetails
+          galleryPiece={galleryPiece}
+          galleryPieceId={galleryPieceId}
+        />
       </div>
-      <ManagerDetails
-        galleryPiece={galleryPiece}
-        galleryPieceId={galleryPieceId}
-      />
     </div>
-  </div>
-);
+  );
+};
 
 const mapStateToProps = (state, props) => {
   const { galleryPieceId } = props.match.params;

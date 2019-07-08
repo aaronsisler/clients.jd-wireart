@@ -5,7 +5,41 @@
 @media only screen {
   .inbox {
     display: grid;
-    // flex: 1 1 auto;
+    flex: 1 1 auto;
+    &__sidebar {
+      display: grid;
+      grid-gap: $small;
+      &-controls {
+        background-color: white;
+        display: grid;
+        filter: $dropShadow;
+        grid-gap: $xsmall;
+        padding: $small;
+      }
+      &-list {
+        filter: $dropShadow;
+      }
+    }
+    &__content {
+      &-invalid {
+        @include font-type($mainFont, $midlarge);
+
+        align-items: center;
+        background-color: white;
+        display: flex;
+        filter: $dropShadow;
+        padding: $small;
+        text-align: center;
+      }
+    }
+    &__nav-back {
+      margin: $medium 0;
+      width: 100%;
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: none;
+    }
   }
 }
 
