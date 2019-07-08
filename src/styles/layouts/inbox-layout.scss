@@ -9,6 +9,7 @@
     &__sidebar {
       display: grid;
       grid-gap: $small;
+      grid-template-rows: auto 1fr;
       &-controls {
         background-color: white;
         display: grid;
@@ -17,6 +18,7 @@
         padding: $small;
       }
       &-list {
+        background-color: white;
         filter: $dropShadow;
       }
     }
