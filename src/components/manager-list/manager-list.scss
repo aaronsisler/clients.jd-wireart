@@ -4,6 +4,14 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
+  .manager-list {
+    &__empty {
+      @include font-type($secFont, $midlarge);
+
+      padding: $medium;
+      text-align: center;
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -14,6 +22,8 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .manager-list {
+  }
 }
 
 //XLarge screens
