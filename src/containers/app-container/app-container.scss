@@ -2,6 +2,22 @@
 //max-width 640px, small screens
 @media only screen {
   #root {
+    display: grid;
+    min-height: 100vh;
+    nav {
+      height: 60px;
+    }
+    main {
+      display: flex;
+      flex: 1 1 auto;
+      flex-flow: column;
+      height: calc(100vh - 110px);
+    }
+    footer {
+      height: 50px;
+    }
+  }
+  #root1 {
     min-height: 100vh;
     display: flex;
     flex-flow: column;

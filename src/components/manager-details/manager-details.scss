@@ -28,6 +28,27 @@
       flex: 1 1 auto;
       filter: $dropShadow;
     }
+    &--empty {
+      @include font-type($mainFont, $midlarge);
+
+      align-items: center;
+      background-color: white;
+      display: flex;
+      filter: $dropShadow;
+      padding: $small;
+      text-align: center;
+    }
+    &--invalid {
+      @include font-type($mainFont, $midlarge);
+
+      align-items: center;
+      background-color: white;
+      display: flex;
+      filter: $dropShadow;
+      flex-direction: column;
+      padding: $small;
+      text-align: center;
+    }
   }
 }
 
@@ -40,6 +61,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .manager-details {
+    overflow: hidden;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -47,6 +69,9 @@
       &-name {
         @include font-type($secFont, $large);
       }
+    }
+    &--invalid {
+      justify-content: center;
     }
   }
 }

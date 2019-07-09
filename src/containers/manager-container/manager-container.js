@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryTextFilter from "../../components/gallery-text-filter";
 import GalleryCategoryFilter from "../../components/gallery-category-filter";
+import selectGallery from "../../selectors/gallery";
 import ManagerList from "../../components/manager-list";
 import ManagerDetails from "../../components/manager-details";
 import NavLink from "../../components/nav-link";
@@ -21,6 +22,7 @@ const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => {
             <GalleryCategoryFilter />
           </div>
           <div className="inbox__sidebar-list">
+            {/* <ManagerList gallery={gallery.slice(0, 5)} /> */}
             <ManagerList gallery={gallery} />
           </div>
         </div>
@@ -42,7 +44,7 @@ const mapStateToProps = (state, props) => {
     : undefined;
 
   return {
-    gallery: state.gallery,
+    gallery: selectGallery(state.gallery, state.filters.gallery),
     galleryPiece,
     galleryPieceId
   };

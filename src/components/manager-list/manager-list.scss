@@ -23,6 +23,8 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .manager-list {
+    height: 100%;
+    overflow-y: auto;
   }
 }
 

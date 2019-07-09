@@ -1,8 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import ManagerListItem from "../manager-list-item";
-import selectGallery from "../../selectors/gallery";
 import "./manager-list.scss";
 
 const ManagerList = ({ gallery }) => {
@@ -23,12 +21,8 @@ const ManagerList = ({ gallery }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  gallery: selectGallery(state.gallery, state.filters.gallery)
-});
-
 ManagerList.propTypes = {
-  gallery: PropTypes.array
+  gallery: PropTypes.array.isRequired
 };
 
-export default connect(mapStateToProps)(ManagerList);
+export default ManagerList;

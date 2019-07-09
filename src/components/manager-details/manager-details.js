@@ -10,7 +10,7 @@ import "./manager-details.scss";
 const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
   if (galleryPieceId && !galleryPiece) {
     return (
-      <div className={`manager-details inbox__content-invalid`}>
+      <div className={`manager-details--invalid`}>
         <div className="inbox__nav-back">
           <Link className="nav-link" to="/manager">
             Back to list
@@ -24,7 +24,7 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
 
   if (!galleryPiece) {
     return (
-      <div className={`manager-details inbox__content-empty inbox__mobile`}>
+      <div className={`manager-details--empty inbox__mobile`}>
         Please select an item to view
       </div>
     );
@@ -33,7 +33,7 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
   const { imageSrc, isPaymentActive, isSold, name } = galleryPiece;
 
   return (
-    <div className="manager-details inbox__content">
+    <div className="manager-details">
       <div className="manager-details__header">
         <div className="inbox__nav-back">
           <Link className="nav-link" to="/manager">

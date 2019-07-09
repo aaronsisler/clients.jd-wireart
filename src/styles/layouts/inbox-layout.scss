@@ -22,18 +22,6 @@
         filter: $dropShadow;
       }
     }
-    &__content {
-      &-invalid {
-        @include font-type($mainFont, $midlarge);
-
-        align-items: center;
-        background-color: white;
-        display: flex;
-        filter: $dropShadow;
-        padding: $small;
-        text-align: center;
-      }
-    }
     &__nav-back {
       margin: $medium 0;
       width: 100%;
@@ -52,6 +40,28 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .inbox {
+    align-self: center;
+    display: grid;
+    grid-gap: $small;
+    grid-template-columns: 1fr 2.5fr;
+    min-height: 100%;
+    padding: 0 15%;
+    &__sidebar {
+      max-height: 100%;
+      // max-height: calc(95vh - 110px);
+      &-controls {
+      }
+      &-list {
+        overflow: hidden;
+      }
+    }
+    &__nav-back {
+      display: none;
+    }
+    // This must stay at the bottom to be applied last
+    &__mobile {
+      display: inherit;
+    }
   }
 }
 
