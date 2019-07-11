@@ -6,6 +6,7 @@
   .inbox {
     display: grid;
     flex: 1 1 auto;
+    margin: $small;
     &__sidebar {
       display: grid;
       grid-gap: $small;
@@ -44,21 +45,22 @@
     display: grid;
     grid-gap: $small;
     grid-template-columns: 1fr 2.5fr;
-    min-height: 100%;
     padding: 0 15%;
     &__sidebar {
-      max-height: 100%;
-      // max-height: calc(95vh - 110px);
-      &-controls {
-      }
+      flex: 1 1 auto;
+      max-height:
+        calc(
+          100vh - #{$navMenuHeight} - #{$footerHeight} - (2 * #{$small})
+        );
+      min-height: 200px;
       &-list {
-        overflow: hidden;
+        overflow-y: hidden;
       }
     }
+    // These must stay at the bottom to be applied last
     &__nav-back {
       display: none;
     }
-    // This must stay at the bottom to be applied last
     &__mobile {
       display: inherit;
     }

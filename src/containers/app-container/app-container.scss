@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
@@ -5,26 +8,15 @@
     display: grid;
     min-height: 100vh;
     nav {
-      height: 60px;
+      height: $navMenuHeight;
     }
     main {
-      display: flex;
+      display: grid;
       flex: 1 1 auto;
-      flex-flow: column;
-      height: calc(100vh - 110px);
+      min-height: 200px;
     }
     footer {
-      height: 50px;
-    }
-  }
-  #root1 {
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column;
-    main {
-      display: flex;
-      flex: 1 1 auto;
-      flex-flow: column;
+      height: $footerHeight;
     }
   }
 }
