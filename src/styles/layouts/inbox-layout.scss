@@ -46,6 +46,10 @@
     grid-gap: $small;
     grid-template-columns: 1fr 2.5fr;
     margin: $small 15%;
+    min-height:
+      calc(
+        100vh - #{$navMenuHeight} - #{$footerHeight} - (2 * #{$small})
+      );
     &__sidebar {
       flex: 1 1 auto;
       max-height:
