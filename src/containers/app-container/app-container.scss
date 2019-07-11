@@ -5,13 +5,15 @@
 //max-width 640px, small screens
 @media only screen {
   #root {
-    display: grid;
+    display: flex;
+    flex-flow: column;
     min-height: 100vh;
     nav {
       height: $navMenuHeight;
     }
     main {
-      display: grid;
+      display: flex;
+      flex-flow: column;
       flex: 1 1 auto;
       min-height: 200px;
     }
