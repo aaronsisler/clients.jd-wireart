@@ -52,7 +52,7 @@
         calc(
           100vh - #{$navMenuHeight} - #{$footerHeight} - (2 * #{$small})
         );
-      min-height: 200px;
+      min-height: 250px;
       &-list {
         overflow-y: hidden;
       }
