@@ -45,7 +45,7 @@
     display: grid;
     grid-gap: $small;
     grid-template-columns: 1fr 2.5fr;
-    padding: 0 15%;
+    margin: $small 15%;
     &__sidebar {
       flex: 1 1 auto;
       max-height:
@@ -56,6 +56,14 @@
       &-list {
         overflow-y: hidden;
       }
+    }
+    &__content {
+      flex: 1 1 auto;
+      max-height:
+        calc(
+          100vh - #{$navMenuHeight} - #{$footerHeight} - (2 * #{$small})
+        );
+      min-height: 250px;
     }
     // These must stay at the bottom to be applied last
     &__nav-back {

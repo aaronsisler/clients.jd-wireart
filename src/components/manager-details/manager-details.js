@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PropTypes from "prop-types";
+import cn from "classnames";
 import EditGalleryPieceDetailsContainer from "../../containers/edit-gallery-piece-details-container";
 import UploadGalleryPieceImageContainer from "../../containers/upload-gallery-piece-image-container";
 import PaymentUnlock from "../payment-unlock";
 import "./manager-details.scss";
 
-const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
+const ManagerDetails = ({ className, galleryPiece, galleryPieceId }) => {
   if (galleryPieceId && !galleryPiece) {
     return (
       <div className={`manager-details--invalid`}>
@@ -33,7 +34,7 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
   const { imageSrc, isPaymentActive, isSold, name } = galleryPiece;
 
   return (
-    <div className="manager-details">
+    <div className={cn("manager-details", className)}>
       <div className="manager-details__header">
         <div className="inbox__nav-back">
           <Link className="nav-link" to="/manager">
@@ -76,7 +77,9 @@ const ManagerDetails = ({ galleryPiece, galleryPieceId }) => {
 };
 
 ManagerDetails.propTypes = {
-  galleryPiece: PropTypes.object
+  className: PropTypes.string,
+  galleryPiece: PropTypes.object,
+  galleryPieceId: PropTypes.string
 };
 
 export default ManagerDetails;

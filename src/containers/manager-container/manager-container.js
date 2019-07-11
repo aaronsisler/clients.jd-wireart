@@ -22,11 +22,11 @@ const ManagerContainer = ({ gallery, galleryPiece, galleryPieceId }) => {
             <GalleryCategoryFilter />
           </div>
           <div className="inbox__sidebar-list">
-            {/* <ManagerList gallery={gallery.slice(0, 5)} /> */}
             <ManagerList gallery={gallery} />
           </div>
         </div>
         <ManagerDetails
+          className="inbox__content"
           galleryPiece={galleryPiece}
           galleryPieceId={galleryPieceId}
         />
