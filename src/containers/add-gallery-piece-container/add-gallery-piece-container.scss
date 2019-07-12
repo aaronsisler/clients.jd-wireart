@@ -6,6 +6,7 @@
 @media only screen {
   .add-gallery-piece-container {
     background-color: $containerBackgroundColor;
+    flex: 1 1 auto;
     padding: $small;
     &__form {
       &-title {
