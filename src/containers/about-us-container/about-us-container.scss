@@ -5,17 +5,7 @@
 //max-width 640px, small screens
 @media only screen {
   .about-us-container {
-    display: grid;
-    padding: $small $medium;
-    &__content {
-      background-color: white;
-      display: grid;
-      grid-gap: $medium;
-      padding: $small;
-      &-title {
-        @include font-type($secFont, $large, bold);
-      }
-    }
+    padding: $small;
   }
 }
 

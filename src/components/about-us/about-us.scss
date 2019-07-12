@@ -5,29 +5,19 @@
 //max-width 640px, small screens
 @media only screen {
   .about-us {
-    padding: $medium 5%;
+    margin: $small;
     text-align: center;
     &__title {
-      @include font-type($mainFont, $large, bold);
-    }
-    &__content {
-      &-image {
-        margin: $medium 0;
-        img {
-          max-height: 50vh;
-          object-fit: scale-down;
-          width: 100%;
-        }
-      }
-      &-text {
-        @include font-type($mainFont, $medium);
+      @include font-type($secFont, $large, bold);
 
-        color: $fontGrey;
-        display: grid;
-        grid-gap: $medium;
-        line-height: $large;
-        padding: 0 $medium;
-      }
+      margin-bottom: $small;
+    }
+    &__text {
+      @include font-type($secFont, $medium);
+
+      color: $fontGrey;
+      line-height: $lineHeight;
+      margin-bottom: $small;
     }
   }
 }
@@ -41,14 +31,13 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $largeScreen) {
   .about-us {
-    padding: $large 10%;
+    margin: $large 10%;
     text-align: inherit;
-    &__content {
-      align-items: center;
-      display: grid;
-      grid-gap: $medium;
-      grid-template-columns: 1fr 1fr;
-      text-align: center;
+    &__title {
+      margin-bottom: $medium;
+    }
+    &__text {
+      margin-bottom: $medium;
     }
   }
 }
