@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .notification-bar {
+    @include font-type($secFont, $medium, bold);
+
+    align-items: center;
+    background-color: #dff0d8;
+    border-radius: 5px;
+    color: $fontGrey;
+    display: flex;
+    height: $xxlarge;
+    &__text {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+    &__clear {
+      cursor: pointer;
+      position: absolute;
+      right: $small;
+    }
+    &--error {
+      background-color: #f2dede;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  .notification-bar {
+    @include font-type($secFont, $midlarge, bold);
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

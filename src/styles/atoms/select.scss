@@ -1,0 +1,31 @@
+@import "../variables.scss";
+@import "../typography.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  select {
+    @include font-type($secFont, $medium);
+
+    border: $border;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: $small $xsmall;
+    text-transform: uppercase;
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

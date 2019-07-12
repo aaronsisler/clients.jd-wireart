@@ -1,0 +1,42 @@
+@import "../styles/variables.scss";
+@import "../styles/fonts.scss";
+@import "../styles/typography.scss";
+@import "../styles/atoms.scss";
+@import "../styles/layouts.scss";
+
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  body {
+    @include font-type();
+
+    height: 100%;
+  }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {
+}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {
+}
