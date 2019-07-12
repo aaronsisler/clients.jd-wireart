@@ -1,23 +1,25 @@
 @import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .privacy_policy_container {
-    font-family: $secFont;
+  .privacy-policy-container {
     padding: $medium;
     &__title {
-      font-size: $midlarge;
-      font-weight: bold;
+      @include font-type($secFont, $midlarge, bold);
+
       margin-bottom: $medium;
     }
     &__heading {
-      font-weight: bold;
-      font-size: $medium;
+      @include font-type($mainFont, $medium);
+
       margin: $medium 0 $xsmall;
     }
     &__content {
-      font-size: $medium;
+      @include font-type($secFont, $medium);
+
+      line-height: $lineHeight;
     }
   }
 }
