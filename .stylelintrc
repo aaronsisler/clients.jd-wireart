@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["mixin", "include", "extend"]
+    }],
+    "rule-empty-line-before": "never",
+    "block-no-empty": null
+  }
+}

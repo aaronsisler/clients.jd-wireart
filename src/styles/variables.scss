@@ -1,0 +1,44 @@
+// Colors
+$mainColor: #009fc4;
+$darkMainColor: darken($mainColor, 10);
+$secColor: #135ba3;
+$superLightGrey: #f8f8f8;
+$lightGrey: #f3f3f3;
+$midLightGrey: #e8e8e8;
+$midGrey: #666;
+$darkGrey: #222;
+
+// Feature Specific Colors
+$fontGrey: rgba(0, 0, 0, 0.7);
+$closeIconGrey: #aaa;
+$borderGrey: rgba(0, 0, 0, 0.5);
+$border: 1px solid $borderGrey;
+$boxShadowGrey: rgba(189, 195, 199, 0.6);
+$dropShadow: drop-shadow(3px 3px 6px $boxShadowGrey);
+$containerBackgroundColor: $superLightGrey;
+
+// Spacing
+$xxsmall: 0.3rem;
+$xsmall: 0.6rem;
+$small: 1.2rem;
+$medium: 1.8rem;
+$midlarge: 2.4rem;
+$large: 3.2rem;
+$xlarge: 4.8rem;
+$xxlarge: 7.6rem;
+$navMenuHeight: 60px;
+$navMenuWidth: 240px;
+$footerHeight: 50px;
+$inboxHeight: 85vh;
+$lineHeight: 1.5;
+
+// Screen Breakpoints
+$mediumScreen: 641px;
+$largeScreen: 1025px;
+$xLargeScreen: 1441px;
+$xxLargeScreen: 1921px;
+
+// Site Fonts
+$mainFont: "Ubuntu", sans-serif;
+$secFont: "Ubuntu Light", sans-serif;
+$accentFont: "Dancing Script", sans-serif;
