@@ -6,26 +6,22 @@
 @media only screen {
   .gallery-piece-form {
     display: grid;
-    grid-gap: $small;
+    grid-gap: $xsmall;
+    &__error {
+      margin-top: $small;
+    }
     &__input {
       display: grid;
       &-title {
         @include font-type($secFont, $medium, bold);
 
-        margin-bottom: $xsmall;
+        margin: $small 0 $xsmall;
       }
     }
     &__dimensions {
       display: grid;
       grid-gap: $small;
       grid-template-columns: 1fr 1fr 1fr;
-    }
-    &__dimension {
-      &-title {
-        @include font-type($secFont, $medium, bold);
-
-        margin-bottom: $xsmall;
-      }
     }
     &__button {
       margin-top: $small;
