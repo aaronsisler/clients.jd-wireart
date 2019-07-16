@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .form-input {
+  .input {
     @include font-type($secFont, $medium);
 
     height: $xlarge;
@@ -26,7 +26,7 @@
       &::after {
         content: "";
         border-bottom: 3px solid $mainColor;
-        bottom: -1px;
+        bottom: -1.5px;
         height: 100%;
         left: 0;
         position: absolute;
@@ -50,8 +50,8 @@
       padding: 0;
       padding-top: $medium;
       width: 100%;
-      &:focus + .form-input__label .form-input__span,
-      &:valid + .form-input__label .form-input__span {
+      &:focus + .input__label .input__span,
+      &:valid + .input__label .input__span {
         @include font-type($mainFont, $small);
 
         color: $mainColor;
@@ -60,8 +60,8 @@
           color: lighten(darkred, 15);
         }
       }
-      &:focus + .form-input__label::after,
-      &:valid + .form-input__label::after {
+      &:focus + .input__label::after,
+      &:valid + .input__label::after {
         transform: translateX(0%);
       }
     }

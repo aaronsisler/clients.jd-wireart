@@ -5,7 +5,7 @@ import {
   convertPriceFromDatabase
 } from "../../tools/price";
 import FormError from "../form-error";
-import FormInput from "../form-input";
+import Input from "../input";
 import categories from "../../content/categories";
 import "./gallery-piece-form.scss";
 
@@ -133,13 +133,13 @@ class GalleryPieceForm extends React.Component {
         <div className="gallery-piece-form__error">
           {error && <FormError error={error} />}
         </div>
-        <FormInput
+        <Input
           label="Name"
           name="name"
           onChange={this.handleNameChange}
           value={name}
         />
-        <FormInput
+        <Input
           label="Price"
           name="price"
           onChange={this.handlePriceChange}
@@ -166,19 +166,19 @@ class GalleryPieceForm extends React.Component {
           </select>
         </div>
         <div className="gallery-piece-form__dimensions">
-          <FormInput
+          <Input
             label="Length&nbsp;(in.)"
             name="length"
             onChange={this.handleDimensionChange}
             value={length}
           />
-          <FormInput
+          <Input
             label="Width&nbsp;(in.)"
             name="width"
             onChange={this.handleDimensionChange}
             value={width}
           />
-          <FormInput
+          <Input
             label="Height&nbsp;(in.)"
             name="height"
             onChange={this.handleDimensionChange}

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
-import "./form-input.scss";
+import "./input.scss";
 
-const FormInput = ({ hasError, label, name, onBlur, onChange, value }) => (
-  <div className="form-input">
+const Input = ({ hasError, label, name, onBlur, onChange, value }) => (
+  <div className="input">
     <input
-      className="form-input__input"
+      className="input__input"
       name={name}
       onBlur={onBlur}
       onChange={onChange}
@@ -16,24 +16,16 @@ const FormInput = ({ hasError, label, name, onBlur, onChange, value }) => (
     />
     <label
       htmlFor={name}
-      className={cn(
-        "form-input__label",
-        hasError ? "form-input__label--error" : ""
-      )}
+      className={cn("input__label", hasError ? "input__label--error" : "")}
     >
-      <span
-        className={cn(
-          "form-input__span",
-          hasError ? "form-input__span--error" : ""
-        )}
-      >
+      <span className={cn("input__span", hasError ? "input__span--error" : "")}>
         {label}
       </span>
     </label>
   </div>
 );
 
-FormInput.propTypes = {
+Input.propTypes = {
   hasError: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -42,4 +34,4 @@ FormInput.propTypes = {
   value: PropTypes.string.isRequired
 };
 
-export default FormInput;
+export default Input;
