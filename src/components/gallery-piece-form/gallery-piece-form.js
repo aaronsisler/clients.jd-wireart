@@ -5,6 +5,7 @@ import {
   convertPriceFromDatabase
 } from "../../tools/price";
 import FormError from "../form-error";
+import Input from "../input";
 import categories from "../../content/categories";
 import "./gallery-piece-form.scss";
 
@@ -78,7 +79,7 @@ class GalleryPieceForm extends React.Component {
       }));
     }
 
-    if (this.validateDimensions()) {
+    if (!this.validateDimensions()) {
       return this.setState(() => ({
         error: "Please provide all three dimensions"
       }));
@@ -102,13 +103,16 @@ class GalleryPieceForm extends React.Component {
 
   validateDimensions = () => {
     const { height, length, width } = this.state;
-    if ((height.length && length, length && width.length)) {
-      return false;
+
+    if (height && length && width) {
+      return true;
     }
-    if (!height.length && !length.length && !width.length) {
-      return false;
+
+    if (!height && !length && !width) {
+      return true;
     }
-    return true;
+
+    return false;
   };
 
   render() {
@@ -129,24 +133,18 @@ class GalleryPieceForm extends React.Component {
         <div className="gallery-piece-form__error">
           {error && <FormError error={error} />}
         </div>
-        <div className="gallery-piece-form__input">
-          <div className="gallery-piece-form__input-title">Name</div>
-          <input
-            onChange={this.handleNameChange}
-            placeholder="Name"
-            type="text"
-            value={name}
-          />
-        </div>
-        <div className="gallery-piece-form__input">
-          <div className="gallery-piece-form__input-title">Price</div>
-          <input
-            onChange={this.handlePriceChange}
-            placeholder="Price"
-            type="text"
-            value={price}
-          />
-        </div>
+        <Input
+          label="Name"
+          name="name"
+          onChange={this.handleNameChange}
+          value={name}
+        />
+        <Input
+          label="Price"
+          name="price"
+          onChange={this.handlePriceChange}
+          value={price}
+        />
         <div className="gallery-piece-form__input">
           <div className="gallery-piece-form__input-title">Category</div>
           <select onChange={this.handleCategoryChange} value={category}>
@@ -168,42 +166,24 @@ class GalleryPieceForm extends React.Component {
           </select>
         </div>
         <div className="gallery-piece-form__dimensions">
-          <div className="gallery-piece-form__dimension">
-            <div className="gallery-piece-form__dimension-title">
-              Length&nbsp;(in.)
-            </div>
-            <input
-              name="length"
-              onChange={this.handleDimensionChange}
-              placeholder="Length"
-              type="text"
-              value={length}
-            />
-          </div>
-          <div className="gallery-piece-form__dimension">
-            <div className="gallery-piece-form__dimension-title">
-              Width&nbsp;(in.)
-            </div>
-            <input
-              name="width"
-              onChange={this.handleDimensionChange}
-              placeholder="Width"
-              type="text"
-              value={width}
-            />
-          </div>
-          <div className="gallery-piece-form__dimension">
-            <div className="gallery-piece-form__dimension-title">
-              Height&nbsp;(in.)
-            </div>
-            <input
-              name="height"
-              onChange={this.handleDimensionChange}
-              placeholder="Height"
-              type="text"
-              value={height}
-            />
-          </div>
+          <Input
+            label="Length&nbsp;(in.)"
+            name="length"
+            onChange={this.handleDimensionChange}
+            value={length}
+          />
+          <Input
+            label="Width&nbsp;(in.)"
+            name="width"
+            onChange={this.handleDimensionChange}
+            value={width}
+          />
+          <Input
+            label="Height&nbsp;(in.)"
+            name="height"
+            onChange={this.handleDimensionChange}
+            value={height}
+          />
         </div>
         <div className="gallery-piece-form__input">
           <div className="gallery-piece-form__input-title">Description</div>

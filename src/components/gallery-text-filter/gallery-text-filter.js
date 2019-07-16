@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { startSetGalleryTextFilter } from "../../actions";
+import Input from "../input";
 import "./gallery-text-filter.scss";
 
 export class GalleryTextFilter extends React.Component {
@@ -12,12 +13,11 @@ export class GalleryTextFilter extends React.Component {
   render() {
     return (
       <div className="gallery-text-filter">
-        <input
-          type="text"
-          className="gallery-text-filter__input"
-          placeholder="Search gallery by name"
-          value={this.props.filters.text}
+        <Input
+          name="gallery-text-filter"
+          label="Search gallery by name"
           onChange={this.handleTextChange}
+          value={this.props.filters.text}
         />
       </div>
     );
