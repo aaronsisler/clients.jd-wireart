@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { sendEmail, isEmailValid } from "../../tools/email";
 import FormError from "../form-error";
+import Input from "../input";
 import "./contact-form.scss";
 
 class ContactForm extends React.Component {
@@ -175,34 +176,31 @@ class ContactForm extends React.Component {
             <div className="contact-form__form">
               <div className="contact-form__form-input">
                 {error.name && <FormError error={error.name} />}
-                <input
+                <Input
+                  label="Name"
                   name="name"
                   onBlur={this.handleNameValidation}
                   onChange={this.handleInput}
-                  placeholder="Name (Required)"
-                  type="text"
                   value={name}
                 />
               </div>
               <div className="contact-form__form-input">
                 {error.emailAddress && <FormError error={error.emailAddress} />}
-                <input
+                <Input
+                  label="Email"
                   name="emailAddress"
                   onBlur={this.handleEmailValidation}
                   onChange={this.handleInput}
-                  placeholder="Email (Required)"
-                  type="text"
                   value={emailAddress}
                 />
               </div>
               <div className="contact-form__form-input">
                 {error.phoneNumber && <FormError error={error.phoneNumber} />}
-                <input
+                <Input
+                  label="Phone (Digits only, no dashes, etc.)"
                   name="phone"
                   onBlur={this.handlePhoneValidation}
                   onChange={this.handlePhoneInput}
-                  placeholder="Phone (Digits only, no dashes, etc.)"
-                  type="text"
                   value={phoneNumber}
                 />
               </div>
