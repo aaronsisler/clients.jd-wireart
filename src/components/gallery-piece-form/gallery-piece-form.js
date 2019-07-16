@@ -36,11 +36,13 @@ class GalleryPieceForm extends React.Component {
 
   handleCategoryChange = e => {
     const category = e.target.value;
-    return this.setState(() => ({ category: category ? category : "" }));
+
+    return this.setState(() => ({ category }));
   };
 
   handleDescriptionChange = e => {
     const description = e.target.value;
+
     return this.setState(() => ({
       description: description ? description : ""
     }));
@@ -52,8 +54,6 @@ class GalleryPieceForm extends React.Component {
     if (!inputValue || inputValue.match(/^[0-9]*$/)) {
       return this.setState({ [inputName]: inputValue });
     }
-
-    return this.setState({ [inputName]: "" });
   };
 
   handleNameChange = e => {
@@ -70,8 +70,16 @@ class GalleryPieceForm extends React.Component {
   };
 
   handleSubmit = () => {
-    const { category, name, price } = this.state;
     const timeoutLengthInMilliseconds = 3000;
+    const {
+      category,
+      description,
+      height,
+      length,
+      name,
+      price,
+      width
+    } = this.state;
 
     if (!name || !price || category === "NONE") {
       return this.setState(() => ({
@@ -90,15 +98,18 @@ class GalleryPieceForm extends React.Component {
       () => this.setState({ isSaveButtonDisabled: false }),
       timeoutLengthInMilliseconds
     );
-    const { error, isSaveButtonDisabled, ...submitObject } = Object.assign(
-      {},
-      this.state
-    ); // eslint-disable-line no-unused-vars
 
-    this.props.onSubmit({
-      ...submitObject,
+    const submitObject = {
+      category,
+      description,
+      height,
+      length,
+      name,
+      width,
       price: convertPriceForDatabase(price)
-    });
+    };
+
+    this.props.onSubmit(submitObject);
   };
 
   validateDimensions = () => {
