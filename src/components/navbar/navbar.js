@@ -17,12 +17,12 @@ class Navbar extends React.Component {
   closeSideMenu = () => this.setState({ isNavOpen: false });
 
   render() {
-    const isNavOpenClass = this.state.isNavOpen ? "nav-menu__links-open" : "";
+    const isNavOpenClass = this.state.isNavOpen ? "nav-menu__links--open" : "";
     return (
       <nav className="nav-menu">
-        <div className="nav-menu__brand">
-          <Link to="/">JD Wire Art Studio</Link>
-        </div>
+        <Link to="/" className="nav-menu__brand">
+          JD Wire Art Studio
+        </Link>
         <div className="nav-menu__toggle">
           {!this.state.isNavOpen && (
             <FontAwesomeIcon
@@ -44,28 +44,28 @@ class Navbar extends React.Component {
         <div className={`nav-menu__links ${isNavOpenClass}`}>
           <Link
             to="/manager"
-            className="nav-menu__links-link"
+            className="nav-menu__link"
             onClick={this.closeSideMenu}
           >
             Manager
           </Link>
           <Link
             to="/gallery"
-            className="nav-menu__links-link"
+            className="nav-menu__link"
             onClick={this.closeSideMenu}
           >
             Gallery
           </Link>
           <Link
             to="/about"
-            className="nav-menu__links-link"
+            className="nav-menu__link"
             onClick={this.closeSideMenu}
           >
             About
           </Link>
           <Link
             to="/contact"
-            className="nav-menu__links-link nav-menu__links-contact"
+            className="nav-menu__link"
             onClick={this.closeSideMenu}
           >
             Contact
