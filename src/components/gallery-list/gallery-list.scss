@@ -8,9 +8,7 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    &__empty {
-      @extend .gallery-list;
-
+    &--empty {
       @include font-type($secFont, $large);
 
       padding: $large;
