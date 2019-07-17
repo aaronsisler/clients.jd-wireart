@@ -29,16 +29,16 @@
     &__links {
       align-items: center;
       background-color: $darkMainColor;
+      clip-path: circle(0 at 100% -10%);
       display: grid;
+      height: calc(100vh - 60px);
+      left: 0;
       padding: 10% 0;
       position: fixed;
-      top: 60px;
-      left: 0;
-      height: calc(100vh - 60px);
-      width: 100%;
       text-align: center;
-      clip-path: circle(0 at 100% -10%);
       transition: all 1s ease-out;
+      top: 60px;
+      width: 100%;
       &.nav-menu__links--open {
         clip-path: circle(150vmax at 100% -10%);
         z-index: 100;
@@ -70,11 +70,11 @@
     &__links {
       clip-path: unset;
       display: flex;
-      justify-content: space-between;
       height: inherit;
+      justify-content: space-between;
       padding: 0;
       position: inherit;
-      width: 25%;
+      width: 35vmax;
     }
     &__link {
       margin-top: $xsmall;
