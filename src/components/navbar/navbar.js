@@ -20,60 +20,56 @@ class Navbar extends React.Component {
     const isNavOpenClass = this.state.isNavOpen ? "nav-menu__links--open" : "";
     return (
       <nav className="nav-menu">
-        <div className="nav-menu__header">
-          <Link to="/" className="nav-menu__brand">
-            JD Wire Art Studio
-          </Link>
-          <div className="nav-menu__toggle">
-            {!this.state.isNavOpen && (
-              <FontAwesomeIcon
-                icon={faBars}
-                size="2x"
-                className="favicon"
-                onClick={this.openSideMenu}
-              />
-            )}
-            {this.state.isNavOpen && (
-              <FontAwesomeIcon
-                icon={faTimes}
-                size="2x"
-                className="favicon"
-                onClick={this.closeSideMenu}
-              />
-            )}
-          </div>
+        <Link to="/" className="nav-menu__brand">
+          JD Wire Art Studio
+        </Link>
+        <div className="nav-menu__toggle">
+          {!this.state.isNavOpen && (
+            <FontAwesomeIcon
+              icon={faBars}
+              size="2x"
+              className="favicon"
+              onClick={this.openSideMenu}
+            />
+          )}
+          {this.state.isNavOpen && (
+            <FontAwesomeIcon
+              icon={faTimes}
+              size="2x"
+              className="favicon"
+              onClick={this.closeSideMenu}
+            />
+          )}
         </div>
         <div className={`nav-menu__links ${isNavOpenClass}`}>
-          <div className={`nav-menu__links-wrapper`}>
-            <Link
-              to="/manager"
-              className="nav-menu__link"
-              onClick={this.closeSideMenu}
-            >
-              Manager
-            </Link>
-            <Link
-              to="/gallery"
-              className="nav-menu__link"
-              onClick={this.closeSideMenu}
-            >
-              Gallery
-            </Link>
-            <Link
-              to="/about"
-              className="nav-menu__link"
-              onClick={this.closeSideMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="nav-menu__link"
-              onClick={this.closeSideMenu}
-            >
-              Contact
-            </Link>
-          </div>
+          <Link
+            to="/manager"
+            className="nav-menu__link"
+            onClick={this.closeSideMenu}
+          >
+            Manager
+          </Link>
+          <Link
+            to="/gallery"
+            className="nav-menu__link"
+            onClick={this.closeSideMenu}
+          >
+            Gallery
+          </Link>
+          <Link
+            to="/about"
+            className="nav-menu__link"
+            onClick={this.closeSideMenu}
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            className="nav-menu__link"
+            onClick={this.closeSideMenu}
+          >
+            Contact
+          </Link>
         </div>
       </nav>
     );
