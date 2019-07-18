@@ -29,6 +29,9 @@
 //Medium screens - TABLET
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
+  .gallery-list-item {
+    max-width: 50vw;
+  }
 }
 
 //Large screens - DESKTOP
