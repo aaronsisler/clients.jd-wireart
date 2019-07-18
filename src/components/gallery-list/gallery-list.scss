@@ -5,15 +5,14 @@
 //max-width 640px, small screens
 @media only screen {
   .gallery-list {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    &__empty {
-      @extend .gallery-list;
-
+    display: grid;
+    grid-gap: $small;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    &--empty {
       @include font-type($secFont, $large);
 
       padding: $large;
+      text-align: center;
     }
   }
 }

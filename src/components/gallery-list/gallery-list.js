@@ -5,7 +5,9 @@ import "./gallery-list.scss";
 
 const GalleryList = ({ gallery }) => {
   if (gallery.length === 0) {
-    return <div className="gallery-list__empty">No available items</div>;
+    return (
+      <div className="gallery-list gallery-list--empty">No available items</div>
+    );
   }
 
   return (
