@@ -5,20 +5,20 @@ import "./gallery-list-item.scss";
 
 const GalleryListItem = ({ galleryPieceId, imageSrc, name }) => (
   <div className="gallery-list-item">
-    <div className="gallery-list-item__image">
-      {imageSrc ? (
-        <img src={imageSrc} alt={name} />
-      ) : (
-        <img src="/images/site/no_image_available.svg" alt="not available" />
-      )}
-    </div>
+    {imageSrc ? (
+      <img src={imageSrc} alt={name} className="gallery-list-item__image" />
+    ) : (
+      <img
+        src="/images/site/no_image_available.svg"
+        alt="not available"
+        className="gallery-list-item__image"
+      />
+    )}
     <div className="gallery-list-item__content">
       <div className="gallery-list-item__content-name">{name}</div>
-      <div className="gallery-list-item__content-link">
-        <Link className="nav-link" to={`/gallery_piece/${galleryPieceId}`}>
-          View Details
-        </Link>
-      </div>
+      <Link className="nav-link" to={`/gallery_piece/${galleryPieceId}`}>
+        View Details
+      </Link>
     </div>
   </div>
 );
