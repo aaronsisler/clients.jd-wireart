@@ -7,7 +7,7 @@
   .gallery-list {
     display: grid;
     grid-gap: $small;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     justify-items: center;
     &--empty {
       @include font-type($secFont, $large);
