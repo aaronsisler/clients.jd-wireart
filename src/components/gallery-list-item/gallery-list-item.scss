@@ -5,22 +5,10 @@
 //max-width 640px, small screens
 @media only screen {
   .gallery-list-item {
-    background-color: white;
-    display: grid;
-    filter: $dropShadow;
-    padding: $small;
     &__image {
       max-height: 30rem;
       object-fit: scale-down;
       width: 100%;
-    }
-    &__content {
-      &-name {
-        @include font-type($secFont, $midlarge);
-
-        padding: $medium;
-        text-align: center;
-      }
     }
   }
 }
@@ -29,7 +17,7 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list-item {
-    max-width: 30rem;
+    // max-width: 30rem;
   }
 }
 

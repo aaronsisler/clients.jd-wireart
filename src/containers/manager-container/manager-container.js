@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import GalleryTextFilter from "../../components/gallery-text-filter";
 import GalleryCategoryFilter from "../../components/gallery-category-filter";
-import selectGallery from "../../selectors/gallery";
+import selectManagerGallery from "../../selectors/manager-gallery";
 import ManagerList from "../../components/manager-list";
 import ManagerDetails from "../../components/manager-details";
 import NavLink from "../../components/nav-link";
@@ -44,7 +44,7 @@ const mapStateToProps = (state, props) => {
     : undefined;
 
   return {
-    gallery: selectGallery(state.gallery, state.filters.gallery),
+    gallery: selectManagerGallery(state.gallery, state.filters.gallery),
     galleryPiece,
     galleryPieceId
   };
