@@ -7,11 +7,12 @@
   .gallery-list {
     display: grid;
     grid-gap: $small;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    justify-items: center;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, 1fr);
     &--empty {
       @include font-type($secFont, $large);
 
+      grid-template-columns: 1fr;
       padding: $large;
       text-align: center;
     }
@@ -26,6 +27,19 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .gallery-list {
+    display: grid;
+    grid-gap: $small;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, 1fr);
+    &--empty {
+      @include font-type($secFont, $large);
+
+      grid-template-columns: 1fr;
+      padding: $large;
+      text-align: center;
+    }
+  }
 }
 
 //XLarge screens
