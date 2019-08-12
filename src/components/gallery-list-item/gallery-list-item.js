@@ -4,11 +4,9 @@ import PropTypes from "prop-types";
 import "./gallery-list-item.scss";
 
 const GalleryListItem = ({ galleryPieceId, imageSrc, name }) => (
-  <div className="gallery-list-item">
-    <Link className="no-style-link" to={`/gallery_piece/${galleryPieceId}`}>
-      <img src={imageSrc} alt={name} className="gallery-list-item__image" />
-    </Link>
-  </div>
+  <Link className="gallery-list-item" to={`/gallery_piece/${galleryPieceId}`}>
+    <img src={imageSrc} alt={name} className="gallery-list-item__image" />
+  </Link>
 );
 
 GalleryListItem.propTypes = {
