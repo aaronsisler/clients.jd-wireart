@@ -23,20 +23,26 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list-item {
-    display: grid;
-    justify-content: center;
-    // background-color: white;
-    // filter: $dropShadow;
-    // margin: 0 $small $small 0;
-    // padding: $small;
-    // height: 30rem;
-    // width: 30rem;
+    // background-color: transparent;
+    // max-height: 50vmax;
+    // max-height: 50vmin;
+    height: 50vmin;
+    // width: 40rem;
+    // max-width: 50rem;
+    // max-width: 50vmax;
+    width: 50vmin;
+    // max-width: 50vmin;
     &__image {
-      height: 100%;
-      // max-height: 25rem;
-      object-fit: scale-down;
-      width: 100%;
-      // max-width: 25rem;
+      // height: 100%;
+      // max-height: 50rem;
+      // max-height: 50vmax;
+      max-height: 50vmin;
+      // max-height: minmax(40rem, 1fr);
+      // object-fit: scale-down;
+      // width: 100%;
+      // max-width: 50rem;
+      // max-width: 50vmax;
+      max-width: 50vmin;
     }
   }
 }
