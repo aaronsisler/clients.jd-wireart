@@ -21,8 +21,14 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list {
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 50vmin);
+    display: inline-block;
+    column-count: 2;
+    column-gap: $small;
+    line-height: 0;
+    &--empty {
+      display: grid;
+      // column-count: auto;
+    }
   }
 }
 
@@ -30,16 +36,9 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .gallery-list {
-    // display: grid;
-    // grid-gap: $small;
-    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    // grid-template-columns: repeat(auto-fit, 1fr);
+    column-count: 3;
     &--empty {
       @include font-type($secFont, $large);
-
-      // grid-template-columns: 1fr;
-      // padding: $large;
-      // text-align: center;
     }
   }
 }
