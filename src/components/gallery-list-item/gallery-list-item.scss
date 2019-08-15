@@ -23,11 +23,11 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list-item {
-    background-color: transparent;
-    display: inline-block;
-    margin-bottom: $small;
-    width: 100%;
+    display: block;
+    margin-bottom: $xsmall;
     &__image {
+      height: auto;
+      width: 100%;
       object-fit: fill;
     }
   }

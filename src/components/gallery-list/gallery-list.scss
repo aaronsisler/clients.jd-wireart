@@ -6,7 +6,7 @@
 @media only screen {
   .gallery-list {
     display: grid;
-    grid-gap: $small;
+    grid-gap: $xsmall;
     &--empty {
       @include font-type($secFont, $large);
 
@@ -21,14 +21,9 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list {
+    column-count: 3;
     display: inline-block;
-    column-count: 2;
-    column-gap: $small;
     line-height: 0;
-    &--empty {
-      display: grid;
-      // column-count: auto;
-    }
   }
 }
 
@@ -36,10 +31,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .gallery-list {
-    column-count: 3;
-    &--empty {
-      @include font-type($secFont, $large);
-    }
+    column-count: 4;
   }
 }
 
