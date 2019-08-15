@@ -23,6 +23,7 @@
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
   .gallery-list-item {
+    break-inside: avoid;
     display: block;
     margin-bottom: $xsmall;
     &__image {

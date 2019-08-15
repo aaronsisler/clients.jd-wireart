@@ -24,6 +24,9 @@
     column-count: 3;
     display: inline-block;
     line-height: 0;
+    &--empty {
+      display: grid;
+    }
   }
 }
 
