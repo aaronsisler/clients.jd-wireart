@@ -6,12 +6,11 @@
 @media only screen {
   .gallery-list {
     display: grid;
-    grid-gap: $small;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    grid-gap: $xsmall;
     &--empty {
       @include font-type($secFont, $large);
 
+      grid-template-columns: 1fr;
       padding: $large;
       text-align: center;
     }
@@ -21,11 +20,22 @@
 //Medium screens - TABLET
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
+  .gallery-list {
+    column-count: 3;
+    display: inline-block;
+    line-height: 0;
+    &--empty {
+      display: grid;
+    }
+  }
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .gallery-list {
+    column-count: 4;
+  }
 }
 
 //XLarge screens
