@@ -6,28 +6,26 @@
 @media only screen {
   .gallery-piece-details-content {
     &__name {
-      @include font-type($secFont, $large);
+      @include font-type($mainFont, $midlarge);
 
       margin-bottom: $small;
       text-align: center;
     }
     &__price {
-      @include font-type($mainFont, $large);
+      @include font-type($mainFont, $midlarge);
 
-      margin-bottom: $medium;
+      margin-bottom: $small;
       text-align: center;
     }
     &__dimensions {
       margin-bottom: $medium;
     }
     &__description {
-      border-top: $border;
-      text-align: center;
-      &-title {
-        @include font-type($secFont, $medium, bold);
+      @include font-type($mainFont, $medium);
 
-        margin: $small 0;
-      }
+      border-top: $border;
+      padding: $medium 0;
+      text-align: center;
     }
   }
 }

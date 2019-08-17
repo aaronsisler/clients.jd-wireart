@@ -13,7 +13,7 @@
     &__input {
       display: grid;
       &-title {
-        @include font-type($secFont, $medium, bold);
+        @include font-type($mainFont, $medium, bold);
 
         margin: $small 0 $xsmall;
       }

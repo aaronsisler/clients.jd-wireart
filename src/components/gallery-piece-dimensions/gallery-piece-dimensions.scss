@@ -7,7 +7,7 @@
   .gallery-piece-dimensions {
     border-top: $border;
     &__title {
-      @include font-type($secFont, $medium, bold);
+      @include font-type($mainFont, $medium, bold);
 
       margin: $small 0;
       text-align: center;

@@ -18,7 +18,7 @@
       padding: $small;
       text-align: center;
       &-name {
-        @include font-type($secFont, $large);
+        @include font-type($mainFont, $large);
       }
     }
     &__content {
@@ -29,7 +29,7 @@
       filter: $dropShadow;
     }
     &--empty {
-      @include font-type($mainFont, $midlarge);
+      @include font-type($secFont, $midlarge);
 
       align-items: center;
       background-color: white;
@@ -39,7 +39,7 @@
       text-align: center;
     }
     &--invalid {
-      @include font-type($mainFont, $midlarge);
+      @include font-type($secFont, $midlarge);
 
       align-items: center;
       background-color: white;
@@ -66,7 +66,7 @@
       justify-content: space-between;
       min-height: 7vw;
       &-name {
-        @include font-type($secFont, $large);
+        @include font-type($mainFont, $large);
       }
     }
     &__content {

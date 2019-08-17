@@ -7,18 +7,16 @@
   .privacy-policy-container {
     padding: $medium;
     &__title {
-      @include font-type($secFont, $midlarge, bold);
+      @include font-type($mainFont, $midlarge, bold);
 
       margin-bottom: $medium;
     }
     &__heading {
-      @include font-type($mainFont, $medium);
+      @include font-type($secFont, $medium);
 
       margin: $medium 0 $xsmall;
     }
     &__content {
-      @include font-type($secFont, $medium);
-
       line-height: $lineHeight;
     }
   }

@@ -4,8 +4,6 @@
 //Small screens - MOBILE
 @media only screen {
   .input {
-    @include font-type($secFont, $medium);
-
     height: $xlarge;
     overflow: hidden;
     position: relative;
@@ -52,7 +50,7 @@
       width: 100%;
       &:focus + .input__label .input__span,
       &:valid + .input__label .input__span {
-        @include font-type($mainFont, $small);
+        @include font-type($secFont, $small);
 
         color: $mainColor;
         transform: translateY(-200%);
