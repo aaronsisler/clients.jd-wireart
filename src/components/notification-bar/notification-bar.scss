@@ -4,7 +4,7 @@
 //Small screens - MOBILE
 @media only screen {
   .notification-bar {
-    @include font-type($secFont, $medium, bold);
+    @include font-type($mainFont, $medium, bold);
 
     align-items: center;
     background-color: #dff0d8;
@@ -34,7 +34,7 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .notification-bar {
-    @include font-type($secFont, $midlarge, bold);
+    @include font-type($mainFont, $midlarge, bold);
   }
 }
 

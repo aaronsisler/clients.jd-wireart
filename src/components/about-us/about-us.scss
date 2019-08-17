@@ -8,12 +8,12 @@
     margin: $small;
     text-align: center;
     &__title {
-      @include font-type($secFont, $large, bold);
+      @include font-type($mainFont, $large, bold);
 
       margin-bottom: $small;
     }
     &__text {
-      @include font-type($secFont, $medium);
+      @include font-type($mainFont, $medium);
 
       color: $fontGrey;
       line-height: $lineHeight;

@@ -6,7 +6,7 @@
 @media only screen {
   .manager-list {
     &__empty {
-      @include font-type($secFont, $midlarge);
+      @include font-type($mainFont, $midlarge);
 
       padding: $medium;
       text-align: center;

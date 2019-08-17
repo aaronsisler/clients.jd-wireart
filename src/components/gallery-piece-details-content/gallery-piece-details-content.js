@@ -24,12 +24,7 @@ const GalleryPieceDetailsContent = ({ galleryPiece }) => {
       )}
       {description && (
         <div className="gallery-piece-details-content__description">
-          <div className="gallery-piece-details-content__description-title">
-            Description
-          </div>
-          <div className="gallery-piece-details-content__description-value">
-            {description}
-          </div>
+          {description}
         </div>
       )}
     </div>

@@ -13,8 +13,6 @@
       margin: 0 auto;
       text-align: center;
       &-content {
-        @include font-type($secFont);
-
         display: grid;
         margin: 0 auto;
         padding-bottom: $small;
@@ -34,15 +32,12 @@
         margin: 0 auto;
         width: 100%;
       }
-      &-order {
-        @include font-type($secFont);
-      }
       &-button {
         padding: $small;
       }
     }
     &__email {
-      @include font-type($secFont, $midlarge);
+      @include font-type($mainFont, $midlarge);
 
       padding: $small 0 $medium;
       text-align: center;

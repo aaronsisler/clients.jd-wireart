@@ -19,7 +19,7 @@
       text-align: center;
       width: fit-content;
       &-text {
-        @include font-type($secFont, $midlarge);
+        @include font-type($mainFont, $midlarge);
       }
       &-links {
         display: grid;
