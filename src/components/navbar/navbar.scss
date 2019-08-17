@@ -74,7 +74,7 @@
       justify-content: space-between;
       padding: 0;
       position: inherit;
-      width: 35vmax;
+      width: 25vmax;
     }
     &__link {
       margin-top: $xsmall;
@@ -91,7 +91,7 @@
 @media only screen and (min-width: 90.063em) {
   .nav-menu {
     &__links {
-      width: 25vmax;
+      width: 20vmax;
     }
   }
 }
