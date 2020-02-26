@@ -26,7 +26,7 @@ export const sendEmail = async (data, done, fail) => {
   }
 
   try {
-    await axios.post(servicesApiGatewayURL, emailData, emailOptions);
+    await axios.post(`${servicesApiGatewayURL}/email`, emailData, emailOptions);
     done();
   } catch (e) {
     fail();
