@@ -48,7 +48,7 @@
   "devDependencies": {
     "firebase-tools": "^6.9.2",
     "fs-extra": "^8.0.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "prettier": "^1.14.2",
     "prettier-stylelint": "^0.4.2",
     "replace-in-file": "^4.1.0",
